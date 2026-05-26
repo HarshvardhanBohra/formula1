@@ -1256,7 +1256,31 @@ body.colo-open { overflow:hidden; }
         </div>
         <h2 class="race-name"><span id="raceName">Canadian</span> <em>Grand Prix</em></h2>
         <div class="race-circuit"><strong id="raceCircuit">Circuit Gilles Villeneuve</strong> · <span id="raceLocality">Montreal</span></div>
-        <div class="race-circuit" id="raceDistance">Round 5 of 23 · 70 laps · 305.270 km</div>
+        <div class="race-circuit" id="raceDistance">Round 6 of 22 · Grand Prix distance</div>
+
+<script>
+async function updateRaceInfo() {
+  const el = document.getElementById('raceDistance');
+  try {
+    const res = await fetch('https://api.jolpi.ca/ergast/f1/2026/next.json');
+    const data = await res.json();
+    let race = data?.MRData?.RaceTable?.Races?.[0];
+
+    if (!race) {
+      const res2 = await fetch('https://api.jolpi.ca/ergast/f1/2026/last.json');
+      const data2 = await res2.json();
+      race = data2?.MRData?.RaceTable?.Races?.[0];
+    }
+
+    if (!race) return;
+
+    el.textContent = `Round ${race.round} of 24 · ${race.laps} laps`;
+  } catch (err) {
+    console.error('Failed to fetch race data:', err);
+  }
+}
+updateRaceInfo();
+</script>
 
         <div class="race-stats">
           <div class="race-stat">
