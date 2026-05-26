@@ -1926,12 +1926,7 @@ function renderStories(results, race) {
         ? `Fastest lap: ${fastest.FastestLap?.Time?.time || 'time pending'}, lap ${fastest.FastestLap?.lap || '-'}, average speed ${fastest.FastestLap?.AverageSpeed?.speed || '-'} ${fastest.FastestLap?.AverageSpeed?.units || ''}.`
         : `The API result is live, but fastest-lap fields were absent. The story will populate automatically when Jolpica exposes them.`
     },
-    {
-      className:'',
-      kicker:'Next Up',
-      headline:`The calendar now points to Montreal, Canada`,
-      body:`Miami is marked complete because its race date has passed. The red NEXT dot is now applied to the Canadian GP until the next future race is detected.`
-    }
+    
   ];
 
   $('newsBlock').innerHTML = stories.map((story, index) => `
