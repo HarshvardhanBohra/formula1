@@ -1243,7 +1243,7 @@ body.colo-open { overflow:hidden; }
 
   <div class="hero-sub">
     <span class="live-badge">Red Bull Edition</span>
-    <span>Max Verstappen · Red Bull Racing · Jolpica Live Data</span>
+    <span>Max Verstappen · Red Bull Racing</span>
   </div>
 </section>
 
@@ -1380,11 +1380,11 @@ body.colo-open { overflow:hidden; }
     <div class="stat">
       <div class="stat-label">Favorite Team</div>
       <div class="stat-big">Red <em>Bull</em></div>
-      <div class="stat-sub">Navy, red and gold accents</div>
+      <div class="stat-sub">Dominant. Aggressive. Calculated.</div>
     </div>
     <div class="stat">
       <div class="stat-label">Data Source</div>
-      <div class="stat-big">Jolpica<em> API</em></div>
+      <div class="stat-big">F1<em> API</em></div>
       <div class="stat-sub">Standings, calendar, last result</div>
     </div>
     <div class="stat">
@@ -1904,7 +1904,7 @@ function renderStories(results, race) {
       className:'lead',
       kicker:'The Story',
       headline:`${winnerName || 'Race winner'} controls ${raceName}`,
-      body:`${winnerName || 'The winner'} took P1 for ${winnerTeam || 'their team'}, with the podium reading ${podiumNames || 'pending API confirmation'}. This section is generated from Jolpica's latest race result.`
+      body:`${winnerName || 'The winner'} took P1 for ${winnerTeam || 'their team'}, with the podium reading ${podiumNames || 'pending API confirmation'}.`
     },
     {
       className:'neutral',
@@ -1914,7 +1914,7 @@ function renderStories(results, race) {
         : `No Red Bull classified in the visible last-race result`,
       body:redBull
         ? `Harshvardhan's garage watch: ${driverFullName(redBull.Driver || {})} finished P${redBull.position} for ${teamLabel(redBull.Constructor?.constructorId, redBull.Constructor?.name)}. Status: ${redBull.status || 'classified'}.`
-        : `Jolpica did not return a Red Bull finisher in this result payload. The dashboard keeps the Red Bull theme and favorite-driver markers intact.`
+        : `F1 API did not return a Red Bull finisher in this result payload. The dashboard keeps the Red Bull theme and favorite-driver markers intact.`
     },
     {
       className:'neutral',
