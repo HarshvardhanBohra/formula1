@@ -1238,7 +1238,6 @@ body.colo-open { overflow:hidden; }
       <span class="line1"><span>Harshvardhan's</span></span>
       <span class="line2"><span>Pit Wall.</span></span>
     </h1>
-      <div class="title-underline"></div>
   </div>
   <div class="hero-sub">
     <span class="live-badge">Red Bull Edition</span>
@@ -1256,8 +1255,7 @@ body.colo-open { overflow:hidden; }
         </div>
         <h2 class="race-name"><span id="raceName">Canadian</span> <em>Grand Prix</em></h2>
         <div class="race-circuit"><strong id="raceCircuit">Circuit Gilles Villeneuve</strong> · <span id="raceLocality">Montreal</span></div>
-        <div class="race-circuit">Round 6 of 22</div>
-
+        <div class="race-circuit" id="raceDistance">Round 5 of 23 · 70 laps · 305.270 km</div>
 
         <div class="race-stats">
           <div class="race-stat">
@@ -1295,13 +1293,13 @@ body.colo-open { overflow:hidden; }
   </div>
 
   <div class="cal-strip-wrap">
-    <div class="cal-progress-track"><div class="cal-progress-fill" id="calProgress" style="width: 21.74%;"></div></div>
+    <div class="cal-progress-track"><div class="cal-progress-fill" id="calProgress" style="width: 18.18%;"></div></div>
     <div class="cal-strip" id="calStrip">
       <div class="cal-round done" data-round="01" data-date="2026-03-08T05:00:00Z" data-race="Australian Grand Prix"><div class="cal-rnum">R01<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇦🇺</div><div class="cal-country">Australia</div><div class="cal-flag-name">Albert Park</div><div class="cal-date">Mar 06-08</div><div class="cal-winner">G. Russell</div></div>
       <div class="cal-round done" data-round="02" data-date="2026-03-15T07:00:00Z" data-race="Chinese Grand Prix"><div class="cal-rnum">R02<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇨🇳</div><div class="cal-country">China</div><div class="cal-flag-name">Shanghai</div><div class="cal-date">Mar 13-15</div><div class="cal-winner">K. Antonelli</div></div>
       <div class="cal-round done" data-round="03" data-date="2026-03-29T05:00:00Z" data-race="Japanese Grand Prix"><div class="cal-rnum">R03<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇯🇵</div><div class="cal-country">Japan</div><div class="cal-flag-name">Suzuka</div><div class="cal-date">Mar 27-29</div><div class="cal-winner">K. Antonelli</div></div>
-      <div class="cal-round done" data-round="04" data-date="2026-05-03T20:00:00Z" data-race="Miami Grand Prix"><div class="cal-rnum">R04<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇺🇸</div><div class="cal-country">USA</div><div class="cal-flag-name">Miami</div><div class="cal-date">May 01-03</div><div class="cal-winner">K. Antonelli</div></div>
-      <div class="cal-round next" data-round="05" data-date="2026-05-24T18:00:00Z" data-race="Canadian Grand Prix"><div class="cal-rnum">R05<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇨🇦</div><div class="cal-country">Canada</div><div class="cal-flag-name">Montreal</div><div class="cal-date">May 22-24</div><div class="cal-winner">K. Antonelli</div></div>
+      <div class="cal-round done" data-round="04" data-date="2026-05-03T20:00:00Z" data-race="Miami Grand Prix"><div class="cal-rnum">R04<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇺🇸</div><div class="cal-country">USA</div><div class="cal-flag-name">Miami</div><div class="cal-date">May 01-03</div></div>
+      <div class="cal-round next" data-round="05" data-date="2026-05-24T18:00:00Z" data-race="Canadian Grand Prix"><div class="cal-rnum">R05 · NEXT<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇨🇦</div><div class="cal-country">Canada</div><div class="cal-flag-name">Montreal</div><div class="cal-date">May 22-24</div></div>
       <div class="cal-round" data-round="06" data-date="2026-06-07T13:00:00Z" data-race="Monaco Grand Prix"><div class="cal-rnum">R06<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇲🇨</div><div class="cal-country">Monaco</div><div class="cal-flag-name">Monte Carlo</div><div class="cal-date">Jun 05-07</div></div>
       <div class="cal-round" data-round="07" data-date="2026-06-14T13:00:00Z" data-race="Spanish Grand Prix"><div class="cal-rnum">R07<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇪🇸</div><div class="cal-country">Spain</div><div class="cal-flag-name">Barcelona</div><div class="cal-date">Jun 12-14</div></div>
       <div class="cal-round" data-round="08" data-date="2026-06-28T13:00:00Z" data-race="Austrian Grand Prix"><div class="cal-rnum">R08<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇦🇹</div><div class="cal-country">Austria</div><div class="cal-flag-name">Red Bull Ring</div><div class="cal-date">Jun 26-28</div></div>
@@ -1329,7 +1327,7 @@ body.colo-open { overflow:hidden; }
       <div class="col-head">
         <div class="col-num">§ 01</div>
         <div class="col-name">Drivers' <em>Championship</em></div>
-        <div class="col-sub" id="driverSub">Top 10 · Loading F1</div>
+        <div class="col-sub" id="driverSub">Top 10 · Loading Jolpica</div>
       </div>
       <div id="driverStandings"></div>
     </div>
@@ -1338,7 +1336,7 @@ body.colo-open { overflow:hidden; }
       <div class="col-head">
         <div class="col-num">§ 02</div>
         <div class="col-name">Constructors' <em>Cup</em></div>
-        <div class="col-sub" id="constructorSub">All teams · Loading F1</div>
+        <div class="col-sub" id="constructorSub">All teams · Loading Jolpica</div>
       </div>
       <div id="constructorStandings"></div>
     </div>
@@ -1347,7 +1345,7 @@ body.colo-open { overflow:hidden; }
       <div class="col-head">
         <div class="col-num">§ 03</div>
         <div class="col-name">Paddock <em>Intel</em></div>
-        <div class="col-sub" id="paddockSub">Last Race · Loading F1</div>
+        <div class="col-sub" id="paddockSub">Last Race · Loading Jolpica</div>
       </div>
 
       <div class="podium-block">
@@ -1362,7 +1360,7 @@ body.colo-open { overflow:hidden; }
       <div class="news-block" id="newsBlock">
         <article class="news-item lead">
           <div class="news-meta"><span class="news-kicker">Live Feed</span><span class="news-num">01</span></div>
-          <h3 class="news-headline">Paddock intel is syncing from F1</h3>
+          <h3 class="news-headline">Paddock intel is syncing from Jolpica</h3>
           <p class="news-body">The dashboard will derive the podium, winner story, Red Bull watch and fastest-lap note from the latest available race result.</p>
         </article>
       </div>
