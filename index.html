@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harshvardhan Bohra's Pit Wall · Red Bull F1 Dashboard</title>
 
-
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -1072,15 +1070,7 @@ body.colo-open { overflow:hidden; }
   transition:transform 0.32s ease;
 }
 .colophon-modal.open .colo-card { transform:translateY(0) scale(1); }
-.colo-card::before {
-  content:'';
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:4px;
-  background:repeating-linear-gradient(90deg, var(--bull-navy) 0 20px, var(--paper-2) 20px 40px);
-}
+
 .colo-close {
   position:absolute;
   top:14px;
@@ -1137,7 +1127,7 @@ body.colo-open { overflow:hidden; }
   top:-10px;
   left:50%;
   transform:translateX(-50%);
-  background:var(--paper);
+  background:transparent;
   padding:0 10px;
   font-size:10px;
   color:var(--bull-blue);
@@ -1255,7 +1245,7 @@ body.colo-open { overflow:hidden; }
         </div>
         <h2 class="race-name"><span id="raceName">Canadian</span> <em>Grand Prix</em></h2>
         <div class="race-circuit"><strong id="raceCircuit">Circuit Gilles Villeneuve</strong> · <span id="raceLocality">Montreal</span></div>
-        <div class="race-circuit" id="raceDistance">Round 5 of 23 · 70 laps · 305.270 km</div>
+        <div class="race-circuit" id="raceDistance">Round 5 of 23 · 70 laps</div>
 
         <div class="race-stats">
           <div class="race-stat">
@@ -1474,7 +1464,7 @@ body.colo-open { overflow:hidden; }
       <div class="colo-rule" style="border-top-color: rgba(255,255,255,0.15);" aria-hidden="true"></div>
 
       <!-- Footer Disclaimer -->
-      <p class="colo-disclaimer" style="color: var(--ink-3); font-size: 11px;">
+      <p class="colo-disclaimer" style="color: rgba(255,255,255,0.4); font-size: 11px;">
         The Pit Wall Briefing · Powered by live performance telemetry. Not affiliated with the FIA. Optimized for Oracle Red Bull Racing strategies.
       </p>
 
@@ -1482,32 +1472,6 @@ body.colo-open { overflow:hidden; }
   </div>
 </div>
 
-  // Metadata matrix to inject track context into your briefing sections dynamically
-const CIRCUIT_INSIGHTS = {
-  'villeneuve': {
-    target: 'MONTRÉAL · WALLOFCHAMPIONS',
-    strategy: 'High braking wear requirements with critical traction out of low-speed chicanes. Watch out for sector 3 overtaking tactics and erratic changing track conditions along the St. Lawrence River.',
-    chips: ['⚡ Curb-riding stability is key', '🔋 Battery harvest heavy in sector 2', '🛑 Wall of Champions entry clearance']
-  },
-  'monaco': {
-    target: 'MONTE CARLO · ZERO ERROR MARGIN',
-    strategy: 'Qualifying is 95% of the race victory metric. Zero room for traditional overtaking; strategy will rely heavily on an aggressive overcut window or premium safety car response windows.',
-    chips: ['🇲🇨 Pitlane delta timing critical', '⚠️ Out-lap tire warming focus', '🔋 Low energy deployments requested']
-  },
-  'silverstone': {
-    target: 'SILVERSTONE · AERODYNAMIC MAX SPEED',
-    strategy: 'Extreme high-speed lateral load profiles through Copse, Maggots, and Becketts. Front-left tire preservation dictates team strategy windows. Dynamic risk factor: unpredictable crosswinds.',
-    chips: ['🏎️ Premium high-speed floor loads', '🌧️ Structural weather variables active', '⚡ DRS drag reduction maximization']
-  },
-  // Global generic baseline fallback values
-  'default': {
-    target: 'GRAND PRIX TRACK SYSTEM',
-    strategy: 'Telemetry demands balancing maximum technical energy recovery configuration with high straight-line kinetic efficiency deployment strategies.',
-    chips: ['🔋 Battery recovery deployment optimized', '🛑 Apex traction tracking active', '🏎️ Variable setup balancing']
-  }
-};
-
-  
 <script>
 const CONFIG = {
   season: '2026',
@@ -1552,6 +1516,56 @@ const COUNTRY_FLAGS = {
   Hungary:'🇭🇺', Netherlands:'🇳🇱', Italy:'🇮🇹', Azerbaijan:'🇦🇿',
   Singapore:'🇸🇬', Mexico:'🇲🇽', Brazil:'🇧🇷', Qatar:'🇶🇦', UAE:'🇦🇪',
   'United Arab Emirates':'🇦🇪'
+};
+
+// Map of circuitId to Total Scheduled Laps
+const CIRCUIT_LAPS = {
+  'albert_park': 58,    // Australia
+  'shanghai': 56,       // China
+  'suzuka': 53,         // Japan
+  'miami': 57,          // Miami
+  'villeneuve': 70,     // Canada
+  'monaco': 78,         // Monaco
+  'catalunya': 66,      // Spain (Barcelona)
+  'red_bull_ring': 71,  // Austria
+  'silverstone': 52,    // UK
+  'spa': 44,            // Belgium
+  'hungaroring': 70,    // Hungary
+  'zandvoort': 72,      // Netherlands
+  'monza': 53,          // Italy
+  'baku': 51,           // Azerbaijan
+  'marina_bay': 62,     // Singapore
+  'americas': 56,       // COTA (USA)
+  'rodriguez': 71,      // Mexico
+  'interlagos': 71,     // Brazil
+  'vegas': 50,          // Las Vegas
+  'losail': 57,         // Qatar
+  'yas_marina': 58      // Abu Dhabi
+};
+
+// Metadata matrix to inject track context into your briefing sections dynamically
+const CIRCUIT_INSIGHTS = {
+  'villeneuve': {
+    target: 'MONTRÉAL · WALLOFCHAMPIONS',
+    strategy: 'High braking wear requirements with critical traction out of low-speed chicanes. Watch out for sector 3 overtaking tactics and erratic changing track conditions along the St. Lawrence River.',
+    chips: ['⚡ Curb-riding stability is key', '🔋 Battery harvest heavy in sector 2', '🛑 Wall of Champions entry clearance']
+  },
+  'monaco': {
+    target: 'MONTE CARLO · ZERO ERROR MARGIN',
+    strategy: 'Qualifying is 95% of the race victory metric. Zero room for traditional overtaking; strategy will rely heavily on an aggressive overcut window or premium safety car response windows.',
+    chips: ['🇲🇨 Pitlane delta timing critical', '⚠️ Out-lap tire warming focus', '🔋 Low energy deployments requested']
+  },
+  'silverstone': {
+    target: 'SILVERSTONE · AERODYNAMIC MAX SPEED',
+    strategy: 'Extreme high-speed lateral load profiles through Copse, Maggots, and Becketts. Front-left tire preservation dictates team strategy windows. Dynamic risk factor: unpredictable crosswinds.',
+    chips: ['🏎️ Premium high-speed floor loads', '🌧️ Structural weather variables active', '⚡ DRS drag reduction maximization']
+  },
+  // Global generic baseline fallback values
+  'default': {
+    target: 'GRAND PRIX TRACK SYSTEM',
+    strategy: 'Telemetry demands balancing maximum technical energy recovery configuration with high straight-line kinetic efficiency deployment strategies.',
+    chips: ['🔋 Battery recovery deployment optimized', '🛑 Apex traction tracking active', '🏎️ Variable setup balancing']
+  }
 };
 
 function $(id) {
@@ -1693,13 +1707,16 @@ function applyNextRace(race, totalRounds) {
   const flag = COUNTRY_FLAGS[country] || '🏁';
   const cleanName = prettyRaceName(race.raceName);
   const target = raceStart(race);
+  
+  const circuitId = race.Circuit?.circuitId || '';
+  const lapCount = CIRCUIT_LAPS[circuitId] || 'TBD';
 
   $('raceRound').textContent = `◆ Round ${roundNumber} · Up Next`;
   $('raceFlag').textContent = flag;
   $('raceName').textContent = cleanName;
   $('raceCircuit').textContent = race.Circuit?.circuitName || 'Formula 1 Circuit';
   $('raceLocality').textContent = race.Circuit?.Location?.locality || country || 'Race weekend';
-  $('raceDistance').textContent = `Round ${Number(race.round || 0)} of ${totalRounds || 23} · Grand Prix distance`;
+  $('raceDistance').textContent = `Round ${Number(race.round || 0)} of ${totalRounds || 23} · ${lapCount} laps`;
   $('raceDates').textContent = formatDateRangeFromRace(race);
   $('nextRaceStat').textContent = cleanName;
   $('nextRaceStatSub').textContent = race.raceName || 'Next Grand Prix';
@@ -1724,8 +1741,9 @@ async function updateNextRaceFromJolpica() {
     const races = data?.MRData?.RaceTable?.Races || [];
     const next = races.find(race => raceStart(race) > Date.now());
     if (next) {
-      applyNextRace(next, races.length);window.cachedNextRace = next;
-if (window.cachedLastRace) populateBriefingModal(window.cachedNextRace, window.cachedLastRace);
+      applyNextRace(next, races.length);
+      window.cachedNextRace = next;
+      if (window.cachedLastRace) populateBriefingModal(window.cachedNextRace, window.cachedLastRace);
       return;
     }
   } catch (e) {}
@@ -1799,6 +1817,7 @@ async function updateDriverStandings() {
     $('driverSub').textContent = 'All Scorers · Static fallback';
   }
 }
+
 function renderFallbackConstructors() {
   const fallback = [
     ['01','Mercedes-AMG','Mercedes PU · DEU','mercedes','135','100'],
@@ -1821,18 +1840,7 @@ function renderFallbackConstructors() {
     </div>
   `).join('');
 }
-async function fetchCompletedLaps(season, round) {
-  const data = await fetchJson(`${CONFIG.apiBase}/${season}/${round}/results.json`);
-  const race = data?.MRData?.RaceTable?.Races?.[0];
-  
-  if (race && race.Results && race.Results.length > 0) {
-    // The winner (index 0) will have the total completed laps
-    const totalLaps = race.Results[0].laps;
-    console.log(`${race.raceName} had ${totalLaps} laps.`);
-    return totalLaps;
-  }
-  return "N/A";
-}
+
 async function updateConstructorStandings() {
   renderFallbackConstructors();
 
@@ -1935,8 +1943,7 @@ function renderStories(results, race) {
       body:fastest
         ? `Fastest lap: ${fastest.FastestLap?.Time?.time || 'time pending'}, lap ${fastest.FastestLap?.lap || '-'}, average speed ${fastest.FastestLap?.AverageSpeed?.speed || '-'} ${fastest.FastestLap?.AverageSpeed?.units || ''}.`
         : `The API result is live, but fastest-lap fields were absent. The story will populate automatically when Jolpica exposes them.`
-    },
-    
+    }
   ];
 
   $('newsBlock').innerHTML = stories.map((story, index) => `
@@ -1948,6 +1955,68 @@ function renderStories(results, race) {
   `).join('');
 }
 
+// Automatically build the complete modal overview using data elements
+function populateBriefingModal(nextRace, lastRace) {
+  if (!nextRace) return;
+  
+  // 1. Process Next Race Target
+  const circuitId = nextRace.Circuit?.circuitId || '';
+  const trackInsight = CIRCUIT_INSIGHTS[circuitId] || CIRCUIT_INSIGHTS['default'];
+  
+  $('briefingTargetHeading').textContent = `${nextRace.raceName.toUpperCase()} · ROUND ${nextRace.round}`;
+  $('briefingNextStrategy').innerHTML = `<strong>STRATEGY SUMMARY:</strong> Moving towards <strong>${nextRace.Circuit?.circuitName}</strong> in ${nextRace.Circuit?.Location?.locality}. ${trackInsight.strategy}`;
+  
+  // Generate Action Chips UI
+  $('briefingActionChips').innerHTML = trackInsight.chips.map(chip => `
+    <a class="colo-btn" style="color: #fff; border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.05); margin-bottom: 6px; margin-right: 6px; cursor: default;">
+      ${chip} <span class="colo-arr">→</span>
+    </a>
+  `).join('');
+
+  // 2. Process Last Race Gossip Insights
+  if (lastRace && lastRace.Results && lastRace.Results.length > 0) {
+    const winner = lastRace.Results[0];
+    const winnerName = `${winner.Driver.givenName} ${winner.Driver.familyName}`;
+    const fastestLap = lastRace.Results.find(r => r.FastestLap?.rank === '1');
+    
+    $('briefingGossipTitle').innerHTML = `Gossip from ${lastRace.raceName}: <em>${winner.Driver.familyName} takes absolute control</em>`;
+    
+    // Construct automated tactical analysis bullet streams
+    let pointsHtml = `
+      • <strong>The Clean Air Factor:</strong> ${winnerName} secured victory utilizing early-stage tire delta preservation patterns.<br><br>
+      • <strong>Tire Surface Thermals:</strong> Degradation patterns stabilized late in stint windows, preventing secondary stop strategy shifts.<br><br>
+    `;
+    
+    if (fastestLap) {
+      pointsHtml += `• <strong>Fastest Lap Velocity:</strong> ${fastestLap.Driver.familyName} grabbed the absolute pace benchmark with a screaming ${fastestLap.FastestLap.Time.time} marker on lap ${fastestLap.FastestLap.lap}.<br><br>`;
+    }
+    
+    // Find Red Bull watch metric details inside arrays
+    const rbDriverResult = lastRace.Results.find(r => r.Constructor.constructorId === CONFIG.favoriteTeamId || r.Driver.driverId === CONFIG.favoriteDriverId);
+    if (rbDriverResult) {
+      const p = rbDriverResult.position;
+      $('briefingRBStatus').textContent = `Max VER / P${p}`;
+      
+      if (p === '1') {
+        $('briefingRBMargin').textContent = `Dominant Victory Delta`;
+        pointsHtml += `• <strong>Red Bull Sector Analysis:</strong> Maximum performance constraints met perfectly; pace management executed flawlessly.`;
+        $('briefingWirelessQuote').textContent = `"Simply lovely stuff out there today, car was flying." — Max VER`;
+      } else {
+        const gap = rbDriverResult.Time?.time || `Status: ${rbDriverResult.status}`;
+        $('briefingRBMargin').textContent = `Delta to P1: ${gap}`;
+        pointsHtml += `• <strong>Red Bull Sector Analysis:</strong> Trapped in operational dirt-air pockets during critical undercut strategy triggers. Focus shifts heavily to electrical battery management mitigation templates.`;
+        $('briefingWirelessQuote').textContent = `"We need to look closely at our straight-line battery clipping recovery profiles." — Max VER`;
+      }
+    } else {
+      $('briefingRBStatus').textContent = `Telemetry Disconnect`;
+      $('briefingRBMargin').textContent = `No RB driver categorized`;
+      $('briefingWirelessQuote').textContent = `"Box, box. We need to check data arrays." — Pit Wall`;
+    }
+    
+    $('briefingGossipPoints').innerHTML = pointsHtml;
+  }
+}
+
 async function updatePaddockIntel() {
   try {
     const data = await fetchJson(`${CONFIG.apiBase}/${CONFIG.season}/last/results.json`);
@@ -1956,9 +2025,9 @@ async function updatePaddockIntel() {
     if (!race || !results.length) return;
     renderPodium(results, race);
     renderStories(results, race);
+    
     window.cachedLastRace = race;
-
-   if (window.cachedNextRace) populateBriefingModal(window.cachedNextRace, window.cachedLastRace);
+    if (window.cachedNextRace) populateBriefingModal(window.cachedNextRace, window.cachedLastRace);
   } catch (e) {
     $('paddockSub').textContent = 'Last Race · Static fallback';
     $('podiumHead').textContent = 'Miami GP · Result pending';
@@ -2023,67 +2092,7 @@ function initColophon() {
     if (e.key === 'Escape' && !modal.hidden) close();
   });
 }
-// Automatically build the complete modal overview using data elements
-function populateBriefingModal(nextRace, lastRace) {
-  if (!nextRace) return;
-  
-  // 1. Process Next Race Target
-  const circuitId = nextRace.Circuit?.circuitId || '';
-  const trackInsight = CIRCUIT_INSIGHTS[circuitId] || CIRCUIT_INSIGHTS['default'];
-  
-  $('briefingTargetHeading').textContent = `${nextRace.raceName.toUpperCase()} · ROUND ${nextRace.round}`;
-  $('briefingNextStrategy').innerHTML = `<strong>STRATEGY SUMMARY:</strong> Moving towards <strong>${nextRace.Circuit?.circuitName}</strong> in ${nextRace.Circuit?.Location?.locality}. ${trackInsight.strategy}`;
-  
-  // Generate Action Chips UI
-  $('briefingActionChips').innerHTML = trackInsight.chips.map(chip => `
-    <a class="colo-btn" style="color: #fff; border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.05); margin-bottom: 6px; margin-right: 6px;">
-      ${chip} <span class="colo-arr">→</span>
-    </a>
-  `).join('');
 
-  // 2. Process Last Race Gossip Insights
-  if (lastRace && lastRace.Results && lastRace.Results.length > 0) {
-    const winner = lastRace.Results[0];
-    const winnerName = `${winner.Driver.givenName} ${winner.Driver.familyName}`;
-    const fastestLap = lastRace.Results.find(r => r.FastestLap?.rank === '1');
-    
-    $('briefingGossipTitle').innerHTML = `Gossip from ${lastRace.raceName}: <em>${winner.Driver.familyName} takes absolute control</em>`;
-    
-    // Construct automated tactical analysis bullet streams
-    let pointsHtml = `
-      • <strong>The Clean Air Factor:</strong> ${winnerName} secured victory utilizing early-stage tire delta preservation patterns.<br><br>
-      • <strong>Tire Surface Thermals:</strong> Degradation patterns stabilized late in stint windows, preventing secondary stop strategy shifts.<br><br>
-    `;
-    
-    if (fastestLap) {
-      pointsHtml += `• <strong>Fastest Lap Velocity:</strong> ${fastestLap.Driver.familyName} grabbed the absolute pace benchmark with a screaming ${fastestLap.FastestLap.Time.time} marker on lap ${fastestLap.FastestLap.lap}.<br><br>`;
-    }
-    
-    // Find Red Bull watch metric details inside arrays
-    const rbDriverResult = lastRace.Results.find(r => r.Constructor.constructorId === CONFIG.favoriteTeamId || r.Driver.driverId === CONFIG.favoriteDriverId);
-    if (rbDriverResult) {
-      const p = rbDriverResult.position;
-      $('briefingRBStatus').textContent = `Max VER / P${p}`;
-      
-      if (p === '1') {
-        $('briefingRBMargin').textContent = `Dominant Victory Delta`;
-        pointsHtml += `• <strong>Red Bull Sector Analysis:</strong> Maximum performance constraints met perfectly; pace management executed flawlessly.`;
-        $('briefingWirelessQuote').textContent = `"Simply lovely stuff out there today, car was flying." — Max VER`;
-      } else {
-        const gap = rbDriverResult.Time?.time || `Status: ${rbDriverResult.status}`;
-        $('briefingRBMargin').textContent = `Delta to P1: ${gap}`;
-        pointsHtml += `• <strong>Red Bull Sector Analysis:</strong> Trapped in operational dirt-air pockets during critical undercut strategy triggers. Focus shifts heavily to electrical battery management mitigation templates.`;
-        $('briefingWirelessQuote').textContent = `"We need to look closely at our straight-line battery clipping recovery profiles." — Max VER`;
-      }
-    } else {
-      $('briefingRBStatus').textContent = `Telemetry Disconnect`;
-      $('briefingRBMargin').textContent = `No RB driver categorized`;
-      $('briefingWirelessQuote').textContent = `"Box, box. We need to check data arrays." — Pit Wall`;
-    }
-    
-    $('briefingGossipPoints').innerHTML = pointsHtml;
-  }
-}
 initGreeting();
 initTicker();
 syncStaticCalendar();
