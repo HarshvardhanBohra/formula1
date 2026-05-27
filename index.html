@@ -1327,7 +1327,7 @@ body.colo-open { overflow:hidden; }
       <div class="col-head">
         <div class="col-num">§ 01</div>
         <div class="col-name">Drivers' <em>Championship</em></div>
-        <div class="col-sub" id="driverSub">Top 22 · Loading Jolpica</div>
+        <div class="col-sub" id="driverSub">All Scorers · Loading Jolpica</div>
       </div>
       <div id="driverStandings"></div>
     </div>
@@ -1771,14 +1771,18 @@ async function updateDriverStandings() {
     const list = data?.MRData?.StandingsTable?.StandingsLists?.[0]?.DriverStandings || [];
     if (!list.length) return;
 
-    $('driverSub').textContent = `Top 10 · After Round ${data.MRData.StandingsTable.StandingsLists[0].round}`;
-    $('driverStandings').innerHTML = list.slice(0, 10).map((item, index) => {
+    // Filter to only include drivers who have scored at least 1 point
+    const scoringDrivers = list.filter(item => Number(item.points) > 0);
+
+    $('driverSub').textContent = `All Scorers · After Round ${data.MRData.StandingsTable.StandingsLists[0].round}`;
+    $('driverStandings').innerHTML = scoringDrivers.map((item, index) => {
       const driver = item.Driver || {};
       const constructor = item.Constructors?.[0] || {};
       const constructorId = constructor.constructorId || '';
       const code = driverCode(driver);
       const favorite = driver.driverId === CONFIG.favoriteDriverId || code === CONFIG.favoriteDriverCode;
       const color = teamColor(constructorId);
+      
       return `
         <div class="driver-row ${index === 0 ? 'leader' : ''} ${favorite ? 'favorite' : ''}" style="--team-color:${color}; animation-delay:${4.5 + index * 0.08}s;">
           <div class="driver-pos">${String(index + 1).padStart(2, '0')}</div>
@@ -1794,10 +1798,9 @@ async function updateDriverStandings() {
       `;
     }).join('');
   } catch (e) {
-    $('driverSub').textContent = 'Top 10 · Static fallback';
+    $('driverSub').textContent = 'All Scorers · Static fallback';
   }
 }
-
 function renderFallbackConstructors() {
   const fallback = [
     ['01','Mercedes-AMG','Mercedes PU · DEU','mercedes','135','100'],
