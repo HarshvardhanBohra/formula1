@@ -1405,112 +1405,109 @@ body.colo-open { overflow:hidden; }
   </div>
 </div>
 
+<!-- RED BULL PIT WALL BRIEFING MODAL -->
 <div class="colophon-modal" id="colophon-modal" role="dialog" aria-modal="true" aria-labelledby="colo-title" hidden>
   <div class="colo-backdrop" data-close></div>
-  <div class="colo-card" role="document">
-    <button type="button" class="colo-close" aria-label="Close">✕</button>
-    <div class="colo-scroll">
+  <div class="colo-card" role="document" style="border: 2px solid var(--racing); background: var(--bull-navy); color: #fff;">
+    <button type="button" class="colo-close" aria-label="Close" style="color: #fff; border-color: rgba(255,255,255,0.2);">✕</button>
+    <div class="colo-scroll" style="padding: 32px 30px;">
 
+      <!-- Header Section -->
       <header class="colo-head">
-        <div class="colo-eyebrow">◆ Race Control</div>
-        <h2 class="colo-title" id="colo-title">The <em>Pit Wall</em></h2>
-        <p class="colo-sub">F1 2026 · Unfiltered · Slightly illegal levels of honesty</p>
+        <div class="colo-eyebrow" style="color: var(--gold); letter-spacing: 0.3em; font-weight: 700;">◆ ORACLE RED BULL RACING INTELLIGENCE</div>
+        <h2 class="colo-title" id="colo-title" style="color: #fff; font-family: 'Playfair Display', serif;">The <em>Pit Wall Briefing</em></h2>
+        <p class="colo-sub" style="color: var(--bull-ice); font-family: 'JetBrains Mono', monospace; font-size: 11px;">Telemetry Sync: Live · Strategy Protocol: Unfiltered</p>
       </header>
 
-      <div class="colo-rule" aria-hidden="true"></div>
+      <div class="colo-rule" style="border-top-color: rgba(255,255,255,0.15);" aria-hidden="true"></div>
 
-      <!-- NEWS BLOCK -->
+      <!-- SECTION 1: UPCOMING RACE STRATEGY BRIEF -->
       <section class="colo-author-sec">
-
-        <p class="colo-author-bio">
-          <strong>BREAKING:</strong> F1 2026 is now officially a battery management simulator with cars attached.
+        <div class="brand-eyebrow" style="color: var(--racing-hot); margin-bottom: 12px; font-size: 10px;">
+          <span style="background: var(--racing); color: #fff; padding: 2px 6px; font-weight: 700; margin-right: 6px;">NEXT TARGET</span> 
+          <span id="briefingTargetHeading">LOADING NEXT GP...</span>
+        </div>
+        <p class="colo-author-bio" id="briefingNextStrategy" style="color: #fff; font-size: 14px; line-height: 1.6; max-width: 100%;">
+          Analyzing upcoming track layout and telemetry metrics...
         </p>
 
-        <div class="colo-links">
-
-          <a class="colo-btn">
-            ⚡ "Overtake completed… temporarily."
-            <span class="colo-arr">→</span>
-          </a>
-
-          <a class="colo-btn">
-            🌩 Miami GP rescheduled because even the weather refused to participate
-            <span class="colo-arr">→</span>
-          </a>
-
-          <a class="colo-btn">
-            🔋 Peak performance achieved… for 3 seconds per lap
-            <span class="colo-arr">→</span>
-          </a>
-
+        <!-- Dynamic Quick-Links Action Chips -->
+        <div class="colo-links" id="briefingActionChips" style="margin-top: 16px;">
+          <!-- Populated via Javascript -->
         </div>
       </section>
 
-      <div class="colo-rule" aria-hidden="true"></div>
+      <div class="colo-rule" style="border-top-color: rgba(255,255,255,0.15);" aria-hidden="true"></div>
 
-      <!-- HEADLINES -->
+      <!-- SECTION 2: LAST RACE DEBRIEF & PADDOCK GOSSIP -->
       <section class="colo-tip-sec">
-        <div class="colo-author-label">Pit Wall Headlines</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 12px; font-weight: 600;">
+          PADDOCK DEBRIEF & POST-RACE GOSSIP
+        </div>
 
-        <h3 class="colo-tip-head">This season feels like <em>Formula E went to the gym</em>.</h3>
+        <h3 class="colo-tip-head" id="briefingGossipTitle" style="color: #fff; font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 14px;">
+          Reviewing previous race constraints...
+        </h3>
 
-        <p class="colo-tip-body">
-          • Drivers lifting mid-straight like they’re saving fuel on a Sunday drive<br><br>
-          • Engineers saying “we think it’s legal” with zero confidence<br><br>
-          • Overtakes now come with a recharge cooldown<br><br>
-          • Strategy meetings longer than the actual race pace windows
-        </p>
+        <div class="colo-tip-body" id="briefingGossipPoints" style="color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.7;">
+          <!-- Dynamic telemetry bullet points inject here -->
+        </div>
 
-        <div class="colo-podium">
-          <div class="colo-p" data-pos="p10">
-            <div class="colo-p-pos">ALERT</div>
-            <div class="colo-p-val">Superclipping</div>
-            <div class="colo-p-lbl">Now nerfed mid-season</div>
-          </div>
-          <div class="colo-p" data-pos="p3">
-            <div class="colo-p-pos">DRAMA</div>
-            <div class="colo-p-val">Drivers</div>
-            <div class="colo-p-lbl">Confused by rules</div>
-          </div>
+        <!-- Custom Pit Wall Alert Badges -->
+        <div class="colo-podium" style="background: rgba(6, 50, 160, 0.3); border: 1px solid var(--bull-blue); margin: 24px 0; padding: 16px;">
           <div class="colo-p" data-pos="p1">
-            <div class="colo-p-pos">CHAOS</div>
-            <div class="colo-p-val">FIA</div>
-            <div class="colo-p-lbl">Also confused</div>
+            <div class="colo-p-pos" style="color: var(--gold); font-weight: 700;">RED BULL WATCH</div>
+            <div class="colo-p-val" id="briefingRBStatus" style="font-size: 16px; font-family: 'JetBrains Mono', monospace; color: #fff; margin-top: 4px;">Syncing...</div>
+            <div class="colo-p-lbl" id="briefingRBMargin" style="font-size: 11px; color: var(--bull-ice); margin-top: 2px;">Calculating Delta</div>
           </div>
-          <div class="colo-p-any">mid-season patch notes dropped like it's a video game</div>
         </div>
 
-        <!-- CLEAN HOT TAKE (QR REMOVED) -->
-        <div class="colo-upi">
+        <!-- Dynamic Hot Take Outtake Box -->
+        <div class="colo-upi" style="background: rgba(225, 6, 0, 0.1); border-left: 4px solid var(--racing); padding: 14px 18px; margin-top: 18px;">
           <div class="colo-upi-left">
-            <span class="colo-upi-label">HOT TAKE</span>
-            <code class="colo-upi-id">"This isn’t racing. This is energy politics."</code>
-            <div class="colo-upi-scan">— Entire F1 Twitter, probably</div>
+            <span class="colo-upi-label" style="color: var(--racing-hot); font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.15em; display: block; margin-bottom: 4px;">PIT WALL WIRELESS</span>
+            <code class="colo-upi-id" id="briefingWirelessQuote" style="color: #fff; font-family: 'Inter', sans-serif; font-style: italic; font-size: 13px; background: transparent; padding: 0; border: 0; display: block; line-height: 1.4;">"Standby for clear track telemetry confirmation..."</code>
           </div>
         </div>
-
-        <p class="colo-intl">
-          Meanwhile, whispers in the paddock suggest a return to <strong>V8 engines</strong>… because apparently everyone misses actual noise.
-        </p>
-
-        <p class="colo-tip-sig">
-          Max called it Mario Kart. Nobody disagreed.
-        </p>
-
       </section>
 
-      <div class="colo-rule" aria-hidden="true"></div>
+      <div class="colo-rule" style="border-top-color: rgba(255,255,255,0.15);" aria-hidden="true"></div>
 
-      <!-- FINAL NOTE -->
-      <p class="colo-disclaimer">
-        The Pit Wall — where strategy meets chaos.  
-        Not affiliated with Formula 1 or FIA. Just better commentary.
+      <!-- Footer Disclaimer -->
+      <p class="colo-disclaimer" style="color: var(--ink-3); font-size: 11px;">
+        The Pit Wall Briefing · Powered by live performance telemetry. Not affiliated with the FIA. Optimized for Oracle Red Bull Racing strategies.
       </p>
 
     </div>
   </div>
 </div>
 
+  // Metadata matrix to inject track context into your briefing sections dynamically
+const CIRCUIT_INSIGHTS = {
+  'villeneuve': {
+    target: 'MONTRÉAL · WALLOFCHAMPIONS',
+    strategy: 'High braking wear requirements with critical traction out of low-speed chicanes. Watch out for sector 3 overtaking tactics and erratic changing track conditions along the St. Lawrence River.',
+    chips: ['⚡ Curb-riding stability is key', '🔋 Battery harvest heavy in sector 2', '🛑 Wall of Champions entry clearance']
+  },
+  'monaco': {
+    target: 'MONTE CARLO · ZERO ERROR MARGIN',
+    strategy: 'Qualifying is 95% of the race victory metric. Zero room for traditional overtaking; strategy will rely heavily on an aggressive overcut window or premium safety car response windows.',
+    chips: ['🇲🇨 Pitlane delta timing critical', '⚠️ Out-lap tire warming focus', '🔋 Low energy deployments requested']
+  },
+  'silverstone': {
+    target: 'SILVERSTONE · AERODYNAMIC MAX SPEED',
+    strategy: 'Extreme high-speed lateral load profiles through Copse, Maggots, and Becketts. Front-left tire preservation dictates team strategy windows. Dynamic risk factor: unpredictable crosswinds.',
+    chips: ['🏎️ Premium high-speed floor loads', '🌧️ Structural weather variables active', '⚡ DRS drag reduction maximization']
+  },
+  // Global generic baseline fallback values
+  'default': {
+    target: 'GRAND PRIX TRACK SYSTEM',
+    strategy: 'Telemetry demands balancing maximum technical energy recovery configuration with high straight-line kinetic efficiency deployment strategies.',
+    chips: ['🔋 Battery recovery deployment optimized', '🛑 Apex traction tracking active', '🏎️ Variable setup balancing']
+  }
+};
+
+  
 <script>
 const CONFIG = {
   season: '2026',
@@ -1727,7 +1724,8 @@ async function updateNextRaceFromJolpica() {
     const races = data?.MRData?.RaceTable?.Races || [];
     const next = races.find(race => raceStart(race) > Date.now());
     if (next) {
-      applyNextRace(next, races.length);
+      applyNextRace(next, races.length);window.cachedNextRace = next;
+if (window.cachedLastRace) populateBriefingModal(window.cachedNextRace, window.cachedLastRace);
       return;
     }
   } catch (e) {}
@@ -1958,6 +1956,9 @@ async function updatePaddockIntel() {
     if (!race || !results.length) return;
     renderPodium(results, race);
     renderStories(results, race);
+    window.cachedLastRace = race;
+
+   if (window.cachedNextRace) populateBriefingModal(window.cachedNextRace, window.cachedLastRace);
   } catch (e) {
     $('paddockSub').textContent = 'Last Race · Static fallback';
     $('podiumHead').textContent = 'Miami GP · Result pending';
@@ -2022,7 +2023,67 @@ function initColophon() {
     if (e.key === 'Escape' && !modal.hidden) close();
   });
 }
+// Automatically build the complete modal overview using data elements
+function populateBriefingModal(nextRace, lastRace) {
+  if (!nextRace) return;
+  
+  // 1. Process Next Race Target
+  const circuitId = nextRace.Circuit?.circuitId || '';
+  const trackInsight = CIRCUIT_INSIGHTS[circuitId] || CIRCUIT_INSIGHTS['default'];
+  
+  $('briefingTargetHeading').textContent = `${nextRace.raceName.toUpperCase()} · ROUND ${nextRace.round}`;
+  $('briefingNextStrategy').innerHTML = `<strong>STRATEGY SUMMARY:</strong> Moving towards <strong>${nextRace.Circuit?.circuitName}</strong> in ${nextRace.Circuit?.Location?.locality}. ${trackInsight.strategy}`;
+  
+  // Generate Action Chips UI
+  $('briefingActionChips').innerHTML = trackInsight.chips.map(chip => `
+    <a class="colo-btn" style="color: #fff; border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.05); margin-bottom: 6px; margin-right: 6px;">
+      ${chip} <span class="colo-arr">→</span>
+    </a>
+  `).join('');
 
+  // 2. Process Last Race Gossip Insights
+  if (lastRace && lastRace.Results && lastRace.Results.length > 0) {
+    const winner = lastRace.Results[0];
+    const winnerName = `${winner.Driver.givenName} ${winner.Driver.familyName}`;
+    const fastestLap = lastRace.Results.find(r => r.FastestLap?.rank === '1');
+    
+    $('briefingGossipTitle').innerHTML = `Gossip from ${lastRace.raceName}: <em>${winner.Driver.familyName} takes absolute control</em>`;
+    
+    // Construct automated tactical analysis bullet streams
+    let pointsHtml = `
+      • <strong>The Clean Air Factor:</strong> ${winnerName} secured victory utilizing early-stage tire delta preservation patterns.<br><br>
+      • <strong>Tire Surface Thermals:</strong> Degradation patterns stabilized late in stint windows, preventing secondary stop strategy shifts.<br><br>
+    `;
+    
+    if (fastestLap) {
+      pointsHtml += `• <strong>Fastest Lap Velocity:</strong> ${fastestLap.Driver.familyName} grabbed the absolute pace benchmark with a screaming ${fastestLap.FastestLap.Time.time} marker on lap ${fastestLap.FastestLap.lap}.<br><br>`;
+    }
+    
+    // Find Red Bull watch metric details inside arrays
+    const rbDriverResult = lastRace.Results.find(r => r.Constructor.constructorId === CONFIG.favoriteTeamId || r.Driver.driverId === CONFIG.favoriteDriverId);
+    if (rbDriverResult) {
+      const p = rbDriverResult.position;
+      $('briefingRBStatus').textContent = `Max VER / P${p}`;
+      
+      if (p === '1') {
+        $('briefingRBMargin').textContent = `Dominant Victory Delta`;
+        pointsHtml += `• <strong>Red Bull Sector Analysis:</strong> Maximum performance constraints met perfectly; pace management executed flawlessly.`;
+        $('briefingWirelessQuote').textContent = `"Simply lovely stuff out there today, car was flying." — Max VER`;
+      } else {
+        const gap = rbDriverResult.Time?.time || `Status: ${rbDriverResult.status}`;
+        $('briefingRBMargin').textContent = `Delta to P1: ${gap}`;
+        pointsHtml += `• <strong>Red Bull Sector Analysis:</strong> Trapped in operational dirt-air pockets during critical undercut strategy triggers. Focus shifts heavily to electrical battery management mitigation templates.`;
+        $('briefingWirelessQuote').textContent = `"We need to look closely at our straight-line battery clipping recovery profiles." — Max VER`;
+      }
+    } else {
+      $('briefingRBStatus').textContent = `Telemetry Disconnect`;
+      $('briefingRBMargin').textContent = `No RB driver categorized`;
+      $('briefingWirelessQuote').textContent = `"Box, box. We need to check data arrays." — Pit Wall`;
+    }
+    
+    $('briefingGossipPoints').innerHTML = pointsHtml;
+  }
+}
 initGreeting();
 initTicker();
 syncStaticCalendar();
