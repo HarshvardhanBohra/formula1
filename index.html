@@ -13,129 +13,129 @@
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
 
 :root {
-  --carbon:#050816;
-  --carbon-2:#08113a;
-  --carbon-3:#0d1b4d;
-  --paper:#f2ece0;
-  --paper-2:#e8e1d2;
-  --paper-3:#d8d0bf;
-  --ink:#060b2d;
-  --ink-2:#29304f;
-  --ink-3:#747b96;
-  --racing:#e10600;
-  --racing-hot:#ff1e00;
-  --racing-deep:#9b0500;
-  --gold:#f6c800;
-  --bull-blue:#0632a0;
-  --bull-navy:#060b2d;
-  --bull-ice:#6db8ff;
-  --mercedes:#27F4D2;
-  --ferrari:#E8002D;
-  --mclaren:#FF8000;
-  --redbull:#0632A0;
-  --williams:#64C4FF;
-  --haas:#B6BABD;
-  --alpine:#0093CC;
-  --audi:#00877C;
-  --racingbulls:#6692FF;
-  --aston:#229971;
-  --cadillac:#8A9099;
-  --rule-light:#d2cabd;
+  --carbon:#050816;
+  --carbon-2:#08113a;
+  --carbon-3:#0d1b4d;
+  --paper:#f2ece0;
+  --paper-2:#e8e1d2;
+  --paper-3:#d8d0bf;
+  --ink:#060b2d;
+  --ink-2:#29304f;
+  --ink-3:#747b96;
+  --racing:#e10600;
+  --racing-hot:#ff1e00;
+  --racing-deep:#9b0500;
+  --gold:#f6c800;
+  --bull-blue:#0632a0;
+  --bull-navy:#060b2d;
+  --bull-ice:#6db8ff;
+  --mercedes:#27F4D2;
+  --ferrari:#E8002D;
+  --mclaren:#FF8000;
+  --redbull:#0632A0;
+  --williams:#64C4FF;
+  --haas:#B6BABD;
+  --alpine:#0093CC;
+  --audi:#00877C;
+  --racingbulls:#6692FF;
+  --aston:#229971;
+  --cadillac:#8A9099;
+  --rule-light:#d2cabd;
 }
 
 @keyframes maskRevealUp {
-  0% { clip-path:inset(100% 0 0 0); transform:translateY(20px); }
-  100% { clip-path:inset(0 0 0 0); transform:translateY(0); }
+  0% { clip-path:inset(100% 0 0 0); transform:translateY(20px); }
+  100% { clip-path:inset(0 0 0 0); transform:translateY(0); }
 }
 @keyframes fadeSlow { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeUpSlow {
-  from { opacity:0; transform:translateY(18px); }
-  to { opacity:1; transform:translateY(0); }
+  from { opacity:0; transform:translateY(18px); }
+  to { opacity:1; transform:translateY(0); }
 }
 @keyframes underlineDraw {
-  0% { transform:scaleX(0); transform-origin:left; }
-  100% { transform:scaleX(1); transform-origin:left; }
+  0% { transform:scaleX(0); transform-origin:left; }
+  100% { transform:scaleX(1); transform-origin:left; }
 }
 @keyframes ticker {
-  0% { transform:translateX(0); }
-  100% { transform:translateX(-50%); }
+  0% { transform:translateX(0); }
+  100% { transform:translateX(-50%); }
 }
 @keyframes flagWave {
-  0%,100% { transform:rotate(0); }
-  50% { transform:rotate(5deg); }
+  0%,100% { transform:rotate(0); }
+  50% { transform:rotate(5deg); }
 }
 @keyframes speedLineSlow {
-  0% { transform:translateX(-200px); opacity:0; }
-  20% { opacity:0.5; }
-  100% { transform:translateX(calc(100vw + 200px)); opacity:0; }
+  0% { transform:translateX(-200px); opacity:0; }
+  20% { opacity:0.5; }
+  100% { transform:translateX(calc(100vw + 200px)); opacity:0; }
 }
 @keyframes barGrowSlow {
-  0% { transform:scaleX(0); transform-origin:left; }
-  100% { transform:scaleX(1); }
+  0% { transform:scaleX(0); transform-origin:left; }
+  100% { transform:scaleX(1); }
 }
 @keyframes rowSlide {
-  from { opacity:0; transform:translateX(-24px); }
-  to { opacity:1; transform:translateX(0); }
+  from { opacity:0; transform:translateX(-24px); }
+  to { opacity:1; transform:translateX(0); }
 }
 @keyframes numSettle {
-  from { opacity:0; transform:translateY(8px); }
-  to { opacity:1; transform:translateY(0); }
+  from { opacity:0; transform:translateY(8px); }
+  to { opacity:1; transform:translateY(0); }
 }
 @keyframes checkerFadeIn {
-  from { opacity:0; transform:scale(0.8); }
-  to { opacity:1; transform:scale(1); }
+  from { opacity:0; transform:scale(0.8); }
+  to { opacity:1; transform:scale(1); }
 }
 
 html { scroll-behavior:smooth; }
 body {
-  background:var(--paper);
-  color:var(--ink);
-  font-family:'Inter', sans-serif;
-  font-weight:400;
-  min-height:100vh;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter', sans-serif;
+  font-weight:400;
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
 }
 
 .ticker-wrap {
-  background:linear-gradient(90deg, var(--bull-navy), var(--carbon), var(--bull-blue));
-  height:44px;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  border-bottom:2px solid var(--racing);
-  position:relative;
-  animation:fadeSlow 0.9s ease both;
+  background:linear-gradient(90deg, var(--bull-navy), var(--carbon), var(--bull-blue));
+  height:44px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  border-bottom:2px solid var(--racing);
+  position:relative;
+  animation:fadeSlow 0.9s ease both;
 }
 .ticker-wrap::before,.ticker-wrap::after {
-  content:'';
-  position:absolute;
-  top:0;
-  bottom:0;
-  width:80px;
-  z-index:2;
-  pointer-events:none;
+  content:'';
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:80px;
+  z-index:2;
+  pointer-events:none;
 }
 .ticker-wrap::before { left:0; background:linear-gradient(90deg, var(--bull-navy), transparent); }
 .ticker-wrap::after { right:0; background:linear-gradient(270deg, var(--bull-blue), transparent); }
 .ticker-track {
-  display:flex;
-  white-space:nowrap;
-  animation:ticker 48s linear infinite;
-  will-change:transform;
+  display:flex;
+  white-space:nowrap;
+  animation:ticker 48s linear infinite;
+  will-change:transform;
 }
 .ticker-track:hover { animation-play-state:paused; }
 .tick {
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:0 26px;
-  font-family:'JetBrains Mono', monospace;
-  font-size:11px;
-  font-weight:500;
-  letter-spacing:.08em;
-  color:rgba(255,255,255,0.58);
-  text-transform:uppercase;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:0 26px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.08em;
+  color:rgba(255,255,255,0.58);
+  text-transform:uppercase;
 }
 .tick .sym { color:var(--racing-hot); font-weight:600; letter-spacing:.14em; }
 .tick .val { color:#fff; font-weight:600; }
@@ -143,1966 +143,1934 @@ body {
 .tick-dot { color:rgba(255,255,255,.22); padding:0 4px; font-size:9px; }
 
 .hero {
-  background:linear-gradient(120deg, rgba(6,50,160,0.09), transparent 48%), var(--paper);
-  padding:56px 36px 32px;
-  max-width:1440px;
-  margin:0 auto;
-  position:relative;
-  overflow:hidden;
+  background:linear-gradient(120deg, rgba(6,50,160,0.09), transparent 48%), var(--paper);
+  padding:56px 36px 32px;
+  max-width:1440px;
+  margin:0 auto;
+  position:relative;
+  overflow:hidden;
 }
 .speed-line {
-  position:absolute;
-  top:0;
-  left:0;
-  height:1px;
-  background:linear-gradient(90deg, transparent 0%, var(--bull-blue) 38%, var(--racing) 64%, transparent 100%);
-  animation:speedLineSlow 5.5s ease-out infinite;
-  pointer-events:none;
+  position:absolute;
+  top:0;
+  left:0;
+  height:1px;
+  background:linear-gradient(90deg, transparent 0%, var(--bull-blue) 38%, var(--racing) 64%, transparent 100%);
+  animation:speedLineSlow 5.5s ease-out infinite;
+  pointer-events:none;
 }
 .speed-line:nth-child(1) { top:18%; width:160px; animation-delay:1.8s; }
 .speed-line:nth-child(2) { top:42%; width:220px; animation-delay:3.2s; }
 .speed-line:nth-child(3) { top:68%; width:120px; animation-delay:2.4s; }
 
 .hero-top {
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  margin-bottom:28px;
-  animation:fadeUpSlow 1s ease both 0.2s;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:28px;
+  animation:fadeUpSlow 1s ease both 0.2s;
 }
 .brand-eyebrow {
-  display:inline-flex;
-  align-items:center;
-  gap:18px;
-  font-family:'JetBrains Mono', monospace;
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:.24em;
-  text-transform:uppercase;
-  color:var(--ink);
-  animation:checkerFadeIn 0.9s cubic-bezier(.2,.8,.2,1) both 0.5s;
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--ink);
+  animation:checkerFadeIn 0.9s cubic-bezier(.2,.8,.2,1) both 0.5s;
 }
 .checker-flag {
-  display:inline-block;
-  width:42px;
-  height:26px;
-  background:
-    linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%),
-    linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%);
-  background-size:10px 10px;
-  background-position:0 0, 5px 5px;
-  background-color:#000;
-  animation:flagWave 3s ease-in-out infinite;
-  transform-origin:left center;
-  flex-shrink:0;
+  display:inline-block;
+  width:42px;
+  height:26px;
+  background:
+    linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%),
+    linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%);
+  background-size:10px 10px;
+  background-position:0 0, 5px 5px;
+  background-color:#000;
+  animation:flagWave 3s ease-in-out infinite;
+  transform-origin:left center;
+  flex-shrink:0;
 }
 .brand-right { text-align:right; animation:fadeUpSlow 1s ease both 0.7s; }
 .greeting {
-  font-family:'Playfair Display', serif;
-  font-style:italic;
-  font-size:15px;
-  color:var(--ink-2);
-  margin-bottom:4px;
+  font-family:'Playfair Display', serif;
+  font-style:italic;
+  font-size:15px;
+  color:var(--ink-2);
+  margin-bottom:4px;
 }
 .dateline {
-  font-family:'JetBrains Mono', monospace;
-  font-size:10px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:var(--ink-3);
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ink-3);
 }
 
 .title-wrap {
-  position:relative;
-  margin-bottom:28px;
-  padding-bottom:24px;
+  position:relative;
+  margin-bottom:28px;
+  padding-bottom:24px;
 }
 .hero-title {
-  font-family:'Playfair Display', serif;
-  font-weight:800;
-  line-height:0.95;
-  letter-spacing:-0.03em;
-  color:var(--ink);
+  font-family:'Playfair Display', serif;
+  font-weight:800;
+  line-height:0.95;
+  letter-spacing:-0.03em;
+  color:var(--ink);
 }
 .hero-title .line1,.hero-title .line2 {
-  display:block;
-  font-size:clamp(56px, 9vw, 126px);
-  line-height:1.1;
-  overflow:hidden;
-  padding-bottom:0.05em;
+  display:block;
+  font-size:clamp(56px, 9vw, 126px);
+  line-height:1.1;
+  overflow:hidden;
+  padding-bottom:0.05em;
 }
 .hero-title .line2 {
-  font-style:italic;
-  color:var(--bull-blue);
-  margin-top:-0.05em;
+  font-style:italic;
+  color:var(--bull-blue);
+  margin-top:-0.05em;
 }
 .hero-title .line1 span { display:inline-block; animation:maskRevealUp 1.1s cubic-bezier(.2,.9,.25,1) both 0.9s; }
 .hero-title .line2 span { display:inline-block; animation:maskRevealUp 1.1s cubic-bezier(.2,.9,.25,1) both 1.4s; }
 .title-underline {
-  position:absolute;
-  left:0;
-  bottom:0;
-  height:5px;
-  width:100%;
-  background:linear-gradient(90deg, var(--racing), var(--gold), var(--bull-blue));
-  transform:scaleX(0);
-  transform-origin:left;
-  animation:underlineDraw 1.2s cubic-bezier(.3,.9,.3,1) both 2.2s;
+  position:absolute;
+  left:0;
+  bottom:0;
+  height:5px;
+  width:100%;
+  background:linear-gradient(90deg, var(--racing), var(--gold), var(--bull-blue));
+  transform:scaleX(0);
+  transform-origin:left;
+  animation:underlineDraw 1.2s cubic-bezier(.3,.9,.3,1) both 2.2s;
 }
 
 .hero-sub {
-  font-family:'JetBrains Mono', monospace;
-  font-size:12px;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  color:var(--ink-2);
-  padding-top:20px;
-  border-top:1px solid var(--ink);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  animation:fadeUpSlow 1s ease both 2.8s;
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--ink-2);
+  padding-top:20px;
+  border-top:1px solid var(--ink);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  animation:fadeUpSlow 1s ease both 2.8s;
 }
 .live-badge {
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:8px 14px;
-  background:linear-gradient(90deg, var(--bull-blue), var(--racing));
-  color:#fff;
-  font-weight:700;
-  letter-spacing:.2em;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:8px 14px;
+  background:linear-gradient(90deg, var(--bull-blue), var(--racing));
+  color:#fff;
+  font-weight:700;
+  letter-spacing:.2em;
 }
 .live-badge::before {
-  content:'';
-  display:inline-block;
-  width:7px;
-  height:7px;
-  background:var(--gold);
-  border-radius:50%;
+  content:'';
+  display:inline-block;
+  width:7px;
+  height:7px;
+  background:var(--gold);
+  border-radius:50%;
 }
 
 .race-hero {
-  margin:0 auto;
-  max-width:1440px;
-  padding:0 36px;
-  background:var(--paper);
-  animation:fadeUpSlow 1.1s ease both 3.2s;
+  margin:0 auto;
+  max-width:1440px;
+  padding:0 36px;
+  background:var(--paper);
+  animation:fadeUpSlow 1.1s ease both 3.2s;
 }
 .race-block {
-  background:
-    radial-gradient(circle at 82% 14%, rgba(255,30,0,0.24), transparent 28%),
-    linear-gradient(135deg, var(--bull-navy), var(--carbon-2) 58%, #020412);
-  color:#fff;
-  padding:44px 48px 46px;
-  margin-top:16px;
-  position:relative;
-  overflow:hidden;
-  border-top:5px solid var(--racing);
+  background:
+    radial-gradient(circle at 82% 14%, rgba(255,30,0,0.24), transparent 28%),
+    linear-gradient(135deg, var(--bull-navy), var(--carbon-2) 58%, #020412);
+  color:#fff;
+  padding:44px 48px 46px;
+  margin-top:16px;
+  position:relative;
+  overflow:hidden;
+  border-top:5px solid var(--racing);
 }
 .race-block::before {
-  content:'';
-  position:absolute;
-  inset:0;
-  background:repeating-linear-gradient(135deg, rgba(255,255,255,0.026) 0 2px, transparent 2px 16px);
-  pointer-events:none;
-  z-index:0;
+  content:'';
+  position:absolute;
+  inset:0;
+  background:repeating-linear-gradient(135deg, rgba(255,255,255,0.026) 0 2px, transparent 2px 16px);
+  pointer-events:none;
+  z-index:0;
 }
 .race-block::after {
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  width:280px;
-  height:56px;
-  background:
-    linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%),
-    linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%);
-  background-size:14px 14px;
-  background-position:0 0, 7px 7px;
-  background-color:#000;
-  opacity:0.12;
-  z-index:0;
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  width:280px;
+  height:56px;
+  background:
+    linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%),
+    linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%);
+  background-size:14px 14px;
+  background-position:0 0, 7px 7px;
+  background-color:#000;
+  opacity:0.12;
+  z-index:0;
 }
 .race-grid {
-  display:grid;
-  grid-template-columns:1.3fr 1fr;
-  gap:48px;
-  position:relative;
-  z-index:1;
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:48px;
+  position:relative;
+  z-index:1;
 }
 .race-meta-row {
-  display:flex;
-  align-items:center;
-  gap:14px;
-  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:18px;
 }
 .race-round {
-  font-family:'JetBrains Mono', monospace;
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:var(--gold);
-  padding:7px 13px;
-  border:1px solid rgba(246,200,0,0.7);
-  background:rgba(246,200,0,0.12);
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--gold);
+  padding:7px 13px;
+  border:1px solid rgba(246,200,0,0.7);
+  background:rgba(246,200,0,0.12);
 }
 .race-flag-big { font-size:32px; animation:flagWave 2.8s ease-in-out infinite; }
 .race-name {
-  font-family:'Playfair Display', serif;
-  font-size:clamp(44px, 6vw, 76px);
-  font-weight:700;
-  line-height:0.92;
-  letter-spacing:-0.025em;
-  color:#fff;
-  margin-bottom:16px;
+  font-family:'Playfair Display', serif;
+  font-size:clamp(44px, 6vw, 76px);
+  font-weight:700;
+  line-height:0.92;
+  letter-spacing:-0.025em;
+  color:#fff;
+  margin-bottom:16px;
 }
 .race-name em {
-  font-style:italic;
-  color:var(--racing-hot);
-  font-weight:500;
+  font-style:italic;
+  color:var(--racing-hot);
+  font-weight:500;
 }
 .race-circuit {
-  font-size:14px;
-  color:rgba(255,255,255,0.68);
-  margin-bottom:6px;
+  font-size:14px;
+  color:rgba(255,255,255,0.68);
+  margin-bottom:6px;
 }
 .race-circuit strong { color:#fff; font-weight:500; }
 .race-stats {
-  display:flex;
-  gap:36px;
-  margin-top:24px;
-  padding-top:22px;
-  border-top:1px solid rgba(255,255,255,0.15);
+  display:flex;
+  gap:36px;
+  margin-top:24px;
+  padding-top:22px;
+  border-top:1px solid rgba(255,255,255,0.15);
 }
 .race-stat { display:flex; flex-direction:column; }
 .race-stat-label {
-  font-family:'JetBrains Mono', monospace;
-  font-size:9px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:rgba(255,255,255,0.5);
-  margin-bottom:7px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:9px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.5);
+  margin-bottom:7px;
 }
 .race-stat-val {
-  font-family:'JetBrains Mono', monospace;
-  font-size:15px;
-  font-weight:500;
-  color:#fff;
+  font-family:'JetBrains Mono', monospace;
+  font-size:15px;
+  font-weight:500;
+  color:#fff;
 }
 .race-right { display:flex; flex-direction:column; justify-content:center; }
 .countdown-label {
-  font-family:'JetBrains Mono', monospace;
-  font-size:10px;
-  letter-spacing:.26em;
-  text-transform:uppercase;
-  color:rgba(255,255,255,0.6);
-  margin-bottom:20px;
-  display:flex;
-  align-items:center;
-  gap:10px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.6);
+  margin-bottom:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 .countdown-label::before {
-  content:'';
-  width:7px;
-  height:7px;
-  background:var(--gold);
-  border-radius:50%;
-  box-shadow:0 0 14px rgba(246,200,0,0.6);
+  content:'';
+  width:7px;
+  height:7px;
+  background:var(--gold);
+  border-radius:50%;
+  box-shadow:0 0 14px rgba(246,200,0,0.6);
 }
 .countdown {
-  display:grid;
-  grid-template-columns:repeat(4, 1fr);
-  gap:8px;
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:8px;
 }
 .cd-cell {
-  background:rgba(255,255,255,0.055);
-  padding:20px 8px 16px;
-  text-align:center;
-  border:1px solid rgba(255,255,255,0.1);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);
+  background:rgba(255,255,255,0.055);
+  padding:20px 8px 16px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.1);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);
 }
 .cd-num {
-  font-family:'JetBrains Mono', monospace;
-  font-size:clamp(36px, 4.2vw, 48px);
-  font-weight:700;
-  color:#fff;
-  line-height:1;
-  letter-spacing:-0.03em;
-  font-variant-numeric:tabular-nums;
-  animation:numSettle 0.65s ease both 3.8s;
+  font-family:'JetBrains Mono', monospace;
+  font-size:clamp(36px, 4.2vw, 48px);
+  font-weight:700;
+  color:#fff;
+  line-height:1;
+  letter-spacing:-0.03em;
+  font-variant-numeric:tabular-nums;
+  animation:numSettle 0.65s ease both 3.8s;
 }
 .cd-cell:nth-child(2) .cd-num { animation-delay:3.9s; }
 .cd-cell:nth-child(3) .cd-num { animation-delay:4s; }
 .cd-cell:nth-child(4) .cd-num { animation-delay:4.1s; }
 .cd-label {
-  font-family:'JetBrains Mono', monospace;
-  font-size:9px;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:rgba(255,255,255,0.55);
-  margin-top:12px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:9px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.55);
+  margin-top:12px;
 }
 
 .cal-section {
-  max-width:1440px;
-  margin:0 auto;
-  padding:48px 36px 0;
-  animation:fadeUpSlow 1s ease both 3.5s;
+  max-width:1440px;
+  margin:0 auto;
+  padding:48px 36px 0;
+  animation:fadeUpSlow 1s ease both 3.5s;
 }
 .cal-head {
-  display:flex;
-  align-items:baseline;
-  justify-content:space-between;
-  margin-bottom:20px;
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  margin-bottom:20px;
 }
 .cal-title {
-  font-family:'Playfair Display', serif;
-  font-size:28px;
-  font-weight:500;
-  letter-spacing:-0.015em;
-  color:var(--ink);
+  font-family:'Playfair Display', serif;
+  font-size:28px;
+  font-weight:500;
+  letter-spacing:-0.015em;
+  color:var(--ink);
 }
 .cal-title em { font-style:italic; color:var(--bull-blue); font-weight:700; }
 .cal-meta {
-  font-family:'JetBrains Mono', monospace;
-  font-size:10px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:var(--ink-3);
-  font-weight:500;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  font-weight:500;
 }
 .cal-strip-wrap {
-  position:relative;
-  overflow:hidden;
-  border:2px solid var(--ink);
-  background:var(--paper-2);
+  position:relative;
+  overflow:hidden;
+  border:2px solid var(--ink);
+  background:var(--paper-2);
 }
 .cal-progress-track {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:3px;
-  background:rgba(0,0,0,0.08);
-  z-index:3;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:rgba(0,0,0,0.08);
+  z-index:3;
 }
 .cal-progress-fill {
-  height:100%;
-  background:linear-gradient(90deg, var(--bull-blue), var(--racing), var(--gold));
-  transform-origin:left;
-  animation:barGrowSlow 1.6s cubic-bezier(.3,.9,.3,1) both 4.2s;
+  height:100%;
+  background:linear-gradient(90deg, var(--bull-blue), var(--racing), var(--gold));
+  transform-origin:left;
+  animation:barGrowSlow 1.6s cubic-bezier(.3,.9,.3,1) both 4.2s;
 }
 .cal-strip {
-  display:grid;
-  grid-auto-flow:column;
-  grid-auto-columns:minmax(132px, 1fr);
-  overflow-x:auto;
-  scrollbar-width:thin;
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:minmax(132px, 1fr);
+  overflow-x:auto;
+  scrollbar-width:thin;
 }
 .cal-strip::-webkit-scrollbar { height:4px; }
 .cal-strip::-webkit-scrollbar-thumb { background:var(--ink); }
 .cal-round {
-  padding:20px 16px 18px;
-  border-right:1px solid var(--rule-light);
-  position:relative;
-  background:var(--paper);
-  transition:background 0.25s, transform 0.25s;
-  min-height:148px;
-  display:flex;
-  flex-direction:column;
-  cursor:default;
+  padding:20px 16px 18px;
+  border-right:1px solid var(--rule-light);
+  position:relative;
+  background:var(--paper);
+  transition:background 0.25s, transform 0.25s;
+  min-height:148px;
+  display:flex;
+  flex-direction:column;
+  cursor:default;
 }
 .cal-round:hover { background:var(--paper-3); }
 .cal-round:last-child { border-right:none; }
 .cal-round.done { background:var(--paper-2); }
 .cal-round.done .cal-flag-name { color:var(--ink-2); }
 .cal-round.next {
-  background:linear-gradient(150deg, var(--bull-navy), var(--bull-blue));
-  color:#fff;
+  background:linear-gradient(150deg, var(--bull-navy), var(--bull-blue));
+  color:#fff;
 }
 .cal-round.next .cal-rnum { color:var(--gold); font-weight:700; }
 .cal-round.next .cal-country { color:rgba(255,255,255,0.58); }
 .cal-round.next .cal-flag-name { color:#fff; }
 .cal-round.next .cal-date { color:rgba(255,255,255,0.75); }
 .cal-rnum {
-  font-family:'JetBrains Mono', monospace;
-  font-size:10px;
-  letter-spacing:.14em;
-  color:var(--ink-3);
-  margin-bottom:12px;
-  font-weight:600;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  letter-spacing:.14em;
+  color:var(--ink-3);
+  margin-bottom:12px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 .cal-status-dot {
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:var(--gold);
-  display:inline-block;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--gold);
+  display:inline-block;
 }
 .cal-round:not(.done):not(.next) .cal-status-dot { display:none; }
 .cal-round.next .cal-status-dot {
-  background:var(--racing);
-  box-shadow:0 0 12px rgba(225,6,0,0.55);
+  background:var(--racing);
+  box-shadow:0 0 12px rgba(225,6,0,0.55);
 }
 .cal-flag-emoji { font-size:24px; line-height:1; margin-bottom:8px; }
 .cal-country {
-  font-family:'JetBrains Mono', monospace;
-  font-size:9px;
-  color:var(--ink-3);
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  margin-bottom:4px;
-  font-weight:500;
+  font-family:'JetBrains Mono', monospace;
+  font-size:9px;
+  color:var(--ink-3);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:4px;
+  font-weight:500;
 }
 .cal-flag-name {
-  font-family:'Playfair Display', serif;
-  font-size:17px;
-  font-weight:500;
-  color:var(--ink);
-  letter-spacing:-.01em;
-  line-height:1.1;
-  margin-bottom:auto;
+  font-family:'Playfair Display', serif;
+  font-size:17px;
+  font-weight:500;
+  color:var(--ink);
+  letter-spacing:-.01em;
+  line-height:1.1;
+  margin-bottom:auto;
 }
 .cal-date {
-  font-family:'JetBrains Mono', monospace;
-  font-size:11px;
-  color:var(--ink-2);
-  letter-spacing:.04em;
-  margin-top:14px;
-  font-weight:500;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  color:var(--ink-2);
+  letter-spacing:.04em;
+  margin-top:14px;
+  font-weight:500;
 }
 .cal-winner {
-  font-family:'JetBrains Mono', monospace;
-  font-size:11px;
-  color:var(--gold);
-  margin-top:6px;
-  font-weight:600;
-  letter-spacing:.02em;
-  display:flex;
-  align-items:center;
-  gap:6px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  color:var(--gold);
+  margin-top:6px;
+  font-weight:600;
+  letter-spacing:.02em;
+  display:flex;
+  align-items:center;
+  gap:6px;
 }
 .cal-winner::before {
-  content:'';
-  display:inline-block;
-  width:10px;
-  height:10px;
-  background:var(--gold);
-  clip-path:polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  content:'';
+  display:inline-block;
+  width:10px;
+  height:10px;
+  background:var(--gold);
+  clip-path:polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
 .main-section {
-  max-width:1440px;
-  margin:0 auto;
-  padding:56px 36px 0;
+  max-width:1440px;
+  margin:0 auto;
+  padding:56px 36px 0;
 }
 .main-grid {
-  display:grid;
-  grid-template-columns:1.1fr 1fr 1fr;
-  border:2px solid var(--ink);
-  background:var(--paper);
+  display:grid;
+  grid-template-columns:1.1fr 1fr 1fr;
+  border:2px solid var(--ink);
+  background:var(--paper);
 }
 .col {
-  border-right:1px solid var(--rule-light);
-  display:flex;
-  flex-direction:column;
+  border-right:1px solid var(--rule-light);
+  display:flex;
+  flex-direction:column;
 }
 .col:last-child { border-right:none; }
 .col-head {
-  padding:22px 24px 20px;
-  border-bottom:2px solid var(--ink);
-  background:var(--paper);
-  position:sticky;
-  top:0;
-  z-index:5;
+  padding:22px 24px 20px;
+  border-bottom:2px solid var(--ink);
+  background:var(--paper);
+  position:sticky;
+  top:0;
+  z-index:5;
 }
 .col-num {
-  font-family:'JetBrains Mono', monospace;
-  font-size:9px;
-  color:var(--ink-3);
-  letter-spacing:.18em;
-  margin-bottom:7px;
-  font-weight:500;
+  font-family:'JetBrains Mono', monospace;
+  font-size:9px;
+  color:var(--ink-3);
+  letter-spacing:.18em;
+  margin-bottom:7px;
+  font-weight:500;
 }
 .col-name {
-  font-family:'Playfair Display', serif;
-  font-size:24px;
-  font-weight:700;
-  letter-spacing:-0.015em;
-  color:var(--ink);
-  line-height:1;
+  font-family:'Playfair Display', serif;
+  font-size:24px;
+  font-weight:700;
+  letter-spacing:-0.015em;
+  color:var(--ink);
+  line-height:1;
 }
 .col-name em { font-style:italic; color:var(--bull-blue); font-weight:500; }
 .col-sub {
-  font-family:'JetBrains Mono', monospace;
-  font-size:9px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:var(--ink-3);
-  margin-top:9px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:9px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  margin-top:9px;
 }
 
 .driver-row {
-  display:grid;
-  grid-template-columns:32px 1fr auto;
-  align-items:center;
-  gap:12px;
-  padding:14px 24px;
-  border-bottom:1px solid var(--rule-light);
-  position:relative;
-  transition:background 0.2s, transform 0.2s;
-  opacity:0;
-  animation:rowSlide 0.6s cubic-bezier(.25,.9,.3,1) both;
+  display:grid;
+  grid-template-columns:32px 1fr auto;
+  align-items:center;
+  gap:12px;
+  padding:14px 24px;
+  border-bottom:1px solid var(--rule-light);
+  position:relative;
+  transition:background 0.2s, transform 0.2s;
+  opacity:0;
+  animation:rowSlide 0.6s cubic-bezier(.25,.9,.3,1) both;
 }
 .driver-row::before {
-  content:'';
-  position:absolute;
-  left:0;
-  top:0;
-  bottom:0;
-  width:4px;
-  background:var(--team-color, var(--ink-3));
+  content:'';
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:var(--team-color, var(--ink-3));
 }
 .driver-row:hover { background:var(--paper-2); transform:translateX(3px); }
 .driver-row.leader { background:linear-gradient(90deg, rgba(212,160,23,0.12) 0%, transparent 60%); }
 .driver-row.favorite {
-  background:linear-gradient(90deg, rgba(6,50,160,0.16), rgba(225,6,0,0.08) 56%, transparent);
+  background:linear-gradient(90deg, rgba(6,50,160,0.16), rgba(225,6,0,0.08) 56%, transparent);
 }
 .driver-row.favorite::after {
-  content:'FAV';
-  position:absolute;
-  right:90px;
-  top:50%;
-  transform:translateY(-50%);
-  font-family:'JetBrains Mono', monospace;
-  font-size:8px;
-  font-weight:700;
-  color:var(--racing);
-  letter-spacing:.1em;
-  background:rgba(225,6,0,0.12);
-  padding:2px 6px;
+  content:'FAV';
+  position:absolute;
+  right:90px;
+  top:50%;
+  transform:translateY(-50%);
+  font-family:'JetBrains Mono', monospace;
+  font-size:8px;
+  font-weight:700;
+  color:var(--racing);
+  letter-spacing:.1em;
+  background:rgba(225,6,0,0.12);
+  padding:2px 6px;
 }
 .driver-row.leader::after {
-  content:'P1';
-  position:absolute;
-  right:90px;
-  top:50%;
-  transform:translateY(-50%);
-  font-family:'JetBrains Mono', monospace;
-  font-size:8px;
-  font-weight:700;
-  color:var(--gold);
-  letter-spacing:.1em;
-  background:rgba(212,160,23,0.15);
-  padding:2px 6px;
+  content:'P1';
+  position:absolute;
+  right:90px;
+  top:50%;
+  transform:translateY(-50%);
+  font-family:'JetBrains Mono', monospace;
+  font-size:8px;
+  font-weight:700;
+  color:var(--gold);
+  letter-spacing:.1em;
+  background:rgba(212,160,23,0.15);
+  padding:2px 6px;
 }
 .driver-pos {
-  font-family:'JetBrains Mono', monospace;
-  font-size:13px;
-  font-weight:700;
-  color:var(--ink-2);
-  font-variant-numeric:tabular-nums;
+  font-family:'JetBrains Mono', monospace;
+  font-size:13px;
+  font-weight:700;
+  color:var(--ink-2);
+  font-variant-numeric:tabular-nums;
 }
 .driver-info { display:flex; flex-direction:column; }
 .driver-line { display:flex; align-items:center; gap:8px; }
 .driver-name {
-  font-family:'Playfair Display', serif;
-  font-size:16px;
-  font-weight:500;
-  color:var(--ink);
-  letter-spacing:-0.01em;
+  font-family:'Playfair Display', serif;
+  font-size:16px;
+  font-weight:500;
+  color:var(--ink);
+  letter-spacing:-0.01em;
 }
 .driver-code {
-  font-family:'JetBrains Mono', monospace;
-  font-size:9px;
-  font-weight:700;
-  color:#fff;
-  background:var(--team-color, var(--ink-3));
-  padding:3px 6px;
-  letter-spacing:.06em;
+  font-family:'JetBrains Mono', monospace;
+  font-size:9px;
+  font-weight:700;
+  color:#fff;
+  background:var(--team-color, var(--ink-3));
+  padding:3px 6px;
+  letter-spacing:.06em;
 }
 .driver-team {
-  font-size:11px;
-  color:var(--ink-3);
-  margin-top:2px;
-  font-weight:400;
+  font-size:11px;
+  color:var(--ink-3);
+  margin-top:2px;
+  font-weight:400;
 }
 .driver-team .gap {
-  color:var(--ink-2);
-  font-family:'JetBrains Mono', monospace;
-  font-size:10px;
-  font-weight:500;
+  color:var(--ink-2);
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  font-weight:500;
 }
 .driver-pts-wrap { text-align:right; }
 .driver-pts {
-  font-family:'JetBrains Mono', monospace;
-  font-size:20px;
-  font-weight:700;
-  color:var(--ink);
-  font-variant-numeric:tabular-nums;
-  line-height:1;
+  font-family:'JetBrains Mono', monospace;
+  font-size:20px;
+  font-weight:700;
+  color:var(--ink);
+  font-variant-numeric:tabular-nums;
+  line-height:1;
 }
 .driver-pts-sub {
-  font-family:'JetBrains Mono', monospace;
-  font-size:8px;
-  color:var(--ink-3);
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  margin-top:3px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:8px;
+  color:var(--ink-3);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-top:3px;
 }
 
 .con-row {
-  padding:15px 24px;
-  border-bottom:1px solid var(--rule-light);
-  position:relative;
-  transition:background 0.2s;
-  opacity:0;
-  animation:rowSlide 0.6s cubic-bezier(.25,.9,.3,1) both;
+  padding:15px 24px;
+  border-bottom:1px solid var(--rule-light);
+  position:relative;
+  transition:background 0.2s;
+  opacity:0;
+  animation:rowSlide 0.6s cubic-bezier(.25,.9,.3,1) both;
 }
 .con-row:hover { background:var(--paper-2); }
 .con-row.favorite { background:linear-gradient(90deg, rgba(6,50,160,0.14), transparent 70%); }
 .con-row::before {
-  content:'';
-  position:absolute;
-  left:0;
-  top:0;
-  bottom:0;
-  width:4px;
-  background:var(--team-color);
+  content:'';
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:var(--team-color);
 }
 .con-top {
-  display:grid;
-  grid-template-columns:26px 1fr auto;
-  align-items:center;
-  gap:12px;
-  margin-bottom:9px;
+  display:grid;
+  grid-template-columns:26px 1fr auto;
+  align-items:center;
+  gap:12px;
+  margin-bottom:9px;
 }
 .con-pos {
-  font-family:'JetBrains Mono', monospace;
-  font-size:12px;
-  font-weight:700;
-  color:var(--ink-2);
-  font-variant-numeric:tabular-nums;
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  font-weight:700;
+  color:var(--ink-2);
+  font-variant-numeric:tabular-nums;
 }
 .con-name {
-  font-family:'Playfair Display', serif;
-  font-size:15px;
-  font-weight:500;
-  color:var(--ink);
-  letter-spacing:-0.01em;
+  font-family:'Playfair Display', serif;
+  font-size:15px;
+  font-weight:500;
+  color:var(--ink);
+  letter-spacing:-0.01em;
 }
 .con-engine { font-size:10px; color:var(--ink-3); margin-top:2px; }
 .con-pts {
-  font-family:'JetBrains Mono', monospace;
-  font-size:18px;
-  font-weight:700;
-  color:var(--ink);
-  font-variant-numeric:tabular-nums;
+  font-family:'JetBrains Mono', monospace;
+  font-size:18px;
+  font-weight:700;
+  color:var(--ink);
+  font-variant-numeric:tabular-nums;
 }
 .con-bar {
-  height:4px;
-  background:var(--paper-3);
-  margin-top:6px;
-  position:relative;
-  overflow:hidden;
+  height:4px;
+  background:var(--paper-3);
+  margin-top:6px;
+  position:relative;
+  overflow:hidden;
 }
 .con-bar-fill {
-  height:100%;
-  background:var(--team-color);
-  transform-origin:left;
-  animation:barGrowSlow 1.4s cubic-bezier(.3,.9,.3,1) both;
+  height:100%;
+  background:var(--team-color);
+  transform-origin:left;
+  animation:barGrowSlow 1.4s cubic-bezier(.3,.9,.3,1) both;
 }
 
 .podium-block { padding:22px 24px; border-bottom:1px solid var(--rule-light); }
 .podium-head {
-  font-family:'JetBrains Mono', monospace;
-  font-size:10px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:var(--ink-3);
-  margin-bottom:14px;
-  font-weight:500;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  margin-bottom:14px;
+  font-weight:500;
 }
 .podium-list { display:flex; flex-direction:column; gap:6px; }
 .pod-row {
-  display:grid;
-  grid-template-columns:32px 1fr auto;
-  align-items:center;
-  gap:10px;
-  padding:10px 12px;
-  position:relative;
-  transition:transform 0.2s;
+  display:grid;
+  grid-template-columns:32px 1fr auto;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  position:relative;
+  transition:transform 0.2s;
 }
 .pod-row:hover { transform:translateX(3px); }
 .pod-row.p1 { background:linear-gradient(90deg, rgba(212,160,23,0.15), transparent); }
 .pod-row.p2 { background:linear-gradient(90deg, rgba(160,160,160,0.12), transparent); }
 .pod-row.p3 { background:linear-gradient(90deg, rgba(176,108,48,0.12), transparent); }
 .pod-badge {
-  font-family:'JetBrains Mono', monospace;
-  font-size:11px;
-  font-weight:700;
-  text-align:center;
-  padding:6px 0;
-  color:#fff;
-  letter-spacing:.04em;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  font-weight:700;
+  text-align:center;
+  padding:6px 0;
+  color:#fff;
+  letter-spacing:.04em;
 }
 .p1 .pod-badge { background:#d4a017; }
 .p2 .pod-badge { background:#a0a0a0; }
 .p3 .pod-badge { background:#b06c30; }
 .pod-driver-name {
-  font-family:'Playfair Display', serif;
-  font-size:15px;
-  font-weight:500;
-  color:var(--ink);
-  letter-spacing:-0.01em;
-  line-height:1;
+  font-family:'Playfair Display', serif;
+  font-size:15px;
+  font-weight:500;
+  color:var(--ink);
+  letter-spacing:-0.01em;
+  line-height:1;
 }
 .pod-driver-team { font-size:10px; color:var(--ink-3); margin-top:3px; }
 .pod-time {
-  font-family:'JetBrains Mono', monospace;
-  font-size:11px;
-  color:var(--ink-2);
-  font-weight:500;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  color:var(--ink-2);
+  font-weight:500;
 }
 
 .news-block { padding:0; }
 .news-item {
-  padding:16px 24px;
-  border-bottom:1px solid var(--rule-light);
-  position:relative;
-  transition:background 0.2s, padding-left 0.2s;
+  padding:16px 24px;
+  border-bottom:1px solid var(--rule-light);
+  position:relative;
+  transition:background 0.2s, padding-left 0.2s;
 }
 .news-item:last-child { border-bottom:none; }
 .news-item::before {
-  content:'';
-  position:absolute;
-  left:0;
-  top:0;
-  bottom:0;
-  width:0;
-  background:var(--bull-blue);
-  transition:width 0.25s;
+  content:'';
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:0;
+  background:var(--bull-blue);
+  transition:width 0.25s;
 }
 .news-item:hover { background:var(--paper-2); padding-left:28px; }
 .news-item:hover::before { width:4px; }
 .news-meta {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:9px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:9px;
 }
 .news-kicker {
-  font-family:'JetBrains Mono', monospace;
-  font-size:8px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  padding:3px 7px;
-  background:var(--bull-blue);
-  color:#fff;
-  font-weight:600;
+  font-family:'JetBrains Mono', monospace;
+  font-size:8px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  padding:3px 7px;
+  background:var(--bull-blue);
+  color:#fff;
+  font-weight:600;
 }
 .news-item.neutral .news-kicker { background:var(--ink); }
 .news-num {
-  font-family:'JetBrains Mono', monospace;
-  font-size:9px;
-  color:var(--ink-3);
-  font-weight:500;
+  font-family:'JetBrains Mono', monospace;
+  font-size:9px;
+  color:var(--ink-3);
+  font-weight:500;
 }
 .news-headline {
-  font-family:'Playfair Display', serif;
-  font-size:15px;
-  font-weight:500;
-  line-height:1.35;
-  color:var(--ink);
-  letter-spacing:-0.01em;
-  margin-bottom:7px;
+  font-family:'Playfair Display', serif;
+  font-size:15px;
+  font-weight:500;
+  line-height:1.35;
+  color:var(--ink);
+  letter-spacing:-0.01em;
+  margin-bottom:7px;
 }
 .news-item.lead .news-headline { font-size:17px; font-weight:700; }
 .news-body { font-size:12px; line-height:1.6; color:var(--ink-2); }
 
 .stats-ribbon { max-width:1440px; margin:0 auto; padding:48px 36px 0; }
 .stats-grid {
-  display:grid;
-  grid-template-columns:repeat(4, 1fr);
-  border:2px solid var(--ink);
-  background:linear-gradient(135deg, var(--bull-navy), var(--carbon-2));
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  border:2px solid var(--ink);
+  background:linear-gradient(135deg, var(--bull-navy), var(--carbon-2));
 }
 .stat {
-  padding:28px 24px 24px;
-  border-right:1px solid rgba(255,255,255,0.1);
-  color:#fff;
-  position:relative;
-  overflow:hidden;
-  transition:background 0.3s;
+  padding:28px 24px 24px;
+  border-right:1px solid rgba(255,255,255,0.1);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+  transition:background 0.3s;
 }
 .stat:last-child { border-right:none; }
 .stat:hover { background:rgba(255,255,255,0.04); }
 .stat::after {
-  content:'';
-  position:absolute;
-  bottom:0;
-  left:0;
-  height:3px;
-  width:0;
-  background:linear-gradient(90deg, var(--racing), var(--gold));
-  transition:width 0.5s ease;
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  height:3px;
+  width:0;
+  background:linear-gradient(90deg, var(--racing), var(--gold));
+  transition:width 0.5s ease;
 }
 .stat:hover::after { width:100%; }
 .stat-label {
-  font-family:'JetBrains Mono', monospace;
-  font-size:9px;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:rgba(255,255,255,0.55);
-  margin-bottom:13px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:9px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.55);
+  margin-bottom:13px;
 }
 .stat-big {
-  font-family:'Playfair Display', serif;
-  font-size:clamp(28px, 3vw, 38px);
-  font-weight:700;
-  color:#fff;
-  line-height:1;
-  letter-spacing:-0.02em;
-  margin-bottom:9px;
+  font-family:'Playfair Display', serif;
+  font-size:clamp(28px, 3vw, 38px);
+  font-weight:700;
+  color:#fff;
+  line-height:1;
+  letter-spacing:-0.02em;
+  margin-bottom:9px;
 }
 .stat-big em { font-style:italic; color:var(--gold); font-weight:500; }
 .stat-sub { font-size:12px; color:rgba(255,255,255,0.58); font-weight:400; }
 
 .footer-wrap { max-width:1440px; margin:0 auto; padding:32px 36px 40px; }
 .footer {
-  border-top:1px solid var(--ink);
-  padding-top:22px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  border-top:1px solid var(--ink);
+  padding-top:22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 .f-note {
-  font-family:'JetBrains Mono', monospace;
-  font-size:9px;
-  color:var(--ink-3);
-  letter-spacing:.18em;
-  text-transform:uppercase;
+  font-family:'JetBrains Mono', monospace;
+  font-size:9px;
+  color:var(--ink-3);
+  letter-spacing:.18em;
+  text-transform:uppercase;
 }
 .f-dot {
-  display:inline-block;
-  width:4px;
-  height:4px;
-  background:var(--racing);
-  vertical-align:middle;
-  margin:0 8px;
-  border-radius:50%;
-  position:relative;
-  top:-2px;
+  display:inline-block;
+  width:4px;
+  height:4px;
+  background:var(--racing);
+  vertical-align:middle;
+  margin:0 8px;
+  border-radius:50%;
+  position:relative;
+  top:-2px;
 }
 .f-brand {
-  font-family:'Playfair Display', serif;
-  font-size:15px;
-  font-style:italic;
-  color:var(--ink-2);
+  font-family:'Playfair Display', serif;
+  font-size:15px;
+  font-style:italic;
+  color:var(--ink-2);
 }
 .f-brand em { color:var(--bull-blue); font-weight:500; }
 .f-colophon-row {
-  max-width:1440px;
-  margin:20px auto 0;
-  padding-top:14px;
-  border-top:1px dashed var(--rule-light);
-  display:flex;
-  justify-content:center;
+  max-width:1440px;
+  margin:20px auto 0;
+  padding-top:14px;
+  border-top:1px dashed var(--rule-light);
+  display:flex;
+  justify-content:center;
 }
 .f-colophon-btn {
-  background:transparent;
-  border:0;
-  color:var(--ink-3);
-  font-family:'JetBrains Mono', monospace;
-  font-size:9.5px;
-  font-weight:500;
-  letter-spacing:0.24em;
-  text-transform:uppercase;
-  padding:6px 10px;
-  cursor:pointer;
-  border-bottom:1px dashed rgba(10,10,10,0.22);
-  transition:color 0.2s ease, border-color 0.2s ease;
+  background:transparent;
+  border:0;
+  color:var(--ink-3);
+  font-family:'JetBrains Mono', monospace;
+  font-size:9.5px;
+  font-weight:500;
+  letter-spacing:0.24em;
+  text-transform:uppercase;
+  padding:6px 10px;
+  cursor:pointer;
+  border-bottom:1px dashed rgba(10,10,10,0.22);
+  transition:color 0.2s ease, border-color 0.2s ease;
 }
 .f-colophon-btn:hover,.f-colophon-btn:focus-visible {
-  color:var(--bull-blue);
-  border-bottom-color:var(--bull-blue);
-  outline:none;
+  color:var(--bull-blue);
+  border-bottom-color:var(--bull-blue);
+  outline:none;
 }
 
 .colophon-modal {
-  position:fixed;
-  inset:0;
-  z-index:9500;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:24px;
-  opacity:0;
-  pointer-events:none;
-  transition:opacity 0.28s ease;
+  position:fixed;
+  inset:0;
+  z-index:9500;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 0.28s ease;
 }
 .colophon-modal.open { opacity:1; pointer-events:auto; }
 .colophon-modal[hidden] { display:none; }
 body.colo-open { overflow:hidden; }
 .colo-backdrop {
-  position:absolute;
-  inset:0;
-  background:rgba(10,10,10,0.72);
-  backdrop-filter:blur(4px);
-  -webkit-backdrop-filter:blur(4px);
+  position:absolute;
+  inset:0;
+  background:rgba(10,10,10,0.72);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
 }
 .colo-card {
-  position:relative;
-  width:min(620px, 100%);
-  max-height:min(88vh, 880px);
-  display:flex;
-  flex-direction:column;
-  background:var(--paper);
-  color:var(--ink);
-  border:2px solid var(--ink);
-  overflow:hidden;
-  transform:translateY(14px) scale(0.985);
-  transition:transform 0.32s ease;
+  position:relative;
+  width:min(620px, 100%);
+  max-height:min(88vh, 880px);
+  display:flex;
+  flex-direction:column;
+  background:var(--paper);
+  color:var(--ink);
+  border:2px solid var(--ink);
+  overflow:hidden;
+  transform:translateY(14px) scale(0.985);
+  transition:transform 0.32s ease;
 }
 .colophon-modal.open .colo-card { transform:translateY(0) scale(1); }
 
 .colo-close {
-  position:absolute;
-  top:14px;
-  right:14px;
-  width:32px;
-  height:32px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:transparent;
-  border:1px solid rgba(10,10,10,0.18);
-  color:var(--ink-2);
-  font-size:15px;
-  cursor:pointer;
-  transition:background 0.2s ease, color 0.2s ease;
-  z-index:3;
+  position:absolute;
+  top:14px;
+  right:14px;
+  width:32px;
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  border:1px solid rgba(10,10,10,0.18);
+  color:var(--ink-2);
+  font-size:15px;
+  cursor:pointer;
+  transition:background 0.2s ease, color 0.2s ease;
+  z-index:3;
 }
 .colo-close:hover { background:var(--carbon); color:var(--paper); border-color:var(--carbon); }
 .colo-scroll { overflow-y:auto; padding:32px 30px 24px; }
 .colo-head { margin-bottom:12px; }
 .colo-eyebrow {
-  font-family:'JetBrains Mono', monospace;
-  font-size:10px;
-  font-weight:600;
-  letter-spacing:0.3em;
-  text-transform:uppercase;
-  color:var(--bull-blue);
-  margin-bottom:8px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color:var(--bull-blue);
+  margin-bottom:8px;
 }
 .colo-title {
-  font-family:'Playfair Display', serif;
-  font-size:42px;
-  font-weight:500;
-  line-height:1.02;
-  margin-bottom:8px;
+  font-family:'Playfair Display', serif;
+  font-size:42px;
+  font-weight:500;
+  line-height:1.02;
+  margin-bottom:8px;
 }
 .colo-title em { color:var(--bull-blue); font-style:italic; font-weight:400; }
 .colo-sub {
-  font-family:'Playfair Display', serif;
-  font-style:italic;
-  font-size:15px;
-  color:var(--ink-2);
-  line-height:1.4;
+  font-family:'Playfair Display', serif;
+  font-style:italic;
+  font-size:15px;
+  color:var(--ink-2);
+  line-height:1.4;
 }
 .colo-rule {
-  height:0;
-  border-top:1px solid var(--ink);
-  margin:20px 0;
-  position:relative;
+  height:0;
+  border-top:1px solid var(--ink);
+  margin:20px 0;
+  position:relative;
 }
 .colo-rule::after {
-  content:'◆';
-  position:absolute;
-  top:-10px;
-  left:50%;
-  transform:translateX(-50%);
-  background:transparent;
-  padding:0 10px;
-  font-size:10px;
-  color:var(--bull-blue);
+  content:'◆';
+  position:absolute;
+  top:-10px;
+  left:50%;
+  transform:translateX(-50%);
+  background:transparent;
+  padding:0 10px;
+  font-size:10px;
+  color:var(--bull-blue);
 }
 .colo-author-bio {
-  font-size:14px;
-  line-height:1.6;
-  color:var(--ink-2);
-  margin-bottom:14px;
-  max-width:54ch;
+  font-size:14px;
+  line-height:1.6;
+  color:var(--ink-2);
+  margin-bottom:14px;
+  max-width:54ch;
 }
 .colo-links { display:flex; flex-wrap:wrap; gap:8px; }
 .colo-btn {
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  padding:8px 14px;
-  font-family:'JetBrains Mono', monospace;
-  font-size:10px;
-  font-weight:600;
-  letter-spacing:0.2em;
-  text-transform:uppercase;
-  text-decoration:none;
-  background:transparent;
-  color:var(--ink);
-  border:1px solid var(--ink);
-  transition:background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:8px 14px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  text-decoration:none;
+  background:transparent;
+  color:var(--ink);
+  border:1px solid var(--ink);
+  transition:background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 .colo-btn:hover {
-  background:var(--ink);
-  color:var(--paper);
-  transform:translateY(-1px);
+  background:var(--ink);
+  color:var(--paper);
+  transform:translateY(-1px);
 }
 .colo-arr { font-size:13px; letter-spacing:0; }
 .colo-disclaimer {
-  font-size:11.5px;
-  line-height:1.6;
-  color:var(--ink-3);
-  letter-spacing:0.01em;
-  padding-top:4px;
+  font-size:11.5px;
+  line-height:1.6;
+  color:var(--ink-3);
+  letter-spacing:0.01em;
+  padding-top:4px;
 }
 
 @media (max-width:980px) {
-  .hero,.race-hero,.cal-section,.main-section,.stats-ribbon,.footer-wrap { padding-left:20px; padding-right:20px; }
-  .hero { padding-top:36px; }
-  .hero-top { flex-direction:column; gap:18px; align-items:flex-start; }
-  .brand-right { text-align:left; }
-  .hero-title .line1,.hero-title .line2 { font-size:clamp(46px, 14vw, 84px); }
-  .race-block { padding:30px 24px 32px; }
-  .race-grid { grid-template-columns:1fr; gap:32px; }
-  .race-name { font-size:clamp(34px, 8vw, 52px); }
-  .race-block::after { width:180px; height:40px; }
-  .main-grid { grid-template-columns:1fr; }
-  .col { border-right:none; border-bottom:1px solid var(--rule-light); }
-  .col:last-child { border-bottom:none; }
-  .col-head { position:relative; top:auto; }
-  .stats-grid { grid-template-columns:1fr 1fr; }
-  .stat:nth-child(2) { border-right:none; }
-  .stat:nth-child(3),.stat:nth-child(4) { border-top:1px solid rgba(255,255,255,0.1); }
-  .stat:nth-child(4) { border-right:none; }
-  .driver-row.leader::after,.driver-row.favorite::after { display:none; }
-  .hero-sub { flex-direction:column; align-items:flex-start; gap:14px; }
+  .hero,.race-hero,.cal-section,.main-section,.stats-ribbon,.footer-wrap { padding-left:20px; padding-right:20px; }
+  .hero { padding-top:36px; }
+  .hero-top { flex-direction:column; gap:18px; align-items:flex-start; }
+  .brand-right { text-align:left; }
+  .hero-title .line1,.hero-title .line2 { font-size:clamp(46px, 14vw, 84px); }
+  .race-block { padding:30px 24px 32px; }
+  .race-grid { grid-template-columns:1fr; gap:32px; }
+  .race-name { font-size:clamp(34px, 8vw, 52px); }
+  .race-block::after { width:180px; height:40px; }
+  .main-grid { grid-template-columns:1fr; }
+  .col { border-right:none; border-bottom:1px solid var(--rule-light); }
+  .col:last-child { border-bottom:none; }
+  .col-head { position:relative; top:auto; }
+  .stats-grid { grid-template-columns:1fr 1fr; }
+  .stat:nth-child(2) { border-right:none; }
+  .stat:nth-child(3),.stat:nth-child(4) { border-top:1px solid rgba(255,255,255,0.1); }
+  .stat:nth-child(4) { border-right:none; }
+  .driver-row.leader::after,.driver-row.favorite::after { display:none; }
+  .hero-sub { flex-direction:column; align-items:flex-start; gap:14px; }
 }
 @media (max-width:540px) {
-  .cd-num { font-size:32px; }
-  .countdown { gap:6px; }
-  .cd-cell { padding:16px 6px 12px; }
-  .driver-name { font-size:14px; }
-  .driver-pts { font-size:17px; }
-  .cal-flag-name { font-size:15px; }
+  .cd-num { font-size:32px; }
+  .countdown { gap:6px; }
+  .cd-cell { padding:16px 6px 12px; }
+  .driver-name { font-size:14px; }
+  .driver-pts { font-size:17px; }
+  .cal-flag-name { font-size:15px; }
 }
 </style>
 </head>
 
 <body>
 <div class="ticker-wrap">
-  <div class="ticker-track" id="tkTrack"></div>
+  <div class="ticker-track" id="tkTrack"></div>
 </div>
 
 <section class="hero">
-  <span class="speed-line"></span>
-  <span class="speed-line"></span>
-  <span class="speed-line"></span>
+  <span class="speed-line"></span>
+  <span class="speed-line"></span>
+  <span class="speed-line"></span>
 
-  <div class="hero-top">
-    <div class="brand-eyebrow">
-      <span class="checker-flag"></span>
-      <span>Personal Edition · F1 2026</span>
-    </div>
-    <div class="brand-right">
-      <div class="greeting" id="greeting">Good morning, Harshvardhan Bohra</div>
-      <div class="dateline" id="dateline"></div>
-    </div>
-  </div>
+  <div class="hero-top">
+    <div class="brand-eyebrow">
+      <span class="checker-flag"></span>
+      <span>Personal Edition · F1 2026</span>
+    </div>
+    <div class="brand-right">
+      <div class="greeting" id="greeting">Good morning, Harshvardhan Bohra</div>
+      <div class="dateline" id="dateline"></div>
+    </div>
+  </div>
 
-  <div class="title-wrap">
-    <h1 class="hero-title">
-      <span class="line1"><span>Harshvardhan's</span></span>
-      <span class="line2"><span>Pit Wall.</span></span>
-    </h1>
-  </div>
-  <div class="hero-sub">
-    <span class="live-badge">Red Bull Edition</span>
-    <span>Max Verstappen · Red Bull Racing</span>
-  </div>
+  <div class="title-wrap">
+    <h1 class="hero-title">
+      <span class="line1"><span>Harshvardhan's</span></span>
+      <span class="line2"><span>Pit Wall.</span></span>
+    </h1>
+  </div>
+  <div class="hero-sub">
+    <span class="live-badge">Red Bull Edition</span>
+    <span>Max Verstappen · Red Bull Racing</span>
+  </div>
 </section>
 
 <section class="race-hero">
-  <div class="race-block">
-    <div class="race-grid">
-      <div class="race-left">
-        <div class="race-meta-row">
-          <span class="race-round" id="raceRound">◆ Round 05 · Up Next</span>
-          <span class="race-flag-big" id="raceFlag">🇨🇦</span>
-        </div>
-        <h2 class="race-name"><span id="raceName">Canadian</span> <em>Grand Prix</em></h2>
-        <div class="race-circuit"><strong id="raceCircuit">Circuit Gilles Villeneuve</strong> · <span id="raceLocality">Montreal</span></div>
-        <div class="race-circuit" id="raceDistance">Round 5 of 23 · 70 laps</div>
+  <div class="race-block">
+    <div class="race-grid">
+      <div class="race-left">
+        <div class="race-meta-row">
+          <span class="race-round" id="raceRound">◆ Round 05 · Up Next</span>
+          <span class="race-flag-big" id="raceFlag">🇨🇦</span>
+        </div>
+        <h2 class="race-name"><span id="raceName">Canadian</span> <em>Grand Prix</em></h2>
+        <div class="race-circuit"><strong id="raceCircuit">Circuit Gilles Villeneuve</strong> · <span id="raceLocality">Montreal</span></div>
+        <div class="race-circuit" id="raceDistance">Round 5 of 23 · 70 laps</div>
 
-        <div class="race-stats">
-          <div class="race-stat">
-            <div class="race-stat-label">Favorite Driver</div>
-            <div class="race-stat-val">M. Verstappen</div>
-          </div>
-          <div class="race-stat">
-            <div class="race-stat-label">Favorite Team</div>
-            <div class="race-stat-val">Red Bull</div>
-          </div>
-          <div class="race-stat">
-            <div class="race-stat-label">Dates</div>
-            <div class="race-stat-val" id="raceDates">May 22 - 24</div>
-          </div>
-        </div>
-      </div>
+        <div class="race-stats">
+          <div class="race-stat">
+            <div class="race-stat-label">Favorite Driver</div>
+            <div class="race-stat-val">M. Verstappen</div>
+          </div>
+          <div class="race-stat">
+            <div class="race-stat-label">Favorite Team</div>
+            <div class="race-stat-val">Red Bull</div>
+          </div>
+          <div class="race-stat">
+            <div class="race-stat-label">Dates</div>
+            <div class="race-stat-val" id="raceDates">May 22 - 24</div>
+          </div>
+        </div>
+      </div>
 
-      <div class="race-right">
-        <div class="countdown-label" id="countdownLabel">Lights Out In</div>
-        <div class="countdown" aria-live="polite">
-          <div class="cd-cell"><div class="cd-num" id="cd-d">00</div><div class="cd-label">Days</div></div>
-          <div class="cd-cell"><div class="cd-num" id="cd-h">00</div><div class="cd-label">Hours</div></div>
-          <div class="cd-cell"><div class="cd-num" id="cd-m">00</div><div class="cd-label">Mins</div></div>
-          <div class="cd-cell"><div class="cd-num" id="cd-s">00</div><div class="cd-label">Secs</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
+      <div class="race-right">
+        <div class="countdown-label" id="countdownLabel">Lights Out In</div>
+        <div class="countdown" aria-live="polite">
+          <div class="cd-cell"><div class="cd-num" id="cd-d">00</div><div class="cd-label">Days</div></div>
+          <div class="cd-cell"><div class="cd-num" id="cd-h">00</div><div class="cd-label">Hours</div></div>
+          <div class="cd-cell"><div class="cd-num" id="cd-m">00</div><div class="cd-label">Mins</div></div>
+          <div class="cd-cell"><div class="cd-num" id="cd-s">00</div><div class="cd-label">Secs</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="cal-section">
-  <div class="cal-head">
-    <div class="cal-title">Season <em>Calendar</em></div>
-    <div class="cal-meta" id="calMeta">23 Rounds · Mar -> Dec 2026</div>
-  </div>
+  <div class="cal-head">
+    <div class="cal-title">Season <em>Calendar</em></div>
+    <div class="cal-meta" id="calMeta">23 Rounds · Mar -> Dec 2026</div>
+  </div>
 
-  <div class="cal-strip-wrap">
-    <div class="cal-progress-track"><div class="cal-progress-fill" id="calProgress" style="width: 25%;"></div></div>
-    <div class="cal-strip" id="calStrip">
-      <div class="cal-round done" data-round="01" data-date="2026-03-08T05:00:00Z" data-race="Australian Grand Prix"><div class="cal-rnum">R01<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇦🇺</div><div class="cal-country">Australia</div><div class="cal-flag-name">Albert Park</div><div class="cal-date">Mar 06-08</div><div class="cal-winner">G. Russell</div></div>
-      <div class="cal-round done" data-round="02" data-date="2026-03-15T07:00:00Z" data-race="Chinese Grand Prix"><div class="cal-rnum">R02<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇨🇳</div><div class="cal-country">China</div><div class="cal-flag-name">Shanghai</div><div class="cal-date">Mar 13-15</div><div class="cal-winner">K. Antonelli</div></div>
-      <div class="cal-round done" data-round="03" data-date="2026-03-29T05:00:00Z" data-race="Japanese Grand Prix"><div class="cal-rnum">R03<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇯🇵</div><div class="cal-country">Japan</div><div class="cal-flag-name">Suzuka</div><div class="cal-date">Mar 27-29</div><div class="cal-winner">K. Antonelli</div></div>
-      <div class="cal-round done" data-round="04" data-date="2026-05-03T20:00:00Z" data-race="Miami Grand Prix"><div class="cal-rnum">R04<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇺🇸</div><div class="cal-country">USA</div><div class="cal-flag-name">Miami</div><div class="cal-date">May 01-03</div><div class="cal-winner">K. Antonelli</div></div>
-      <div class="cal-round next" data-round="05" data-date="2026-05-24T18:00:00Z" data-race="Canadian Grand Prix"><div class="cal-rnum">R05 · NEXT<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇨🇦</div><div class="cal-country">Canada</div><div class="cal-flag-name">Montreal</div><div class="cal-date">May 22-24</div><div class="cal-winner">K. Antonelli</div></div>
-      <div class="cal-round" data-round="06" data-date="2026-06-07T13:00:00Z" data-race="Monaco Grand Prix"><div class="cal-rnum">R06<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇲🇨</div><div class="cal-country">Monaco</div><div class="cal-flag-name">Monte Carlo</div><div class="cal-date">Jun 05-07</div></div>
-      <div class="cal-round" data-round="07" data-date="2026-06-14T13:00:00Z" data-race="Spanish Grand Prix"><div class="cal-rnum">R07<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇪🇸</div><div class="cal-country">Spain</div><div class="cal-flag-name">Barcelona</div><div class="cal-date">Jun 12-14</div></div>
-      <div class="cal-round" data-round="08" data-date="2026-06-28T13:00:00Z" data-race="Austrian Grand Prix"><div class="cal-rnum">R08<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇦🇹</div><div class="cal-country">Austria</div><div class="cal-flag-name">Red Bull Ring</div><div class="cal-date">Jun 26-28</div></div>
-      <div class="cal-round" data-round="09" data-date="2026-07-05T14:00:00Z" data-race="British Grand Prix"><div class="cal-rnum">R09<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇬🇧</div><div class="cal-country">UK</div><div class="cal-flag-name">Silverstone</div><div class="cal-date">Jul 03-05</div></div>
-      <div class="cal-round" data-round="10" data-date="2026-07-26T13:00:00Z" data-race="Belgian Grand Prix"><div class="cal-rnum">R10<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇧🇪</div><div class="cal-country">Belgium</div><div class="cal-flag-name">Spa</div><div class="cal-date">Jul 24-26</div></div>
-      <div class="cal-round" data-round="11" data-date="2026-08-02T13:00:00Z" data-race="Hungarian Grand Prix"><div class="cal-rnum">R11<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇭🇺</div><div class="cal-country">Hungary</div><div class="cal-flag-name">Hungaroring</div><div class="cal-date">Jul 31-Aug 2</div></div>
-      <div class="cal-round" data-round="12" data-date="2026-08-23T13:00:00Z" data-race="Dutch Grand Prix"><div class="cal-rnum">R12<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇳🇱</div><div class="cal-country">Netherlands</div><div class="cal-flag-name">Zandvoort</div><div class="cal-date">Aug 21-23</div></div>
-      <div class="cal-round" data-round="13" data-date="2026-09-06T13:00:00Z" data-race="Italian Grand Prix"><div class="cal-rnum">R13<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇮🇹</div><div class="cal-country">Italy</div><div class="cal-flag-name">Monza</div><div class="cal-date">Sep 04-06</div></div>
-      <div class="cal-round" data-round="14" data-date="2026-09-13T13:00:00Z" data-race="Spanish Grand Prix"><div class="cal-rnum">R14<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇪🇸</div><div class="cal-country">Spain</div><div class="cal-flag-name">Madrid</div><div class="cal-date">Sep 11-13</div></div>
-      <div class="cal-round" data-round="15" data-date="2026-09-26T11:00:00Z" data-race="Azerbaijan Grand Prix"><div class="cal-rnum">R15<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇦🇿</div><div class="cal-country">Azerbaijan</div><div class="cal-flag-name">Baku</div><div class="cal-date">Sep 26 · Sat</div></div>
-      <div class="cal-round" data-round="16" data-date="2026-10-11T12:00:00Z" data-race="Singapore Grand Prix"><div class="cal-rnum">R16<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇸🇬</div><div class="cal-country">Singapore</div><div class="cal-flag-name">Marina Bay</div><div class="cal-date">Oct 09-11</div></div>
-      <div class="cal-round" data-round="17" data-date="2026-10-25T19:00:00Z" data-race="United States Grand Prix"><div class="cal-rnum">R17<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇺🇸</div><div class="cal-country">USA</div><div class="cal-flag-name">Austin</div><div class="cal-date">Oct 23-25</div></div>
-      <div class="cal-round" data-round="18" data-date="2026-11-01T20:00:00Z" data-race="Mexico City Grand Prix"><div class="cal-rnum">R18<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇲🇽</div><div class="cal-country">Mexico</div><div class="cal-flag-name">Mexico City</div><div class="cal-date">Oct 30-Nov 1</div></div>
-      <div class="cal-round" data-round="19" data-date="2026-11-08T17:00:00Z" data-race="São Paulo Grand Prix"><div class="cal-rnum">R19<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇧🇷</div><div class="cal-country">Brazil</div><div class="cal-flag-name">São Paulo</div><div class="cal-date">Nov 06-08</div></div>
-      <div class="cal-round" data-round="20" data-date="2026-11-21T06:00:00Z" data-race="Las Vegas Grand Prix"><div class="cal-rnum">R20<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇺🇸</div><div class="cal-country">USA</div><div class="cal-flag-name">Las Vegas</div><div class="cal-date">Nov 19-21</div></div>
-      <div class="cal-round" data-round="21" data-date="2026-11-29T16:00:00Z" data-race="Qatar Grand Prix"><div class="cal-rnum">R21<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇶🇦</div><div class="cal-country">Qatar</div><div class="cal-flag-name">Lusail</div><div class="cal-date">Nov 27-29</div></div>
-      <div class="cal-round" data-round="22" data-date="2026-12-06T13:00:00Z" data-race="Abu Dhabi Grand Prix"><div class="cal-rnum">R22<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇦🇪</div><div class="cal-country">UAE</div><div class="cal-flag-name">Yas Marina</div><div class="cal-date">Dec 04-06</div></div>
-    </div>
-  </div>
+  <div class="cal-strip-wrap">
+    <div class="cal-progress-track"><div class="cal-progress-fill" id="calProgress" style="width: 25%;"></div></div>
+    <div class="cal-strip" id="calStrip">
+      <div class="cal-round done" data-round="01" data-date="2026-03-08T05:00:00Z" data-race="Australian Grand Prix"><div class="cal-rnum">R01<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇦🇺</div><div class="cal-country">Australia</div><div class="cal-flag-name">Albert Park</div><div class="cal-date">Mar 06-08</div><div class="cal-winner">G. Russell</div></div>
+      <div class="cal-round done" data-round="02" data-date="2026-03-15T07:00:00Z" data-race="Chinese Grand Prix"><div class="cal-rnum">R02<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇨🇳</div><div class="cal-country">China</div><div class="cal-flag-name">Shanghai</div><div class="cal-date">Mar 13-15</div><div class="cal-winner">K. Antonelli</div></div>
+      <div class="cal-round done" data-round="03" data-date="2026-03-29T05:00:00Z" data-race="Japanese Grand Prix"><div class="cal-rnum">R03<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇯🇵</div><div class="cal-country">Japan</div><div class="cal-flag-name">Suzuka</div><div class="cal-date">Mar 27-29</div><div class="cal-winner">K. Antonelli</div></div>
+      <div class="cal-round done" data-round="04" data-date="2026-05-03T20:00:00Z" data-race="Miami Grand Prix"><div class="cal-rnum">R04<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇺🇸</div><div class="cal-country">USA</div><div class="cal-flag-name">Miami</div><div class="cal-date">May 01-03</div><div class="cal-winner">K. Antonelli</div></div>
+      <div class="cal-round next" data-round="05" data-date="2026-05-24T18:00:00Z" data-race="Canadian Grand Prix"><div class="cal-rnum">R05 · NEXT<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇨🇦</div><div class="cal-country">Canada</div><div class="cal-flag-name">Montreal</div><div class="cal-date">May 22-24</div><div class="cal-winner">K. Antonelli</div></div>
+      <div class="cal-round" data-round="06" data-date="2026-06-07T13:00:00Z" data-race="Monaco Grand Prix"><div class="cal-rnum">R06<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇲🇨</div><div class="cal-country">Monaco</div><div class="cal-flag-name">Monte Carlo</div><div class="cal-date">Jun 05-07</div></div>
+      <div class="cal-round" data-round="07" data-date="2026-06-14T13:00:00Z" data-race="Spanish Grand Prix"><div class="cal-rnum">R07<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇪🇸</div><div class="cal-country">Spain</div><div class="cal-flag-name">Barcelona</div><div class="cal-date">Jun 12-14</div></div>
+      <div class="cal-round" data-round="08" data-date="2026-06-28T13:00:00Z" data-race="Austrian Grand Prix"><div class="cal-rnum">R08<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇦🇹</div><div class="cal-country">Austria</div><div class="cal-flag-name">Red Bull Ring</div><div class="cal-date">Jun 26-28</div></div>
+      <div class="cal-round" data-round="09" data-date="2026-07-05T14:00:00Z" data-race="British Grand Prix"><div class="cal-rnum">R09<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇬🇧</div><div class="cal-country">UK</div><div class="cal-flag-name">Silverstone</div><div class="cal-date">Jul 03-05</div></div>
+      <div class="cal-round" data-round="10" data-date="2026-07-26T13:00:00Z" data-race="Belgian Grand Prix"><div class="cal-rnum">R10<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇧🇪</div><div class="cal-country">Belgium</div><div class="cal-flag-name">Spa</div><div class="cal-date">Jul 24-26</div></div>
+      <div class="cal-round" data-round="11" data-date="2026-08-02T13:00:00Z" data-race="Hungarian Grand Prix"><div class="cal-rnum">R11<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇭🇺</div><div class="cal-country">Hungary</div><div class="cal-flag-name">Hungaroring</div><div class="cal-date">Jul 31-Aug 2</div></div>
+      <div class="cal-round" data-round="12" data-date="2026-08-23T13:00:00Z" data-race="Dutch Grand Prix"><div class="cal-rnum">R12<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇳🇱</div><div class="cal-country">Netherlands</div><div class="cal-flag-name">Zandvoort</div><div class="cal-date">Aug 21-23</div></div>
+      <div class="cal-round" data-round="13" data-date="2026-09-06T13:00:00Z" data-race="Italian Grand Prix"><div class="cal-rnum">R13<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇮🇹</div><div class="cal-country">Italy</div><div class="cal-flag-name">Monza</div><div class="cal-date">Sep 04-06</div></div>
+      <div class="cal-round" data-round="14" data-date="2026-09-13T13:00:00Z" data-race="Spanish Grand Prix"><div class="cal-rnum">R14<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇪🇸</div><div class="cal-country">Spain</div><div class="cal-flag-name">Madrid</div><div class="cal-date">Sep 11-13</div></div>
+      <div class="cal-round" data-round="15" data-date="2026-09-26T11:00:00Z" data-race="Azerbaijan Grand Prix"><div class="cal-rnum">R15<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇦🇿</div><div class="cal-country">Azerbaijan</div><div class="cal-flag-name">Baku</div><div class="cal-date">Sep 26 · Sat</div></div>
+      <div class="cal-round" data-round="16" data-date="2026-10-11T12:00:00Z" data-race="Singapore Grand Prix"><div class="cal-rnum">R16<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇸🇬</div><div class="cal-country">Singapore</div><div class="cal-flag-name">Marina Bay</div><div class="cal-date">Oct 09-11</div></div>
+      <div class="cal-round" data-round="17" data-date="2026-10-25T19:00:00Z" data-race="United States Grand Prix"><div class="cal-rnum">R17<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇺🇸</div><div class="cal-country">USA</div><div class="cal-flag-name">Austin</div><div class="cal-date">Oct 23-25</div></div>
+      <div class="cal-round" data-round="18" data-date="2026-11-01T20:00:00Z" data-race="Mexico City Grand Prix"><div class="cal-rnum">R18<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇲🇽</div><div class="cal-country">Mexico</div><div class="cal-flag-name">Mexico City</div><div class="cal-date">Oct 30-Nov 1</div></div>
+      <div class="cal-round" data-round="19" data-date="2026-11-08T17:00:00Z" data-race="São Paulo Grand Prix"><div class="cal-rnum">R19<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇧🇷</div><div class="cal-country">Brazil</div><div class="cal-flag-name">São Paulo</div><div class="cal-date">Nov 06-08</div></div>
+      <div class="cal-round" data-round="20" data-date="2026-11-21T06:00:00Z" data-race="Las Vegas Grand Prix"><div class="cal-rnum">R20<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇺🇸</div><div class="cal-country">USA</div><div class="cal-flag-name">Las Vegas</div><div class="cal-date">Nov 19-21</div></div>
+      <div class="cal-round" data-round="21" data-date="2026-11-29T16:00:00Z" data-race="Qatar Grand Prix"><div class="cal-rnum">R21<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇶🇦</div><div class="cal-country">Qatar</div><div class="cal-flag-name">Lusail</div><div class="cal-date">Nov 27-29</div></div>
+      <div class="cal-round" data-round="22" data-date="2026-12-06T13:00:00Z" data-race="Abu Dhabi Grand Prix"><div class="cal-rnum">R22<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇦🇪</div><div class="cal-country">UAE</div><div class="cal-flag-name">Yas Marina</div><div class="cal-date">Dec 04-06</div></div>
+    </div>
+  </div>
 </section>
 
 <section class="main-section">
-  <div class="main-grid">
-    <div class="col">
-      <div class="col-head">
-        <div class="col-num">§ 01</div>
-        <div class="col-name">Drivers' <em>Championship</em></div>
-        <div class="col-sub" id="driverSub">All Scorers · Loading Jolpica</div>
-      </div>
-      <div id="driverStandings"></div>
-    </div>
+  <div class="main-grid">
+    <div class="col">
+      <div class="col-head">
+        <div class="col-num">§ 01</div>
+        <div class="col-name">Drivers' <em>Championship</em></div>
+        <div class="col-sub" id="driverSub">All Scorers · Loading Jolpica</div>
+      </div>
+      <div id="driverStandings"></div>
+    </div>
 
-    <div class="col">
-      <div class="col-head">
-        <div class="col-num">§ 02</div>
-        <div class="col-name">Constructors' <em>Cup</em></div>
-        <div class="col-sub" id="constructorSub">All teams · Loading Jolpica</div>
-      </div>
-      <div id="constructorStandings"></div>
-    </div>
+    <div class="col">
+      <div class="col-head">
+        <div class="col-num">§ 02</div>
+        <div class="col-name">Constructors' <em>Cup</em></div>
+        <div class="col-sub" id="constructorSub">All teams · Loading Jolpica</div>
+      </div>
+      <div id="constructorStandings"></div>
+    </div>
 
-    <div class="col">
-      <div class="col-head">
-        <div class="col-num">§ 03</div>
-        <div class="col-name">Paddock <em>Intel</em></div>
-        <div class="col-sub" id="paddockSub">Last Race · Loading Jolpica</div>
-      </div>
+    <div class="col">
+      <div class="col-head">
+        <div class="col-num">§ 03</div>
+        <div class="col-name">Paddock <em>Intel</em></div>
+        <div class="col-sub" id="paddockSub">Last Race · Loading Jolpica</div>
+      </div>
 
-      <div class="podium-block">
-        <div class="podium-head" id="podiumHead">Last Race · Result</div>
-        <div class="podium-list" id="podiumList">
-          <div class="pod-row p1"><div class="pod-badge">P1</div><div><div class="pod-driver-name">Loading</div><div class="pod-driver-team">Jolpica API</div></div><div class="pod-time">...</div></div>
-          <div class="pod-row p2"><div class="pod-badge">P2</div><div><div class="pod-driver-name">Loading</div><div class="pod-driver-team">Jolpica API</div></div><div class="pod-time">...</div></div>
-          <div class="pod-row p3"><div class="pod-badge">P3</div><div><div class="pod-driver-name">Loading</div><div class="pod-driver-team">Jolpica API</div></div><div class="pod-time">...</div></div>
-        </div>
-      </div>
+      <div class="podium-block">
+        <div class="podium-head" id="podiumHead">Last Race · Result</div>
+        <div class="podium-list" id="podiumList">
+          <div class="pod-row p1"><div class="pod-badge">P1</div><div><div class="pod-driver-name">Loading</div><div class="pod-driver-team">Jolpica API</div></div><div class="pod-time">...</div></div>
+          <div class="pod-row p2"><div class="pod-badge">P2</div><div><div class="pod-driver-name">Loading</div><div class="pod-driver-team">Jolpica API</div></div><div class="pod-time">...</div></div>
+          <div class="pod-row p3"><div class="pod-badge">P3</div><div><div class="pod-driver-name">Loading</div><div class="pod-driver-team">Jolpica API</div></div><div class="pod-time">...</div></div>
+        </div>
+      </div>
 
-      <div class="news-block" id="newsBlock">
-        <article class="news-item lead">
-          <div class="news-meta"><span class="news-kicker">Live Feed</span><span class="news-num">01</span></div>
-          <h3 class="news-headline">Paddock intel is syncing from Jolpica</h3>
-          <p class="news-body">The dashboard will derive the podium, winner story, Red Bull watch and fastest-lap note from the latest available race result.</p>
-        </article>
-      </div>
-    </div>
-  </div>
+      <div class="news-block" id="newsBlock">
+        <article class="news-item lead">
+          <div class="news-meta"><span class="news-kicker">Live Feed</span><span class="news-num">01</span></div>
+          <h3 class="news-headline">Paddock intel is syncing from Jolpica</h3>
+          <p class="news-body">The dashboard will derive the podium, winner story, Red Bull watch and fastest-lap note from the latest available race result.</p>
+        </article>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="stats-ribbon">
-  <div class="stats-grid">
-    <div class="stat">
-      <div class="stat-label">Favorite Driver</div>
-      <div class="stat-big">Max <em>VER</em></div>
-      <div class="stat-sub">Harshvardhan's race-day pick</div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">Favorite Team</div>
-      <div class="stat-big">Red <em>Bull</em></div>
-      <div class="stat-sub">Dominant. Aggressive. Calculated.</div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">Data Source</div>
-      <div class="stat-big">F1<em> API</em></div>
-      <div class="stat-sub">Standings, calendar, last result</div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">Next Race</div>
-      <div class="stat-big" id="nextRaceStat">Montreal</div>
-      <div class="stat-sub" id="nextRaceStatSub">Canadian GP</div>
-    </div>
-  </div>
+  <div class="stats-grid">
+    <div class="stat">
+      <div class="stat-label">Favorite Driver</div>
+      <div class="stat-big">Max <em>VER</em></div>
+      <div class="stat-sub">Harshvardhan's race-day pick</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Favorite Team</div>
+      <div class="stat-big">Red <em>Bull</em></div>
+      <div class="stat-sub">Dominant. Aggressive. Calculated.</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Data Source</div>
+      <div class="stat-big">F1<em> API</em></div>
+      <div class="stat-sub">Standings, calendar, last result</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Next Race</div>
+      <div class="stat-big" id="nextRaceStat">Montreal</div>
+      <div class="stat-sub" id="nextRaceStatSub">Canadian GP</div>
+    </div>
+  </div>
 </section>
 
 <div class="footer-wrap">
-  <footer class="footer">
-    <div class="f-note">For Harshvardhan Bohra · eyes only<span class="f-dot"></span>Lights out and chaos unleashed</div>
-    <div class="f-brand">The <em>Pit Wall</em></div>
-  </footer>
-  <div class="f-colophon-row">
-    <button type="button" class="f-colophon-btn" id="openColophon" aria-haspopup="dialog" aria-controls="colophon-modal">
-      <span>Pit Wall Briefing</span>
-    </button>
-  </div>
+  <footer class="footer">
+    <div class="f-note">For Harshvardhan Bohra · eyes only<span class="f-dot"></span>Lights out and chaos unleashed</div>
+    <div class="f-brand">The <em>Pit Wall</em></div>
+  </footer>
+  <div class="f-colophon-row">
+    <button type="button" class="f-colophon-btn" id="openColophon" aria-haspopup="dialog" aria-controls="colophon-modal">
+      <span>Pit Wall Briefing</span>
+    </button>
+  </div>
 </div>
 
 <div class="colophon-modal" id="colophon-modal" role="dialog" aria-modal="true" aria-labelledby="colo-title" hidden>
-  <div class="colo-backdrop" data-close></div>
-  <div class="colo-card" role="document" style="border: 2px solid var(--racing); background: var(--bull-navy); color: #fff;">
-    <button type="button" class="colo-close" aria-label="Close" style="color: #fff; border-color: rgba(255,255,255,0.2);">✕</button>
-    <div class="colo-scroll" style="padding: 32px 30px;">
+  <div class="colo-backdrop" data-close></div>
+  <div class="colo-card" role="document" style="border: 2px solid var(--racing); background: var(--bull-navy); color: #fff;">
+    <button type="button" class="colo-close" aria-label="Close" style="color: #fff; border-color: rgba(255,255,255,0.2);">✕</button>
+    <div class="colo-scroll" style="padding: 32px 30px;">
 
-      <header class="colo-head">
-        <div class="colo-eyebrow" style="color: var(--gold); letter-spacing: 0.3em; font-weight: 700;">◆ ORACLE RED BULL RACING INTELLIGENCE</div>
-        <h2 class="colo-title" id="colo-title" style="color: #fff; font-family: 'Playfair Display', serif;">The <em>Pit Wall Briefing</em></h2>
-        <p class="colo-sub" style="color: var(--bull-ice); font-family: 'JetBrains Mono', monospace; font-size: 11px;">Telemetry Sync: Live · Strategy Protocol: Unfiltered</p>
-      </header>
+      <header class="colo-head">
+        <div class="colo-eyebrow" style="color: var(--gold); letter-spacing: 0.3em; font-weight: 700;">◆ ORACLE RED BULL RACING INTELLIGENCE</div>
+        <h2 class="colo-title" id="colo-title" style="color: #fff; font-family: 'Playfair Display', serif;">The <em>Pit Wall Briefing</em></h2>
+        <p class="colo-sub" style="color: var(--bull-ice); font-family: 'JetBrains Mono', monospace; font-size: 11px;">Telemetry Sync: Live · Strategy Protocol: Unfiltered</p>
+      </header>
 
-      <div class="colo-rule" style="border-top-color: rgba(255,255,255,0.15);" aria-hidden="true"></div>
+      <div class="colo-rule" style="border-top-color: rgba(255,255,255,0.15);" aria-hidden="true"></div>
 
-      <section class="colo-author-sec">
-        <div class="brand-eyebrow" style="color: var(--racing-hot); margin-bottom: 12px; font-size: 10px;">
-          <span style="background: var(--racing); color: #fff; padding: 2px 6px; font-weight: 700; margin-right: 6px;">NEXT TARGET</span> 
-          <span id="briefingTargetHeading">LOADING NEXT GP...</span>
-        </div>
-        <p class="colo-author-bio" id="briefingNextStrategy" style="color: #fff; font-size: 14px; line-height: 1.6; max-width: 100%;">
-          Analyzing upcoming track layout and telemetry metrics...
-        </p>
+      <section class="colo-author-sec">
+        <div class="brand-eyebrow" style="color: var(--racing-hot); margin-bottom: 12px; font-size: 10px;">
+          <span style="background: var(--racing); color: #fff; padding: 2px 6px; font-weight: 700; margin-right: 6px;">NEXT TARGET</span> 
+          <span id="briefingTargetHeading">LOADING NEXT GP...</span>
+        </div>
+        <p class="colo-author-bio" id="briefingNextStrategy" style="color: #fff; font-size: 14px; line-height: 1.6; max-width: 100%;">
+          Analyzing upcoming track layout and telemetry metrics...
+        </p>
 
-        <div class="colo-links" id="briefingActionChips" style="margin-top: 16px;">
-          </div>
-      </section>
+        <div class="colo-links" id="briefingActionChips" style="margin-top: 16px;">
+          </div>
+      </section>
 
-      <div class="colo-rule" style="border-top-color: rgba(255,255,255,0.15);" aria-hidden="true"></div>
+      <div class="colo-rule" style="border-top-color: rgba(255,255,255,0.15);" aria-hidden="true"></div>
 
-      <section class="colo-tip-sec">
-        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 12px; font-weight: 600;">
-          PADDOCK DEBRIEF & POST-RACE GOSSIP
-        </div>
+      <section class="colo-tip-sec">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 12px; font-weight: 600;">
+          PADDOCK DEBRIEF & POST-RACE GOSSIP
+        </div>
 
-        <h3 class="colo-tip-head" id="briefingGossipTitle" style="color: #fff; font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 14px;">
-          Reviewing previous race constraints...
-        </h3>
+        <h3 class="colo-tip-head" id="briefingGossipTitle" style="color: #fff; font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 14px;">
+          Reviewing previous race constraints...
+        </h3>
 
-        <div class="colo-tip-body" id="briefingGossipPoints" style="color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.7;">
-          </div>
+        <div class="colo-tip-body" id="briefingGossipPoints" style="color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.7;">
+          </div>
 
-        <div class="colo-podium" style="background: rgba(6, 50, 160, 0.3); border: 1px solid var(--bull-blue); margin: 24px 0; padding: 16px;">
-          <div class="colo-p" data-pos="p1">
-            <div class="colo-p-pos" style="color: var(--gold); font-weight: 700;">RED BULL WATCH</div>
-            <div class="colo-p-val" id="briefingRBStatus" style="font-size: 16px; font-family: 'JetBrains Mono', monospace; color: #fff; margin-top: 4px;">Syncing...</div>
-            <div class="colo-p-lbl" id="briefingRBMargin" style="font-size: 11px; color: var(--bull-ice); margin-top: 2px;">Calculating Delta</div>
-          </div>
-        </div>
+        <div class="colo-podium" style="background: rgba(6, 50, 160, 0.3); border: 1px solid var(--bull-blue); margin: 24px 0; padding: 16px;">
+          <div class="colo-p" data-pos="p1">
+            <div class="colo-p-pos" style="color: var(--gold); font-weight: 700;">RED BULL WATCH</div>
+            <div class="colo-p-val" id="briefingRBStatus" style="font-size: 16px; font-family: 'JetBrains Mono', monospace; color: #fff; margin-top: 4px;">Syncing...</div>
+            <div class="colo-p-lbl" id="briefingRBMargin" style="font-size: 11px; color: var(--bull-ice); margin-top: 2px;">Calculating Delta</div>
+          </div>
+        </div>
 
-        <div class="colo-upi" style="background: rgba(225, 6, 0, 0.1); border-left: 4px solid var(--racing); padding: 14px 18px; margin-top: 18px;">
-          <div class="colo-upi-left">
-            <span class="colo-upi-label" style="color: var(--racing-hot); font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.15em; display: block; margin-bottom: 4px;">PIT WALL WIRELESS</span>
-            <code class="colo-upi-id" id="briefingWirelessQuote" style="color: #fff; font-family: 'Inter', sans-serif; font-style: italic; font-size: 13px; background: transparent; padding: 0; border: 0; display: block; line-height: 1.4;">"Standby for clear track telemetry confirmation..."</code>
-          </div>
-        </div>
-      </section>
+        <div class="colo-upi" style="background: rgba(225, 6, 0, 0.1); border-left: 4px solid var(--racing); padding: 14px 18px; margin-top: 18px;">
+          <div class="colo-upi-left">
+            <span class="colo-upi-label" style="color: var(--racing-hot); font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.15em; display: block; margin-bottom: 4px;">PIT WALL WIRELESS</span>
+            <code class="colo-upi-id" id="briefingWirelessQuote" style="color: #fff; font-family: 'Inter', sans-serif; font-style: italic; font-size: 13px; background: transparent; padding: 0; border: 0; display: block; line-height: 1.4;">"Standby for clear track telemetry confirmation..."</code>
+          </div>
+        </div>
+      </section>
 
-      <div class="colo-rule" style="border-top-color: rgba(255,255,255,0.15);" aria-hidden="true"></div>
+      <div class="colo-rule" style="border-top-color: rgba(255,255,255,0.15);" aria-hidden="true"></div>
 
-      <p class="colo-disclaimer" style="color: rgba(255,255,255,0.4); font-size: 11px;">
-        The Pit Wall Briefing · Powered by live performance telemetry. Not affiliated with the FIA. Optimized for Oracle Red Bull Racing strategies.
-      </p>
+      <p class="colo-disclaimer" style="color: rgba(255,255,255,0.4); font-size: 11px;">
+        The Pit Wall Briefing · Powered by live performance telemetry. Not affiliated with the FIA. Optimized for Oracle Red Bull Racing strategies.
+      </p>
 
-    </div>
-  </div>
+    </div>
+  </div>
 </div>
 
 <script>
 const CONFIG = {
-  season: '2026',
-  apiBase: 'https://api.jolpi.ca/ergast/f1',
-  favoriteDriverId: 'max_verstappen',
-  favoriteDriverCode: 'VER',
-  favoriteTeamId: 'red_bull',
-  favoriteTeamName: 'Red Bull'
+  season: '2026',
+  apiBase: 'https://api.jolpi.ca/ergast/f1',
+  favoriteDriverId: 'max_verstappen',
+  favoriteDriverCode: 'VER',
+  favoriteTeamId: 'red_bull',
+  favoriteTeamName: 'Red Bull'
 };
 
 const TEAM_COLORS = {
-  mercedes: 'var(--mercedes)',
-  ferrari: 'var(--ferrari)',
-  mclaren: 'var(--mclaren)',
-  red_bull: 'var(--redbull)',
-  williams: 'var(--williams)',
-  haas: 'var(--haas)',
-  alpine: 'var(--alpine)',
-  sauber: 'var(--audi)',
-  rb: 'var(--racingbulls)',
-  aston_martin: 'var(--aston)',
-  cadillac: 'var(--cadillac)'
+  mercedes: 'var(--mercedes)',
+  ferrari: 'var(--ferrari)',
+  mclaren: 'var(--mclaren)',
+  red_bull: 'var(--redbull)',
+  williams: 'var(--williams)',
+  haas: 'var(--haas)',
+  alpine: 'var(--alpine)',
+  sauber: 'var(--audi)',
+  rb: 'var(--racingbulls)',
+  aston_martin: 'var(--aston)',
+  cadillac: 'var(--cadillac)'
 };
 
 const TEAM_LABELS = {
-  mercedes: 'Mercedes',
-  ferrari: 'Ferrari',
-  mclaren: 'McLaren',
-  red_bull: 'Red Bull',
-  williams: 'Williams',
-  haas: 'Haas',
-  alpine: 'Alpine',
-  sauber: 'Kick Sauber',
-  rb: 'Racing Bulls',
-  aston_martin: 'Aston Martin',
-  cadillac: 'Cadillac'
+  mercedes: 'Mercedes',
+  ferrari: 'Ferrari',
+  mclaren: 'McLaren',
+  red_bull: 'Red Bull',
+  williams: 'Williams',
+  haas: 'Haas',
+  alpine: 'Alpine',
+  sauber: 'Kick Sauber',
+  rb: 'Racing Bulls',
+  aston_martin: 'Aston Martin',
+  cadillac: 'Cadillac'
 };
 
 const COUNTRY_FLAGS = {
-  Australia:'🇦🇺', China:'🇨🇳', Japan:'🇯🇵', USA:'🇺🇸', Canada:'🇨🇦',
-  Monaco:'🇲🇨', Spain:'🇪🇸', Austria:'🇦🇹', UK:'🇬🇧', Belgium:'🇧🇪',
-  Hungary:'🇭🇺', Netherlands:'🇳🇱', Italy:'🇮🇹', Azerbaijan:'🇦🇿',
-  Singapore:'🇸🇬', Mexico:'🇲🇽', Brazil:'🇧🇷', Qatar:'🇶🇦', UAE:'🇦🇪',
-  'United Arab Emirates':'🇦🇪'
+  Australia:'🇦🇺', China:'🇨🇳', Japan:'🇯🇵', USA:'🇺🇸', Canada:'🇨🇦',
+  Monaco:'🇲🇨', Spain:'🇪🇸', Austria:'🇦🇹', UK:'🇬🇧', Belgium:'🇧🇪',
+  Hungary:'🇭🇺', Netherlands:'🇳🇱', Italy:'🇮🇹', Azerbaijan:'🇦🇿',
+  Singapore:'🇸🇬', Mexico:'🇲🇽', Brazil:'🇧🇷', Qatar:'🇶🇦', UAE:'🇦🇪',
+  'United Arab Emirates':'🇦🇪'
 };
 
 // Map of circuitId to Total Scheduled Laps
 const CIRCUIT_LAPS = {
-  'albert_park': 58,    // Australia
-  'shanghai': 56,       // China
-  'suzuka': 53,         // Japan
-  'miami': 57,          // Miami
-  'villeneuve': 70,     // Canada
-  'monaco': 78,         // Monaco
-  'catalunya': 66,      // Spain (Barcelona)
-  'red_bull_ring': 71,  // Austria
-  'silverstone': 52,    // UK
-  'spa': 44,            // Belgium
-  'hungaroring': 70,    // Hungary
-  'zandvoort': 72,      // Netherlands
-  'monza': 53,          // Italy
-  'baku': 51,           // Azerbaijan
-  'marina_bay': 62,     // Singapore
-  'americas': 56,       // COTA (USA)
-  'rodriguez': 71,      // Mexico
-  'interlagos': 71,     // Brazil
-  'vegas': 50,          // Las Vegas
-  'losail': 57,         // Qatar
-  'yas_marina': 58      // Abu Dhabi
+  'albert_park': 58,    // Australia
+  'shanghai': 56,       // China
+  'suzuka': 53,         // Japan
+  'miami': 57,          // Miami
+  'villeneuve': 70,     // Canada
+  'monaco': 78,         // Monaco
+  'catalunya': 66,      // Spain (Barcelona)
+  'red_bull_ring': 71,  // Austria
+  'silverstone': 52,    // UK
+  'spa': 44,            // Belgium
+  'hungaroring': 70,    // Hungary
+  'zandvoort': 72,      // Netherlands
+  'monza': 53,          // Italy
+  'baku': 51,           // Azerbaijan
+  'marina_bay': 62,     // Singapore
+  'americas': 56,       // COTA (USA)
+  'rodriguez': 71,      // Mexico
+  'interlagos': 71,     // Brazil
+  'vegas': 50,          // Las Vegas
+  'losail': 57,         // Qatar
+  'yas_marina': 58      // Abu Dhabi
 };
 
 const CIRCUIT_INSIGHTS = {
-  'villeneuve': {
-    strategy: 'High braking loads combined with heavy traction requirements out of slow-speed chicanes dictate aero profiles. Monitor structural curbs closely.',
-    chips: ['LOW DRAG SECTORS', 'BRAKE THERMALS', 'CHICANR RECOVERY']
-  },
-  'monaco': {
-    strategy: 'Maximum downforce mandatory. Track position is absolute priority. Stint lengths extensions are heavily favored if green flag track parameters persist.',
-    chips: ['MAX DOWNFORCE', 'STEERING LOCK', 'TRACK POSITION']
-  },
-  'default': {
-    strategy: 'Balancing straight line speeds with low decay platform deployment profiles to secure high sector performance margins.',
-    chips: ['TYRE DELTA', 'ENERGY STORAGE', 'AERO PROTOCOLS']
-  }
+  'villeneuve': {
+    strategy: 'High braking loads combined with heavy traction requirements out of slow-speed chicanes dictate aero profiles. Monitor structural curbs closely.',
+    chips: ['LOW DRAG SECTORS', 'BRAKE THERMALS', 'CHICANR RECOVERY']
+  },
+  'monaco': {
+    strategy: 'Maximum downforce mandatory. Track position is absolute priority. Stint lengths extensions are heavily favored if green flag track parameters persist.',
+    chips: ['MAX DOWNFORCE', 'STEERING LOCK', 'TRACK POSITION']
+  },
+  'default': {
+    strategy: 'Balancing straight line speeds with low decay platform deployment profiles to secure high sector performance margins.',
+    chips: ['TYRE DELTA', 'ENERGY STORAGE', 'AERO PROTOCOLS']
+  }
 };
 
 
 function $(id) {
-  return document.getElementById(id);
+  return document.getElementById(id);
 }
 
 function esc(value) {
-  return String(value ?? '').replace(/[&<>"']/g, char => ({
-    '&':'&amp;',
-    '<':'&lt;',
-    '>':'&gt;',
-    '"':'&quot;',
-    "'":'&#39;'
-  }[char]));
+  return String(value ?? '').replace(/[&<>"']/g, char => ({
+    '&':'&amp;',
+    '<':'&lt;',
+    '>':'&gt;',
+    '"':'&quot;',
+    "'":'&#39;'
+  }[char]));
 }
 
 function pad(n) {
-  return String(Math.max(0, n)).padStart(2, '0');
+  return String(Math.max(0, n)).padStart(2, '0');
 }
 
 function lastName(name) {
-  const parts = String(name || '').trim().split(/\s+/);
-  return parts[parts.length - 1] || name || '';
+  const parts = String(name || '').trim().split(/\s+/);
+  return parts[parts.length - 1] || name || '';
 }
 
 function driverFullName(driver) {
-  return `${driver.givenName || ''} ${driver.familyName || ''}`.trim();
+  return `${driver.givenName || ''} ${driver.familyName || ''}`.trim();
 }
 
 function driverShortName(driver) {
-  const initial = driver.givenName ? driver.givenName.charAt(0) + '. ' : '';
-  return `${initial}${driver.familyName || ''}`.trim();
+  const initial = driver.givenName ? driver.givenName.charAt(0) + '. ' : '';
+  return `${initial}${driver.familyName || ''}`.trim();
 }
 
 function driverCode(driver) {
-  return driver.code || (driver.familyName || 'F1').slice(0, 3).toUpperCase();
+  return driver.code || (driver.familyName || 'F1').slice(0, 3).toUpperCase();
 }
 
 function teamColor(id) {
-  return TEAM_COLORS[id] || 'var(--ink-3)';
+  return TEAM_COLORS[id] || 'var(--ink-3)';
 }
 
 function teamLabel(id, fallback) {
-  return TEAM_LABELS[id] || fallback || id || 'F1 Team';
+  return TEAM_LABELS[id] || fallback || id || 'F1 Team';
 }
 
 function raceStart(race) {
-  return new Date(`${race.date}T${race.time || '14:00:00Z'}`).getTime();
+  return new Date(`${race.date}T${race.time || '14:00:00Z'}`).getTime();
 }
 
 function prettyRaceName(name) {
-  return String(name || 'Next').replace(/\s+Grand Prix$/i, '');
+  return String(name || 'Next').replace(/\s+Grand Prix$/i, '');
 }
 
 function formatDateRangeFromRace(race) {
-  const end = new Date(`${race.date}T12:00:00Z`);
-  const start = new Date(end);
-  start.setUTCDate(end.getUTCDate() - 2);
-  const startTxt = start.toLocaleDateString('en-US', { month:'short', day:'numeric', timeZone:'UTC' });
-  const endTxt = end.toLocaleDateString('en-US', { month:start.getUTCMonth() === end.getUTCMonth() ? undefined : 'short', day:'numeric', timeZone:'UTC' });
-  return `${startTxt} - ${endTxt}`;
+  const end = new Date(`${race.date}T12:00:00Z`);
+  const start = new Date(end);
+  start.setUTCDate(end.getUTCDate() - 2);
+  const startTxt = start.toLocaleDateString('en-US', { month:'short', day:'numeric', timeZone:'UTC' });
+  const endTxt = end.toLocaleDateString('en-US', { month:start.getUTCMonth() === end.getUTCMonth() ? undefined : 'short', day:'numeric', timeZone:'UTC' });
+  return `${startTxt} - ${endTxt}`;
 }
 
 function millisToCountdown(diff) {
-  return {
-    d: Math.floor(diff / 86400000),
-    h: Math.floor((diff % 86400000) / 3600000),
-    m: Math.floor((diff % 3600000) / 60000),
-    s: Math.floor((diff % 60000) / 1000)
-  };
+  return {
+    d: Math.floor(diff / 86400000),
+    h: Math.floor((diff % 86400000) / 3600000),
+    m: Math.floor((diff % 3600000) / 60000),
+    s: Math.floor((diff % 60000) / 1000)
+  };
 }
 
 let countdownTarget = null;
 let countdownTimer = null;
 
 function startCountdown(target) {
-  countdownTarget = target;
-  if (countdownTimer) clearInterval(countdownTimer);
+  countdownTarget = target;
+  if (countdownTimer) clearInterval(countdownTimer);
 
-  function tick() {
-    const diff = countdownTarget - Date.now();
-    if (diff <= 0) {
-      $('cd-d').textContent = '00';
-      $('cd-h').textContent = '00';
-      $('cd-m').textContent = '00';
-      $('cd-s').textContent = '00';
-      $('countdownLabel').textContent = 'Race Weekend Live';
-      clearInterval(countdownTimer);
-      return;
-    }
+  function tick() {
+    const diff = countdownTarget - Date.now();
+    if (diff <= 0) {
+      $('cd-d').textContent = '00';
+      $('cd-h').textContent = '00';
+      $('cd-m').textContent = '00';
+      $('cd-s').textContent = '00';
+      $('countdownLabel').textContent = 'Race Weekend Live';
+      clearInterval(countdownTimer);
+      return;
+    }
 
-    const cd = millisToCountdown(diff);
-    $('cd-d').textContent = pad(cd.d);
-    $('cd-h').textContent = pad(cd.h);
-    $('cd-m').textContent = pad(cd.m);
-    $('cd-s').textContent = pad(cd.s);
-  }
+    const cd = millisToCountdown(diff);
+    $('cd-d').textContent = pad(cd.d);
+    $('cd-h').textContent = pad(cd.h);
+    $('cd-m').textContent = pad(cd.m);
+    $('cd-s').textContent = pad(cd.s);
+  }
 
-  tick();
-  countdownTimer = setInterval(tick, 1000);
+  tick();
+  countdownTimer = setInterval(tick, 1000);
 }
 
 function getStaticNextRound() {
-  const rounds = [...document.querySelectorAll('.cal-round')];
-  return rounds.find(round => new Date(round.dataset.date).getTime() > Date.now()) || rounds[rounds.length - 1];
+  const rounds = [...document.querySelectorAll('.cal-round')];
+  return rounds.find(round => new Date(round.dataset.date).getTime() > Date.now()) || rounds[rounds.length - 1];
 }
 
 function syncStaticCalendar(nextRoundEl) {
-  const rounds = [...document.querySelectorAll('.cal-round')];
-  const now = Date.now();
-  const nextRound = nextRoundEl || getStaticNextRound();
+  const rounds = [...document.querySelectorAll('.cal-round')];
+  const now = Date.now();
+  const nextRound = nextRoundEl || getStaticNextRound();
 
-  rounds.forEach(round => {
-    const rnum = round.dataset.round;
-    const label = round.querySelector('.cal-rnum');
-    round.classList.remove('done', 'next');
+  rounds.forEach(round => {
+    const rnum = round.dataset.round;
+    const label = round.querySelector('.cal-rnum');
+    round.classList.remove('done', 'next');
 
-    if (round === nextRound) {
-      round.classList.add('next');
-      label.innerHTML = `R${rnum} · NEXT<span class="cal-status-dot"></span>`;
-    } else {
-      label.innerHTML = `R${rnum}<span class="cal-status-dot"></span>`;
-      if (new Date(round.dataset.date).getTime() < now) round.classList.add('done');
-    }
-  });
+    if (round === nextRound) {
+      round.classList.add('next');
+      label.innerHTML = `R${rnum} · NEXT<span class="cal-status-dot"></span>`;
+    } else {
+      label.innerHTML = `R${rnum}<span class="cal-status-dot"></span>`;
+      if (new Date(round.dataset.date).getTime() < now) round.classList.add('done');
+    }
+  });
 
-  const completed = rounds.filter(round => round.classList.contains('done')).length;
-  const pct = rounds.length ? (completed / rounds.length) * 100 : 0;
-  $('calProgress').style.width = `${pct}%`;
+  const completed = rounds.filter(round => round.classList.contains('done')).length;
+  const pct = rounds.length ? (completed / rounds.length) * 100 : 0;
+  $('calProgress').style.width = `${pct}%`;
 
-  setTimeout(() => {
-    nextRound.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
-  }, 800);
+  setTimeout(() => {
+    nextRound.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
+  }, 800);
 }
 
 function applyNextRace(race, totalRounds) {
-  const roundNumber = String(race.round || '').padStart(2, '0');
-  const country = race.Circuit?.Location?.country || '';
-  const flag = COUNTRY_FLAGS[country] || '🏁';
-  const cleanName = prettyRaceName(race.raceName);
-  const target = raceStart(race);
-  
-  const circuitId = race.Circuit?.circuitId || '';
-  const lapCount = CIRCUIT_LAPS[circuitId] || 'TBD';
+  const roundNumber = String(race.round || '').padStart(2, '0');
+  const country = race.Circuit?.Location?.country || '';
+  const flag = COUNTRY_FLAGS[country] || '🏁';
+  const cleanName = prettyRaceName(race.raceName);
+  const target = raceStart(race);
+  
+  const circuitId = race.Circuit?.circuitId || '';
+  const lapCount = CIRCUIT_LAPS[circuitId] || 'TBD';
 
-  $('raceRound').textContent = `◆ Round ${roundNumber} · Up Next`;
-  $('raceFlag').textContent = flag;
-  $('raceName').textContent = cleanName;
-  $('raceCircuit').textContent = race.Circuit?.circuitName || 'Formula 1 Circuit';
-  $('raceLocality').textContent = race.Circuit?.Location?.locality || country || 'Race weekend';
-  $('raceDistance').textContent = `Round ${Number(race.round || 0)} of ${totalRounds || 23} · ${lapCount} laps`;
-  $('raceDates').textContent = formatDateRangeFromRace(race);
-  $('nextRaceStat').textContent = cleanName;
-  $('nextRaceStatSub').textContent = race.raceName || 'Next Grand Prix';
-  document.title = `Harshvardhan Bohra's Pit Wall · ${cleanName} GP Countdown`;
-  startCountdown(target);
+  $('raceRound').textContent = `◆ Round ${roundNumber} · Up Next`;
+  $('raceFlag').textContent = flag;
+  $('raceName').textContent = cleanName;
+  $('raceCircuit').textContent = race.Circuit?.circuitName || 'Formula 1 Circuit';
+  $('raceLocality').textContent = race.Circuit?.Location?.locality || country || 'Race weekend';
+  $('raceDistance').textContent = `Round ${Number(race.round || 0)} of ${totalRounds || 23} · ${lapCount} laps`;
+  $('raceDates').textContent = formatDateRangeFromRace(race);
+  $('nextRaceStat').textContent = cleanName;
+  $('nextRaceStatSub').textContent = race.raceName || 'Next Grand Prix';
+  document.title = `Harshvardhan Bohra's Pit Wall · ${cleanName} GP Countdown`;
+  startCountdown(target);
 
-  const matchingStatic = [...document.querySelectorAll('.cal-round')].find(round =>
-    String(Number(round.dataset.round)) === String(Number(race.round))
-  );
-  syncStaticCalendar(matchingStatic || getStaticNextRound());
+  const matchingStatic = [...document.querySelectorAll('.cal-round')].find(round =>
+    String(Number(round.dataset.round)) === String(Number(race.round))
+  );
+  syncStaticCalendar(matchingStatic || getStaticNextRound());
 }
 
 async function fetchJson(url) {
-  const response = await fetch(url, { cache:'no-store' });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  return response.json();
+  const response = await fetch(url, { cache:'no-store' });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  return response.json();
 }
 
 async function updateNextRaceFromJolpica() {
-  try {
-    const data = await fetchJson(`${CONFIG.apiBase}/${CONFIG.season}.json`);
-    const races = data?.MRData?.RaceTable?.Races || [];
-    const next = races.find(race => raceStart(race) > Date.now());
-    if (next) {
-      applyNextRace(next, races.length);
-      window.cachedNextRace = next;
-      if (window.cachedLastRace) populateBriefingModal(window.cachedNextRace, window.cachedLastRace);
-      return;
-    }
-  } catch (e) {}
+  try {
+    const data = await fetchJson(`${CONFIG.apiBase}/${CONFIG.season}.json`);
+    const races = data?.MRData?.RaceTable?.Races || [];
+    const next = races.find(race => raceStart(race) > Date.now());
+    if (next) {
+      applyNextRace(next, races.length);
+      window.cachedNextRace = next;
+      if (window.cachedLastRace) populateBriefingModal(window.cachedNextRace, window.cachedLastRace);
+      return;
+    }
+  } catch (e) {}
 
-  const staticNext = getStaticNextRound();
-  syncStaticCalendar(staticNext);
-  startCountdown(new Date(staticNext.dataset.date).getTime());
+  const staticNext = getStaticNextRound();
+  syncStaticCalendar(staticNext);
+  startCountdown(new Date(staticNext.dataset.date).getTime());
 }
 
 function renderFallbackDrivers() {
-  const fallback = [
-    ['01','K. Antonelli','ANT','Mercedes','mercedes','72'],
-    ['02','G. Russell','RUS','Mercedes','mercedes','63'],
-    ['03','C. Leclerc','LEC','Ferrari','ferrari','49'],
-    ['04','L. Hamilton','HAM','Ferrari','ferrari','41'],
-    ['05','L. Norris','NOR','McLaren','mclaren','25'],
-    ['06','O. Piastri','PIA','McLaren','mclaren','21'],
-    ['07','O. Bearman','BEA','Haas','haas','17'],
-    ['08','P. Gasly','GAS','Alpine','alpine','15'],
-    ['09','M. Verstappen','VER','Red Bull','red_bull','12'],
-    ['10','L. Lawson','LAW','Racing Bulls','rb','10']
-  ];
+  const fallback = [
+    ['01','K. Antonelli','ANT','Mercedes','mercedes','72'],
+    ['02','G. Russell','RUS','Mercedes','mercedes','63'],
+    ['03','C. Leclerc','LEC','Ferrari','ferrari','49'],
+    ['04','L. Hamilton','HAM','Ferrari','ferrari','41'],
+    ['05','L. Norris','NOR','McLaren','mclaren','25'],
+    ['06','O. Piastri','PIA','McLaren','mclaren','21'],
+    ['07','O. Bearman','BEA','Haas','haas','17'],
+    ['08','P. Gasly','GAS','Alpine','alpine','15'],
+    ['09','M. Verstappen','VER','Red Bull','red_bull','12'],
+    ['10','L. Lawson','LAW','Racing Bulls','rb','10']
+  ];
 
-  $('driverStandings').innerHTML = fallback.map((d, i) => `
-    <div class="driver-row ${i === 0 ? 'leader' : ''} ${d[2] === 'VER' ? 'favorite' : ''}" style="--team-color:${teamColor(d[4])}; animation-delay:${4.5 + i * 0.08}s;">
-      <div class="driver-pos">${d[0]}</div>
-      <div class="driver-info">
-        <div class="driver-line"><span class="driver-name">${d[1]}</span><span class="driver-code" style="background:${teamColor(d[4])};">${d[2]}</span></div>
-        <div class="driver-team">${d[3]} · ${d[2] === 'VER' ? 'Harshvardhan pick' : 'Static fallback'}</div>
-      </div>
-      <div class="driver-pts-wrap"><div class="driver-pts">${d[5]}</div><div class="driver-pts-sub">pts</div></div>
-    </div>
-  `).join('');
+  $('driverStandings').innerHTML = fallback.map((d, i) => `
+    <div class="driver-row ${i === 0 ? 'leader' : ''} ${d[2] === 'VER' ? 'favorite' : ''}" style="--team-color:${teamColor(d[4])}; animation-delay:${4.5 + i * 0.08}s;">
+      <div class="driver-pos">${d[0]}</div>
+      <div class="driver-info">
+        <div class="driver-line"><span class="driver-name">${d[1]}</span><span class="driver-code" style="background:${teamColor(d[4])};">${d[2]}</span></div>
+        <div class="driver-team">${d[3]} · ${d[2] === 'VER' ? 'Harshvardhan pick' : 'Static fallback'}</div>
+      </div>
+      <div class="driver-pts-wrap"><div class="driver-pts">${d[5]}</div><div class="driver-pts-sub">pts</div></div>
+    </div>
+  `).join('');
 }
 
 async function updateDriverStandings() {
-  renderFallbackDrivers();
+  renderFallbackDrivers();
 
-  try {
-    const data = await fetchJson(`${CONFIG.apiBase}/${CONFIG.season}/driverStandings.json`);
-    const list = data?.MRData?.StandingsTable?.StandingsLists?.[0]?.DriverStandings || [];
-    if (!list.length) return;
+  try {
+    const data = await fetchJson(`${CONFIG.apiBase}/${CONFIG.season}/driverStandings.json`);
+    const list = data?.MRData?.StandingsTable?.StandingsLists?.[0]?.DriverStandings || [];
+    if (!list.length) return;
 
-    const scoringDrivers = list.filter(item => Number(item.points) > 0);
+    const scoringDrivers = list.filter(item => Number(item.points) > 0);
 
-    $('driverSub').textContent = `All Scorers · After Round ${data.MRData.StandingsTable.StandingsLists[0].round}`;
-    $('driverStandings').innerHTML = scoringDrivers.map((item, index) => {
-      const driver = item.Driver || {};
-      const constructor = item.Constructors?.[0] || {};
-      const constructorId = constructor.constructorId || '';
-      const code = driverCode(driver);
-      const favorite = driver.driverId === CONFIG.favoriteDriverId || code === CONFIG.favoriteDriverCode;
-      const color = teamColor(constructorId);
-      
-      return `
-        <div class="driver-row ${index === 0 ? 'leader' : ''} ${favorite ? 'favorite' : ''}" style="--team-color:${color}; animation-delay:${4.5 + index * 0.08}s;">
-          <div class="driver-pos">${String(index + 1).padStart(2, '0')}</div>
-          <div class="driver-info">
-            <div class="driver-line">
-              <span class="driver-name">${esc(driverShortName(driver))}</span>
-              <span class="driver-code" style="background:${color};">${esc(code)}</span>
-            </div>
-            <div class="driver-team">${esc(teamLabel(constructorId, constructor.name))} · ${esc(driver.nationality || 'F1')} ${favorite ? '· <span class="gap">Harshvardhan pick</span>' : ''}</div>
-          </div>
-          <div class="driver-pts-wrap"><div class="driver-pts">${esc(item.points)}</div><div class="driver-pts-sub">pts</div></div>
-        </div>
-      `;
-    }).join('');
-
-    // --- NEW: GENERATE LIVE TICKER DATA ---
-    const top3Drivers = scoringDrivers.slice(0, 3);
-    const liveTickerData = top3Drivers.map((item, index) => ({
-      sym: `WDC P${index + 1}`,
-      val: `${item.Driver.givenName.charAt(0)}. ${item.Driver.familyName}`.toUpperCase(),
-      pts: `${item.points} PTS`
-    }));
-
-    // Add a custom Red Bull specific tracker to the ticker
-    const rbDriver = scoringDrivers.find(d => d.Driver.driverId === CONFIG.favoriteDriverId);
-    if (rbDriver && rbDriver.position > 3) {
-      liveTickerData.push({
-        sym: 'RB WATCH',
-        val: 'MAX VERSTAPPEN',
-        pts: `P${rbDriver.position} (${rbDriver.points} PTS)`
-      });
-    }
-
-    // Add general dashboard info
-    liveTickerData.push(
-      { sym: 'NEXT UP', val: $('nextRaceStat').textContent.toUpperCase(), pts: 'LIVE' },
-      { sym: 'TELEMETRY', val: 'STATUS', pts: 'SYNCED' }
-    );
-
-    // Re-initialize the ticker with the live data!
-    initTicker(liveTickerData);
-
-  } catch (e) {
-    $('driverSub').textContent = 'All Scorers · Static fallback';
-  }
+    $('driverSub').textContent = `All Scorers · After Round ${data.MRData.StandingsTable.StandingsLists[0].round}`;
+    $('driverStandings').innerHTML = scoringDrivers.map((item, index) => {
+      const driver = item.Driver || {};
+      const constructor = item.Constructors?.[0] || {};
+      const constructorId = constructor.constructorId || '';
+      const code = driverCode(driver);
+      const favorite = driver.driverId === CONFIG.favoriteDriverId || code === CONFIG.favoriteDriverCode;
+      const color = teamColor(constructorId);
+      
+      return `
+        <div class="driver-row ${index === 0 ? 'leader' : ''} ${favorite ? 'favorite' : ''}" style="--team-color:${color}; animation-delay:${4.5 + index * 0.08}s;">
+          <div class="driver-pos">${String(index + 1).padStart(2, '0')}</div>
+          <div class="driver-info">
+            <div class="driver-line">
+              <span class="driver-name">${esc(driverShortName(driver))}</span>
+              <span class="driver-code" style="background:${color};">${esc(code)}</span>
+            </div>
+            <div class="driver-team">${esc(teamLabel(constructorId, constructor.name))} · ${esc(driver.nationality || 'F1')} ${favorite ? '· <span class="gap">Harshvardhan pick</span>' : ''}</div>
+          </div>
+          <div class="driver-pts-wrap"><div class="driver-pts">${esc(item.points)}</div><div class="driver-pts-sub">pts</div></div>
+        </div>
+      `;
+    }).join('');
+  } catch (e) {
+    $('driverSub').textContent = 'All Scorers · Static fallback';
+  }
 }
 
 function renderFallbackConstructors() {
-  const fallback = [
-    ['01','Mercedes-AMG','Mercedes PU · DEU','mercedes','135','100'],
-    ['02','Scuderia Ferrari','Ferrari PU · ITA','ferrari','90','66'],
-    ['03','McLaren','Mercedes PU · GBR','mclaren','46','34'],
-    ['04','Haas F1','Ferrari PU · USA','haas','18','13'],
-    ['05','Red Bull Racing','Red Bull Ford · AUT · Harshvardhan team','red_bull','16','12'],
-    ['06','Alpine','Mercedes PU · FRA','alpine','16','12'],
-    ['07','Racing Bulls','Red Bull Ford · ITA','rb','14','10'],
-    ['08','Audi','Audi PU · DEU','sauber','2','2'],
-    ['09','Williams','Mercedes PU · GBR','williams','2','2'],
-    ['10','Aston Martin','Honda PU · GBR','aston_martin','0','0'],
-    ['11','Cadillac','Ferrari PU · USA · NEW','cadillac','0','0']
-  ];
+  const fallback = [
+    ['01','Mercedes-AMG','Mercedes PU · DEU','mercedes','135','100'],
+    ['02','Scuderia Ferrari','Ferrari PU · ITA','ferrari','90','66'],
+    ['03','McLaren','Mercedes PU · GBR','mclaren','46','34'],
+    ['04','Haas F1','Ferrari PU · USA','haas','18','13'],
+    ['05','Red Bull Racing','Red Bull Ford · AUT · Harshvardhan team','red_bull','16','12'],
+    ['06','Alpine','Mercedes PU · FRA','alpine','16','12'],
+    ['07','Racing Bulls','Red Bull Ford · ITA','rb','14','10'],
+    ['08','Audi','Audi PU · DEU','sauber','2','2'],
+    ['09','Williams','Mercedes PU · GBR','williams','2','2'],
+    ['10','Aston Martin','Honda PU · GBR','aston_martin','0','0'],
+    ['11','Cadillac','Ferrari PU · USA · NEW','cadillac','0','0']
+  ];
 
-  $('constructorStandings').innerHTML = fallback.map((c, i) => `
-    <div class="con-row ${c[3] === CONFIG.favoriteTeamId ? 'favorite' : ''}" style="--team-color:${teamColor(c[3])}; animation-delay:${4.5 + i * 0.08}s;">
-      <div class="con-top"><div class="con-pos">${c[0]}</div><div><div class="con-name">${c[1]}</div><div class="con-engine">${c[2]}</div></div><div class="con-pts">${c[4]}</div></div>
-      <div class="con-bar"><div class="con-bar-fill" style="width:${c[5]}%; animation-delay:${5.5 + i * 0.05}s;"></div></div>
-    </div>
-  `).join('');
+  $('constructorStandings').innerHTML = fallback.map((c, i) => `
+    <div class="con-row ${c[3] === CONFIG.favoriteTeamId ? 'favorite' : ''}" style="--team-color:${teamColor(c[3])}; animation-delay:${4.5 + i * 0.08}s;">
+      <div class="con-top"><div class="con-pos">${c[0]}</div><div><div class="con-name">${c[1]}</div><div class="con-engine">${c[2]}</div></div><div class="con-pts">${c[4]}</div></div>
+      <div class="con-bar"><div class="con-bar-fill" style="width:${c[5]}%; animation-delay:${5.5 + i * 0.05}s;"></div></div>
+    </div>
+  `).join('');
 }
 
 async function updateConstructorStandings() {
-  renderFallbackConstructors();
+  renderFallbackConstructors();
 
-  try {
-    const data = await fetchJson(`${CONFIG.apiBase}/${CONFIG.season}/constructorStandings.json`);
-    const list = data?.MRData?.StandingsTable?.StandingsLists?.[0]?.ConstructorStandings || [];
-    if (!list.length) return;
+  try {
+    const data = await fetchJson(`${CONFIG.apiBase}/${CONFIG.season}/constructorStandings.json`);
+    const list = data?.MRData?.StandingsTable?.StandingsLists?.[0]?.ConstructorStandings || [];
+    if (!list.length) return;
 
-    const maxPoints = Math.max(...list.map(item => Number(item.points) || 0), 1);
-    $('constructorSub').textContent = `All teams · After Round ${data.MRData.StandingsTable.StandingsLists[0].round}`;
-    $('constructorStandings').innerHTML = list.map((item, index) => {
-      const constructor = item.Constructor || {};
-      const id = constructor.constructorId || '';
-      const color = teamColor(id);
-      const favorite = id === CONFIG.favoriteTeamId || /red bull/i.test(constructor.name || '');
-      const pct = Math.max(2, Math.round((Number(item.points) / maxPoints) * 100));
-      return `
-        <div class="con-row ${favorite ? 'favorite' : ''}" style="--team-color:${color}; animation-delay:${4.5 + index * 0.08}s;">
-          <div class="con-top">
-            <div class="con-pos">${String(index + 1).padStart(2, '0')}</div>
-            <div>
-              <div class="con-name">${esc(teamLabel(id, constructor.name))}</div>
-              <div class="con-engine">${esc(constructor.nationality || 'F1')} ${favorite ? '· Harshvardhan team' : ''}</div>
-            </div>
-            <div class="con-pts">${esc(item.points)}</div>
-          </div>
-          <div class="con-bar"><div class="con-bar-fill" style="width:${pct}%; animation-delay:${5.5 + index * 0.05}s;"></div></div>
-        </div>
-      `;
-    }).join('');
-  } catch (e) {
-    $('constructorSub').textContent = 'All teams · Static fallback';
-  }
+    const maxPoints = Math.max(...list.map(item => Number(item.points) || 0), 1);
+    $('constructorSub').textContent = `All teams · After Round ${data.MRData.StandingsTable.StandingsLists[0].round}`;
+    $('constructorStandings').innerHTML = list.map((item, index) => {
+      const constructor = item.Constructor || {};
+      const id = constructor.constructorId || '';
+      const color = teamColor(id);
+      const favorite = id === CONFIG.favoriteTeamId || /red bull/i.test(constructor.name || '');
+      const pct = Math.max(2, Math.round((Number(item.points) / maxPoints) * 100));
+      return `
+        <div class="con-row ${favorite ? 'favorite' : ''}" style="--team-color:${color}; animation-delay:${4.5 + index * 0.08}s;">
+          <div class="con-top">
+            <div class="con-pos">${String(index + 1).padStart(2, '0')}</div>
+            <div>
+              <div class="con-name">${esc(teamLabel(id, constructor.name))}</div>
+              <div class="con-engine">${esc(constructor.nationality || 'F1')} ${favorite ? '· Harshvardhan team' : ''}</div>
+            </div>
+            <div class="con-pts">${esc(item.points)}</div>
+          </div>
+          <div class="con-bar"><div class="con-bar-fill" style="width:${pct}%; animation-delay:${5.5 + index * 0.05}s;"></div></div>
+        </div>
+      `;
+    }).join('');
+  } catch (e) {
+    $('constructorSub').textContent = 'All teams · Static fallback';
+  }
 }
 
 function resultGap(result, index) {
-  if (index === 0) return result.Time?.time || 'Winner';
-  if (result.Time?.time) return result.Time.time;
-  if (result.status && result.status !== 'Finished') return result.status;
-  return result.Time?.millis ? `+${result.Time.millis}ms` : 'Finished';
+  if (index === 0) return result.Time?.time || 'Winner';
+  if (result.Time?.time) return result.Time.time;
+  if (result.status && result.status !== 'Finished') return result.status;
+  return result.Time?.millis ? `+${result.Time.millis}ms` : 'Finished';
 }
 
 function renderPodium(results, race) {
-  $('podiumHead').textContent = `${race.raceName || 'Last Race'} · ${race.Circuit?.Location?.locality || race.Circuit?.circuitName || 'Result'}`;
-  $('paddockSub').textContent = `Last Race · Round ${race.round || '-'}`;
-  $('podiumList').innerHTML = results.slice(0, 3).map((result, index) => {
-    const driver = result.Driver || {};
-    const constructor = result.Constructor || {};
-    return `
-      <div class="pod-row p${index + 1}">
-        <div class="pod-badge">P${index + 1}</div>
-        <div>
-          <div class="pod-driver-name">${esc(driverFullName(driver))}</div>
-          <div class="pod-driver-team">${esc(teamLabel(constructor.constructorId, constructor.name))} · #${esc(result.number || driver.permanentNumber || '')}</div>
-        </div>
-        <div class="pod-time">${esc(resultGap(result, index))}</div>
-      </div>
-    `;
-  }).join('');
+  $('podiumHead').textContent = `${race.raceName || 'Last Race'} · ${race.Circuit?.Location?.locality || race.Circuit?.circuitName || 'Result'}`;
+  $('paddockSub').textContent = `Last Race · Round ${race.round || '-'}`;
+  $('podiumList').innerHTML = results.slice(0, 3).map((result, index) => {
+    const driver = result.Driver || {};
+    const constructor = result.Constructor || {};
+    return `
+      <div class="pod-row p${index + 1}">
+        <div class="pod-badge">P${index + 1}</div>
+        <div>
+          <div class="pod-driver-name">${esc(driverFullName(driver))}</div>
+          <div class="pod-driver-team">${esc(teamLabel(constructor.constructorId, constructor.name))} · #${esc(result.number || driver.permanentNumber || '')}</div>
+        </div>
+        <div class="pod-time">${esc(resultGap(result, index))}</div>
+      </div>
+    `;
+  }).join('');
 }
 
 function renderStories(results, race) {
-  const winner = results[0] || {};
-  const second = results[1] || {};
-  const third = results[2] || {};
-  const redBull = results.find(result => {
-    const constructor = result.Constructor || {};
-    const driver = result.Driver || {};
-    return constructor.constructorId === CONFIG.favoriteTeamId || driver.driverId === CONFIG.favoriteDriverId;
-  });
-  const fastest = results.find(result => result.FastestLap?.rank === '1') || results.find(result => result.FastestLap?.Time?.time);
-  const raceName = race.raceName || 'the last Grand Prix';
-  const winnerName = driverFullName(winner.Driver || {});
-  const winnerTeam = teamLabel(winner.Constructor?.constructorId, winner.Constructor?.name);
-  const podiumNames = [winner, second, third].filter(Boolean).map(result => lastName(driverFullName(result.Driver || {}))).join(' · ');
+  const winner = results[0] || {};
+  const second = results[1] || {};
+  const third = results[2] || {};
+  const redBull = results.find(result => {
+    const constructor = result.Constructor || {};
+    const driver = result.Driver || {};
+    return constructor.constructorId === CONFIG.favoriteTeamId || driver.driverId === CONFIG.favoriteDriverId;
+  });
+  const fastest = results.find(result => result.FastestLap?.rank === '1') || results.find(result => result.FastestLap?.Time?.time);
+  const raceName = race.raceName || 'the last Grand Prix';
+  const winnerName = driverFullName(winner.Driver || {});
+  const winnerTeam = teamLabel(winner.Constructor?.constructorId, winner.Constructor?.name);
+  const podiumNames = [winner, second, third].filter(Boolean).map(result => lastName(driverFullName(result.Driver || {}))).join(' · ');
 
-  const stories = [
-    {
-      className:'lead',
-      kicker:'The Story',
-      headline:`${winnerName || 'Race winner'} controls ${raceName}`,
-      body:`${winnerName || 'The winner'} took P1 for ${winnerTeam || 'their team'}, with the podium reading ${podiumNames || 'pending API confirmation'}.`
-    },
-    {
-      className:'neutral',
-      kicker:'Red Bull Watch',
-      headline:redBull
-        ? `${driverFullName(redBull.Driver || {})} brings Red Bull home P${redBull.position}`
-        : `No Red Bull classified in the visible last-race result`,
-      body:redBull
-        ? `Harshvardhan's garage watch: ${driverFullName(redBull.Driver || {})} finished P${redBull.position} for ${teamLabel(redBull.Constructor?.constructorId, redBull.Constructor?.name)}. Status: ${redBull.status || 'classified'}.`
-        : `F1 API did not return a Red Bull finisher in this result payload. The dashboard keeps the Red Bull theme and favorite-driver markers intact.`
-    },
-    {
-      className:'neutral',
-      kicker:'Fastest Lap',
-      headline:fastest
-        ? `${driverFullName(fastest.Driver || {})} owns the race pace marker`
-        : `Fastest lap data is not available yet`,
-      body:fastest
-        ? `Fastest lap: ${fastest.FastestLap?.Time?.time || 'time pending'}, lap ${fastest.FastestLap?.lap || '-'}, average speed ${fastest.FastestLap?.AverageSpeed?.speed || '-'} ${fastest.FastestLap?.AverageSpeed?.units || ''}.`
-        : `The API result is live, but fastest-lap fields were absent. The story will populate automatically when Jolpica exposes them.`
-    }
-  ];
+  const stories = [
+    {
+      className:'lead',
+      kicker:'The Story',
+      headline:`${winnerName || 'Race winner'} controls ${raceName}`,
+      body:`${winnerName || 'The winner'} took P1 for ${winnerTeam || 'their team'}, with the podium reading ${podiumNames || 'pending API confirmation'}.`
+    },
+    {
+      className:'neutral',
+      kicker:'Red Bull Watch',
+      headline:redBull
+        ? `${driverFullName(redBull.Driver || {})} brings Red Bull home P${redBull.position}`
+        : `No Red Bull classified in the visible last-race result`,
+      body:redBull
+        ? `Harshvardhan's garage watch: ${driverFullName(redBull.Driver || {})} finished P${redBull.position} for ${teamLabel(redBull.Constructor?.constructorId, redBull.Constructor?.name)}. Status: ${redBull.status || 'classified'}.`
+        : `F1 API did not return a Red Bull finisher in this result payload. The dashboard keeps the Red Bull theme and favorite-driver markers intact.`
+    },
+    {
+      className:'neutral',
+      kicker:'Fastest Lap',
+      headline:fastest
+        ? `${driverFullName(fastest.Driver || {})} owns the race pace marker`
+        : `Fastest lap data is not available yet`,
+      body:fastest
+        ? `Fastest lap: ${fastest.FastestLap?.Time?.time || 'time pending'}, lap ${fastest.FastestLap?.lap || '-'}, average speed ${fastest.FastestLap?.AverageSpeed?.speed || '-'} ${fastest.FastestLap?.AverageSpeed?.units || ''}.`
+        : `The API result is live, but fastest-lap fields were absent. The story will populate automatically when Jolpica exposes them.`
+    }
+  ];
 
-  $('newsBlock').innerHTML = stories.map((story, index) => `
-    <article class="news-item ${story.className}">
-      <div class="news-meta"><span class="news-kicker">${esc(story.kicker)}</span><span class="news-num">${String(index + 1).padStart(2, '0')}</span></div>
-      <h3 class="news-headline">${esc(story.headline)}</h3>
-      <p class="news-body">${esc(story.body)}</p>
-    </article>
-  `).join('');
+  $('newsBlock').innerHTML = stories.map((story, index) => `
+    <article class="news-item ${story.className}">
+      <div class="news-meta"><span class="news-kicker">${esc(story.kicker)}</span><span class="news-num">${String(index + 1).padStart(2, '0')}</span></div>
+      <h3 class="news-headline">${esc(story.headline)}</h3>
+      <p class="news-body">${esc(story.body)}</p>
+    </article>
+  `).join('');
 }
 
 // Automatically build the complete modal overview using data elements
 function populateBriefingModal(nextRace, lastRace) {
-  if (!nextRace) return;
-  
-  // 1. Process Next Race Target
-  const circuitId = nextRace.Circuit?.circuitId || '';
-  const trackInsight = CIRCUIT_INSIGHTS[circuitId] || CIRCUIT_INSIGHTS['default'];
-  
-  $('briefingTargetHeading').textContent = `${nextRace.raceName.toUpperCase()} · ROUND ${nextRace.round}`;
-  $('briefingNextStrategy').innerHTML = `<strong>STRATEGY SUMMARY:</strong> Moving towards <strong>${nextRace.Circuit?.circuitName}</strong> in ${nextRace.Circuit?.Location?.locality}. ${trackInsight.strategy}`;
-  
-  // Generate Action Chips UI
-  $('briefingActionChips').innerHTML = trackInsight.chips.map(chip => `
-    <a class="colo-btn" style="color: #fff; border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.05); margin-bottom: 6px; margin-right: 6px; cursor: default;">
-      ${chip} <span class="colo-arr">→</span>
-    </a>
-  `).join('');
+  if (!nextRace) return;
+  
+  // 1. Process Next Race Target
+  const circuitId = nextRace.Circuit?.circuitId || '';
+  const trackInsight = CIRCUIT_INSIGHTS[circuitId] || CIRCUIT_INSIGHTS['default'];
+  
+  $('briefingTargetHeading').textContent = `${nextRace.raceName.toUpperCase()} · ROUND ${nextRace.round}`;
+  $('briefingNextStrategy').innerHTML = `<strong>STRATEGY SUMMARY:</strong> Moving towards <strong>${nextRace.Circuit?.circuitName}</strong> in ${nextRace.Circuit?.Location?.locality}. ${trackInsight.strategy}`;
+  
+  // Generate Action Chips UI
+  $('briefingActionChips').innerHTML = trackInsight.chips.map(chip => `
+    <a class="colo-btn" style="color: #fff; border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.05); margin-bottom: 6px; margin-right: 6px; cursor: default;">
+      ${chip} <span class="colo-arr">→</span>
+    </a>
+  `).join('');
 
-  // 2. Process Last Race Gossip Insights
-  if (lastRace && lastRace.Results && lastRace.Results.length > 0) {
-    const winner = lastRace.Results[0];
-    const winnerName = `${winner.Driver.givenName} ${winner.Driver.familyName}`;
-    const fastestLap = lastRace.Results.find(r => r.FastestLap?.rank === '1');
-    
-    $('briefingGossipTitle').innerHTML = `Gossip from ${lastRace.raceName}: <em>${winner.Driver.familyName} takes absolute control</em>`;
-    
-    // Construct automated tactical analysis bullet streams
-    let pointsHtml = `
-      • <strong>The Clean Air Factor:</strong> ${winnerName} secured victory utilizing early-stage tire delta preservation patterns.<br><br>
-      • <strong>Tire Surface Thermals:</strong> Degradation patterns stabilized late in stint windows, preventing secondary stop strategy shifts.<br><br>
-    `;
-    
-    if (fastestLap) {
-      pointsHtml += `• <strong>Fastest Lap Velocity:</strong> ${fastestLap.Driver.familyName} grabbed the absolute pace benchmark with a screaming ${fastestLap.FastestLap.Time.time} marker on lap ${fastestLap.FastestLap.lap}.<br><br>`;
-    }
-    
-    // Find Red Bull watch metric details inside arrays
-    const rbDriverResult = lastRace.Results.find(r => r.Constructor.constructorId === CONFIG.favoriteTeamId || r.Driver.driverId === CONFIG.favoriteDriverId);
-    if (rbDriverResult) {
-      const p = rbDriverResult.position;
-      $('briefingRBStatus').textContent = `Max VER / P${p}`;
-      
-      if (p === '1') {
-        $('briefingRBMargin').textContent = `Dominant Victory Delta`;
-        pointsHtml += `• <strong>Red Bull Sector Analysis:</strong> Maximum performance constraints met perfectly; pace management executed flawlessly.`;
-        $('briefingWirelessQuote').textContent = `"Simply lovely stuff out there today, car was flying." — Max VER`;
-      } else {
-        const gap = rbDriverResult.Time?.time || `Status: ${rbDriverResult.status}`;
-        $('briefingRBMargin').textContent = `Delta to P1: ${gap}`;
-        pointsHtml += `• <strong>Red Bull Sector Analysis:</strong> Trapped in operational dirt-air pockets during critical undercut strategy triggers. Focus shifts heavily to electrical battery management mitigation templates.`;
-        $('briefingWirelessQuote').textContent = `"We need to look closely at our straight-line battery clipping recovery profiles." — Max VER`;
-      }
-    } else {
-      $('briefingRBStatus').textContent = `Telemetry Disconnect`;
-      $('briefingRBMargin').textContent = `No RB driver categorized`;
-      $('briefingWirelessQuote').textContent = `"Box, box. We need to check data arrays." — Pit Wall`;
-    }
-    
-    $('briefingGossipPoints').innerHTML = pointsHtml;
-  }
-}
-
-async function updatePaddockIntel() {
-  try {
-    const data = await fetchJson(`${CONFIG.apiBase}/${CONFIG.season}/last/results.json`);
-    const race = data?.MRData?.RaceTable?.Races?.[0];
-    const results = race?.Results || [];
-    if (!race || !results.length) return;
-    renderPodium(results, race);
-    renderStories(results, race);
-    
-    window.cachedLastRace = race;
-    if (window.cachedNextRace) populateBriefingModal(window.cachedNextRace, window.cachedLastRace);
-  } catch (e) {
-    $('paddockSub').textContent = 'Last Race · Static fallback';
-    $('podiumHead').textContent = 'Miami GP · Result pending';
-    $('podiumList').innerHTML = `
-      <div class="pod-row p1"><div class="pod-badge">P1</div><div><div class="pod-driver-name">Awaiting Jolpica</div><div class="pod-driver-team">Latest result</div></div><div class="pod-time">API</div></div>
-      <div class="pod-row p2"><div class="pod-badge">P2</div><div><div class="pod-driver-name">Awaiting Jolpica</div><div class="pod-driver-team">Latest result</div></div><div class="pod-time">API</div></div>
-      <div class="pod-row p3"><div class="pod-badge">P3</div><div><div class="pod-driver-name">Awaiting Jolpica</div><div class="pod-driver-team">Latest result</div></div><div class="pod-time">API</div></div>
-    `;
-  }
-}
-
-function initGreeting() {
-  const now = new Date();
-  const h = now.getHours();
-  const g = h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
-  $('greeting').textContent = `${g}, Harshvardhan Bohra`;
-  const D = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
-  const M = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-  $('dateline').textContent = `${D[now.getDay()]} · ${String(now.getDate()).padStart(2,'0')} ${M[now.getMonth()]} · ${now.getFullYear()}`;
-}
-
-function initTicker(dynamicItems = null) {
-  const defaultItems = [
-    { sym:'FAV DRIVER', val:'MAX VERSTAPPEN', pts:'VER' },
-    { sym:'FAV TEAM', val:'RED BULL', pts:'RACING' },
-    { sym:'NEXT', val:'CANADIAN GP', pts:'MONTREAL' },
-    { sym:'DATA', val:'JOLPICA API', pts:'LIVE' },
-    { sym:'WDC', val:'AUTO UPDATE', pts:'DRIVERS' },
-    { sym:'WCC', val:'AUTO UPDATE', pts:'TEAMS' },
-    { sym:'PADDOCK', val:'LAST RACE', pts:'RESULTS' },
-    { sym:'THEME', val:'NAVY · RED · GOLD', pts:'RB' }
-  ];
-  const items = dynamicItems || defaultItems;
-  const mk = (it) => `<span class="tick"><span class="sym">${it.sym}</span> <span class="val">${it.val}</span> <span class="pts">${it.pts}</span></span><span class="tick tick-dot">◆</span>`;
-  const half = items.map(mk).join('');
-  const track = $('tkTrack');
-  if (track) {
-    track.innerHTML = half + half;
+  // 2. Process Last Race Gossip Insights
+  if (lastRace && lastRace.Results && lastRace.Results.length > 0) {
+    const winner = lastRace.Results[0];
+    const winnerName = `${winner.Driver.givenName} ${winner.Driver.familyName}`;
+    const fastestLap = lastRace.Results.find(r => r.FastestLap?.rank === '1');
+    
+    $('briefingGossipTitle').innerHTML = `Gossip from ${lastRace.raceName}: <em>${winner.Driver.familyName} takes absolute control</em>`;
+    
+    // Construct automated tactical analysis bullet streams
+    let pointsHtml = `
+      • <strong>The Clean Air Factor:</strong> ${winnerName} secured victory utilizing early-stage tire delta preservation patterns.<br><br>
+      • <strong>Tire Surface Thermals:</strong> Degradation patterns stabilized late in stint windows, preventing secondary stop strategy shifts.<br><br>
+    `;
+    
+    if (fastestLap) {
+      pointsHtml += `• <strong>Fastest Lap Velocity:</strong> ${fastestLap.Driver.familyName} grabbed the absolute pace benchmark with a screaming ${fastestLap.FastestLap.Time.time} marker on lap ${fastestLap.FastestLap.lap}.<br><br>`;
+    }
+    
+    // Find Red Bull watch metric details inside arrays
+    const rbDriverResult = lastRace.Results.find(r => r.Constructor.constructorId === CONFIG.favoriteTeamId || r.Driver.driverId === CONFIG.favoriteDriverId);
+    if (rbDriverResult) {
+      const p = rbDriverResult.position;
+      $('briefingRBStatus').textContent = `Max VER / P${p}`;
+      
+      if (p === '1') {
+        $('briefingRBMargin').textContent = `Dominant Victory Delta`;
+        pointsHtml += `• <strong>Red Bull Sector Analysis:</strong> Maximum performance constraints met perfectly; pace management executed flawlessly.`;
+        $('briefingWirelessQuote').textContent = `"Simply lovely stuff out there today, car was flying." — Max VER`;
+      } else {
+        const gap = rbDriverResult.Time?.time || `Status: ${rbDriverResult.status}`;
+        $('briefingRBMargin').textContent = `Delta to P1: ${gap}`;
+        pointsHtml += `• <strong>Red Bull Sector Analysis:</strong> Trapped in operational dirt-air pockets during critical undercut strategy triggers. Focus shifts heavily to electrical battery management mitigation templates.`;
+        $('briefingWirelessQuote').textContent = `"We need to look closely at our straight-line battery clipping recovery profiles." — Max VER`;
+      }
+    } else {
+      $('briefingRBStatus').textContent = `Telemetry Disconnect`;
+      $('briefingRBMargin').textContent = `No RB driver categorized`;
+      $('briefingWirelessQuote').textContent = `"Box, box. We need to check data arrays." — Pit Wall`;
+    }
+    
+    $('briefingGossipPoints').innerHTML = pointsHtml;
   }
 }
 
+async function updatePaddockIntel() {
+  try {
+    const data = await fetchJson(`${CONFIG.apiBase}/${CONFIG.season}/last/results.json`);
+    const race = data?.MRData?.RaceTable?.Races?.[0];
+    const results = race?.Results || [];
+    if (!race || !results.length) return;
+    renderPodium(results, race);
+    renderStories(results, race);
+    
+    window.cachedLastRace = race;
+    if (window.cachedNextRace) populateBriefingModal(window.cachedNextRace, window.cachedLastRace);
+  } catch (e) {
+    $('paddockSub').textContent = 'Last Race · Static fallback';
+    $('podiumHead').textContent = 'Miami GP · Result pending';
+    $('podiumList').innerHTML = `
+      <div class="pod-row p1"><div class="pod-badge">P1</div><div><div class="pod-driver-name">Awaiting Jolpica</div><div class="pod-driver-team">Latest result</div></div><div class="pod-time">API</div></div>
+      <div class="pod-row p2"><div class="pod-badge">P2</div><div><div class="pod-driver-name">Awaiting Jolpica</div><div class="pod-driver-team">Latest result</div></div><div class="pod-time">API</div></div>
+      <div class="pod-row p3"><div class="pod-badge">P3</div><div><div class="pod-driver-name">Awaiting Jolpica</div><div class="pod-driver-team">Latest result</div></div><div class="pod-time">API</div></div>
+    `;
+  }
+}
+
+function initGreeting() {
+  const now = new Date();
+  const h = now.getHours();
+  const g = h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
+  $('greeting').textContent = `${g}, Harshvardhan Bohra`;
+  const D = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+  const M = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  $('dateline').textContent = `${D[now.getDay()]} · ${String(now.getDate()).padStart(2,'0')} ${M[now.getMonth()]} · ${now.getFullYear()}`;
+}
+
+function initTicker() {
+  const items = [
+    { sym:'FAV DRIVER', val:'MAX VERSTAPPEN', pts:'VER' },
+    { sym:'FAV TEAM', val:'RED BULL', pts:'RACING' },
+    { sym:'NEXT', val:'CANADIAN GP', pts:'MONTREAL' },
+    { sym:'DATA', val:'JOLPICA API', pts:'LIVE' },
+    { sym:'WDC', val:'AUTO UPDATE', pts:'DRIVERS' },
+    { sym:'WCC', val:'AUTO UPDATE', pts:'TEAMS' },
+    { sym:'PADDOCK', val:'LAST RACE', pts:'RESULTS' },
+    { sym:'THEME', val:'NAVY · RED · GOLD', pts:'RB' }
+  ];
+  const mk = (it) => `<span class="tick"><span class="sym">${it.sym}</span> <span class="val">${it.val}</span> <span class="pts">${it.pts}</span></span><span class="tick tick-dot">◆</span>`;
+  const half = items.map(mk).join('');
+  $('tkTrack').innerHTML = half + half;
+}
+
 function initColophon() {
-  const modal = $('colophon-modal');
-  const openBtn = $('openColophon');
-  const closeBtn = modal && modal.querySelector('.colo-close');
-  const backdrop = modal && modal.querySelector('.colo-backdrop');
-  if (!modal || !openBtn) return;
+  const modal = $('colophon-modal');
+  const openBtn = $('openColophon');
+  const closeBtn = modal && modal.querySelector('.colo-close');
+  const backdrop = modal && modal.querySelector('.colo-backdrop');
+  if (!modal || !openBtn) return;
 
-  function open() {
-    modal.hidden = false;
-    requestAnimationFrame(() => modal.classList.add('open'));
-    document.body.classList.add('colo-open');
-    if (closeBtn) closeBtn.focus();
-  }
+  function open() {
+    modal.hidden = false;
+    requestAnimationFrame(() => modal.classList.add('open'));
+    document.body.classList.add('colo-open');
+    if (closeBtn) closeBtn.focus();
+  }
 
-  function close() {
-    modal.classList.remove('open');
-    document.body.classList.remove('colo-open');
-    setTimeout(() => { modal.hidden = true; }, 300);
-  }
+  function close() {
+    modal.classList.remove('open');
+    document.body.classList.remove('colo-open');
+    setTimeout(() => { modal.hidden = true; }, 300);
+  }
 
-  openBtn.addEventListener('click', open);
-  closeBtn && closeBtn.addEventListener('click', close);
-  backdrop && backdrop.addEventListener('click', close);
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && !modal.hidden) close();
-  });
+  openBtn.addEventListener('click', open);
+  closeBtn && closeBtn.addEventListener('click', close);
+  backdrop && backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.hidden) close();
+  });
 }
 
 initGreeting();
