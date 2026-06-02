@@ -1543,30 +1543,7 @@ const CIRCUIT_LAPS = {
   'yas_marina': 58      // Abu Dhabi
 };
 
-// Metadata matrix to inject track context into your briefing sections dynamically
-const CIRCUIT_INSIGHTS = {
-  'villeneuve': {
-    target: 'MONTRÉAL · WALLOFCHAMPIONS',
-    strategy: 'High braking wear requirements with critical traction out of low-speed chicanes. Watch out for sector 3 overtaking tactics and erratic changing track conditions along the St. Lawrence River.',
-    chips: ['⚡ Curb-riding stability is key', '🔋 Battery harvest heavy in sector 2', '🛑 Wall of Champions entry clearance']
-  },
-  'monaco': {
-    target: 'MONTE CARLO · ZERO ERROR MARGIN',
-    strategy: 'Qualifying is 95% of the race victory metric. Zero room for traditional overtaking; strategy will rely heavily on an aggressive overcut window or premium safety car response windows.',
-    chips: ['🇲🇨 Pitlane delta timing critical', '⚠️ Out-lap tire warming focus', '🔋 Low energy deployments requested']
-  },
-  'silverstone': {
-    target: 'SILVERSTONE · AERODYNAMIC MAX SPEED',
-    strategy: 'Extreme high-speed lateral load profiles through Copse, Maggots, and Becketts. Front-left tire preservation dictates team strategy windows. Dynamic risk factor: unpredictable crosswinds.',
-    chips: ['🏎️ Premium high-speed floor loads', '🌧️ Structural weather variables active', '⚡ DRS drag reduction maximization']
-  },
-  // Global generic baseline fallback values
-  'default': {
-    target: 'GRAND PRIX TRACK SYSTEM',
-    strategy: 'Telemetry demands balancing maximum technical energy recovery configuration with high straight-line kinetic efficiency deployment strategies.',
-    chips: ['🔋 Battery recovery deployment optimized', '🛑 Apex traction tracking active', '🏎️ Variable setup balancing']
-  }
-};
+
 
 function $(id) {
   return document.getElementById(id);
