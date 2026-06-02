@@ -2033,12 +2033,10 @@ function initTicker() {
   const items = [
     { sym:'FAV DRIVER', val:'MAX VERSTAPPEN', pts:'VER' },
     { sym:'FAV TEAM', val:'RED BULL', pts:'RACING' },
-    { sym:'NEXT', val:'CANADIAN GP', pts:'MONTREAL' },
-    { sym:'DATA', val:'JOLPICA API', pts:'LIVE' },
-    { sym:'WDC', val:'AUTO UPDATE', pts:'DRIVERS' },
-    { sym:'WCC', val:'AUTO UPDATE', pts:'TEAMS' },
-    { sym:'PADDOCK', val:'LAST RACE', pts:'RESULTS' },
-    { sym:'THEME', val:'NAVY · RED · GOLD', pts:'RB' }
+    { sym:'NEXT', val:'MONACO GP', pts:'MONTE CARLO' },
+    { sym:'DATA', val:'F1 API', pts:'LIVE' },
+    { sym:'WDC', val:'MERCEDES', pts:'MERC' },
+    { sym:'WCC', val:'K. ANTONELLI', pts:'KIMI' },
   ];
   const mk = (it) => `<span class="tick"><span class="sym">${it.sym}</span> <span class="val">${it.val}</span> <span class="pts">${it.pts}</span></span><span class="tick tick-dot">◆</span>`;
   const half = items.map(mk).join('');
