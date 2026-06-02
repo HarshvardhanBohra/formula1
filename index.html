@@ -236,7 +236,7 @@ body {
   color:var(--bull-blue);
   margin-top:-0.05em;
 }
-.hero-title .line1 span { display:inline-block; animation:maskRevealUp 1.1s cubic-bezier(.2,.9,.25,1) both 0.9s; }
+.hero-title .line1 span { display:inline-block; animation:maskRevealUp 1.1s cubic-bezier(.2(.9,.25,1) both 0.9s; }
 .hero-title .line2 span { display:inline-block; animation:maskRevealUp 1.1s cubic-bezier(.2,.9,.25,1) both 1.4s; }
 .title-underline {
   position:absolute;
@@ -1395,14 +1395,12 @@ body.colo-open { overflow:hidden; }
   </div>
 </div>
 
-<!-- RED BULL PIT WALL BRIEFING MODAL -->
 <div class="colophon-modal" id="colophon-modal" role="dialog" aria-modal="true" aria-labelledby="colo-title" hidden>
   <div class="colo-backdrop" data-close></div>
   <div class="colo-card" role="document" style="border: 2px solid var(--racing); background: var(--bull-navy); color: #fff;">
     <button type="button" class="colo-close" aria-label="Close" style="color: #fff; border-color: rgba(255,255,255,0.2);">✕</button>
     <div class="colo-scroll" style="padding: 32px 30px;">
 
-      <!-- Header Section -->
       <header class="colo-head">
         <div class="colo-eyebrow" style="color: var(--gold); letter-spacing: 0.3em; font-weight: 700;">◆ ORACLE RED BULL RACING INTELLIGENCE</div>
         <h2 class="colo-title" id="colo-title" style="color: #fff; font-family: 'Playfair Display', serif;">The <em>Pit Wall Briefing</em></h2>
@@ -1411,7 +1409,6 @@ body.colo-open { overflow:hidden; }
 
       <div class="colo-rule" style="border-top-color: rgba(255,255,255,0.15);" aria-hidden="true"></div>
 
-      <!-- SECTION 1: UPCOMING RACE STRATEGY BRIEF -->
       <section class="colo-author-sec">
         <div class="brand-eyebrow" style="color: var(--racing-hot); margin-bottom: 12px; font-size: 10px;">
           <span style="background: var(--racing); color: #fff; padding: 2px 6px; font-weight: 700; margin-right: 6px;">NEXT TARGET</span> 
@@ -1421,15 +1418,12 @@ body.colo-open { overflow:hidden; }
           Analyzing upcoming track layout and telemetry metrics...
         </p>
 
-        <!-- Dynamic Quick-Links Action Chips -->
         <div class="colo-links" id="briefingActionChips" style="margin-top: 16px;">
-          <!-- Populated via Javascript -->
-        </div>
+          </div>
       </section>
 
       <div class="colo-rule" style="border-top-color: rgba(255,255,255,0.15);" aria-hidden="true"></div>
 
-      <!-- SECTION 2: LAST RACE DEBRIEF & PADDOCK GOSSIP -->
       <section class="colo-tip-sec">
         <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 12px; font-weight: 600;">
           PADDOCK DEBRIEF & POST-RACE GOSSIP
@@ -1440,10 +1434,8 @@ body.colo-open { overflow:hidden; }
         </h3>
 
         <div class="colo-tip-body" id="briefingGossipPoints" style="color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.7;">
-          <!-- Dynamic telemetry bullet points inject here -->
-        </div>
+          </div>
 
-        <!-- Custom Pit Wall Alert Badges -->
         <div class="colo-podium" style="background: rgba(6, 50, 160, 0.3); border: 1px solid var(--bull-blue); margin: 24px 0; padding: 16px;">
           <div class="colo-p" data-pos="p1">
             <div class="colo-p-pos" style="color: var(--gold); font-weight: 700;">RED BULL WATCH</div>
@@ -1452,7 +1444,6 @@ body.colo-open { overflow:hidden; }
           </div>
         </div>
 
-        <!-- Dynamic Hot Take Outtake Box -->
         <div class="colo-upi" style="background: rgba(225, 6, 0, 0.1); border-left: 4px solid var(--racing); padding: 14px 18px; margin-top: 18px;">
           <div class="colo-upi-left">
             <span class="colo-upi-label" style="color: var(--racing-hot); font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.15em; display: block; margin-bottom: 4px;">PIT WALL WIRELESS</span>
@@ -1463,7 +1454,6 @@ body.colo-open { overflow:hidden; }
 
       <div class="colo-rule" style="border-top-color: rgba(255,255,255,0.15);" aria-hidden="true"></div>
 
-      <!-- Footer Disclaimer -->
       <p class="colo-disclaimer" style="color: rgba(255,255,255,0.4); font-size: 11px;">
         The Pit Wall Briefing · Powered by live performance telemetry. Not affiliated with the FIA. Optimized for Oracle Red Bull Racing strategies.
       </p>
@@ -1518,32 +1508,41 @@ const COUNTRY_FLAGS = {
   'United Arab Emirates':'🇦🇪'
 };
 
-// Map of circuitId to Total Scheduled Laps
 const CIRCUIT_LAPS = {
-  'albert_park': 58,    // Australia
-  'shanghai': 56,       // China
-  'suzuka': 53,         // Japan
-  'miami': 57,          // Miami
-  'villeneuve': 70,     // Canada
-  'monaco': 78,         // Monaco
-  'catalunya': 66,      // Spain (Barcelona)
-  'red_bull_ring': 71,  // Austria
-  'silverstone': 52,    // UK
-  'spa': 44,            // Belgium
-  'hungaroring': 70,    // Hungary
-  'zandvoort': 72,      // Netherlands
-  'monza': 53,          // Italy
-  'baku': 51,           // Azerbaijan
-  'marina_bay': 62,     // Singapore
-  'americas': 56,       // COTA (USA)
-  'rodriguez': 71,      // Mexico
-  'interlagos': 71,     // Brazil
-  'vegas': 50,          // Las Vegas
-  'losail': 57,         // Qatar
-  'yas_marina': 58      // Abu Dhabi
+  'albert_park': 58,
+  'shanghai': 56,
+  'suzuka': 53,
+  'miami': 57,
+  'villeneuve': 70,
+  'monaco': 78,
+  'catalunya': 66,
+  'red_bull_ring': 71,
+  'silverstone': 52,
+  'spa': 44,
+  'hungaroring': 70,
+  'zandvoort': 72,
+  'monza': 53,
+  'baku': 51,
+  'marina_bay': 62,
+  'americas': 56,
+  'rodriguez': 71,
+  'interlagos': 71,
+  'vegas': 50,
+  'losail': 57,
+  'yas_marina': 58
 };
 
-
+// Strategic insights for the Pit Wall Briefing Modal
+const CIRCUIT_INSIGHTS = {
+  'villeneuve': {
+    strategy: "High traction requirements out of slow chicanes with intense braking thermal degradation profiles. Aero setups emphasize low-to-medium downforce maps to leverage long straight sectors.",
+    chips: ["Low Downforce Aero", "Brake Cooling Option B", "Undercut Priority"]
+  },
+  'default': {
+    strategy: "Balancing thermal structural degradation alongside battery allocation maps. Pit options rely heavily on structural undercut metrics to isolate variables in clear air windows.",
+    chips: ["Aero Plan A", "Standard Energy Management", "Balanced Map"]
+  }
+};
 
 function $(id) {
   return document.getElementById(id);
@@ -1556,7 +1555,7 @@ function esc(value) {
     '>':'&gt;',
     '"':'&quot;',
     "'":'&#39;'
-  }[char]));
+  char]));
 }
 
 function pad(n) {
@@ -1764,7 +1763,6 @@ async function updateDriverStandings() {
     const list = data?.MRData?.StandingsTable?.StandingsLists?.[0]?.DriverStandings || [];
     if (!list.length) return;
 
-    // Filter to only include drivers who have scored at least 1 point
     const scoringDrivers = list.filter(item => Number(item.points) > 0);
 
     $('driverSub').textContent = `All Scorers · After Round ${data.MRData.StandingsTable.StandingsLists[0].round}`;
@@ -1892,7 +1890,7 @@ function renderStories(results, race) {
   const raceName = race.raceName || 'the last Grand Prix';
   const winnerName = driverFullName(winner.Driver || {});
   const winnerTeam = teamLabel(winner.Constructor?.constructorId, winner.Constructor?.name);
-  const podiumNames = [winner, second, third].filter(Boolean).map(result => lastName(driverFullName(result.Driver || {}))).join(' · ');
+  const podiumNames = [winner, second, third].filter(Boolean).map(result => lastName(driverFullName(result.Driver || {}.Driver))).join(' · ');
 
   const stories = [
     {
@@ -1929,28 +1927,28 @@ function renderStories(results, race) {
       <h3 class="news-headline">${esc(story.headline)}</h3>
       <p class="news-body">${esc(story.body)}</p>
     </article>
-  `).join('');
+   `).join('');
 }
 
-// Automatically build the complete modal overview using data elements
+// Automatically builds and maps real telemetry elements directly into your Pit Wall Modal IDs
 function populateBriefingModal(nextRace, lastRace) {
   if (!nextRace) return;
   
-  // 1. Process Next Race Target
+  // 1. Process Next Race Target Setup
   const circuitId = nextRace.Circuit?.circuitId || '';
   const trackInsight = CIRCUIT_INSIGHTS[circuitId] || CIRCUIT_INSIGHTS['default'];
   
   $('briefingTargetHeading').textContent = `${nextRace.raceName.toUpperCase()} · ROUND ${nextRace.round}`;
   $('briefingNextStrategy').innerHTML = `<strong>STRATEGY SUMMARY:</strong> Moving towards <strong>${nextRace.Circuit?.circuitName}</strong> in ${nextRace.Circuit?.Location?.locality}. ${trackInsight.strategy}`;
   
-  // Generate Action Chips UI
+  // Map Action Chips UI inside Modal
   $('briefingActionChips').innerHTML = trackInsight.chips.map(chip => `
     <a class="colo-btn" style="color: #fff; border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.05); margin-bottom: 6px; margin-right: 6px; cursor: default;">
       ${chip} <span class="colo-arr">→</span>
     </a>
   `).join('');
 
-  // 2. Process Last Race Gossip Insights
+  // 2. Process Last Race Gossip Parsing
   if (lastRace && lastRace.Results && lastRace.Results.length > 0) {
     const winner = lastRace.Results[0];
     const winnerName = `${winner.Driver.givenName} ${winner.Driver.familyName}`;
@@ -1958,7 +1956,6 @@ function populateBriefingModal(nextRace, lastRace) {
     
     $('briefingGossipTitle').innerHTML = `Gossip from ${lastRace.raceName}: <em>${winner.Driver.familyName} takes absolute control</em>`;
     
-    // Construct automated tactical analysis bullet streams
     let pointsHtml = `
       • <strong>The Clean Air Factor:</strong> ${winnerName} secured victory utilizing early-stage tire delta preservation patterns.<br><br>
       • <strong>Tire Surface Thermals:</strong> Degradation patterns stabilized late in stint windows, preventing secondary stop strategy shifts.<br><br>
@@ -1968,7 +1965,7 @@ function populateBriefingModal(nextRace, lastRace) {
       pointsHtml += `• <strong>Fastest Lap Velocity:</strong> ${fastestLap.Driver.familyName} grabbed the absolute pace benchmark with a screaming ${fastestLap.FastestLap.Time.time} marker on lap ${fastestLap.FastestLap.lap}.<br><br>`;
     }
     
-    // Find Red Bull watch metric details inside arrays
+    // Scan specific arrays to construct Red Bull Watch variables 
     const rbDriverResult = lastRace.Results.find(r => r.Constructor.constructorId === CONFIG.favoriteTeamId || r.Driver.driverId === CONFIG.favoriteDriverId);
     if (rbDriverResult) {
       const p = rbDriverResult.position;
@@ -2070,14 +2067,17 @@ function initColophon() {
   });
 }
 
-initGreeting();
-initTicker();
-syncStaticCalendar();
-updateNextRaceFromJolpica();
-updateDriverStandings();
-updateConstructorStandings();
-updatePaddockIntel();
-initColophon();
+// Primary execution array sequence
+document.addEventListener('DOMContentLoaded', () => {
+  initGreeting();
+  initTicker();
+  syncStaticCalendar();
+  updateNextRaceFromJolpica();
+  updateDriverStandings();
+  updateConstructorStandings();
+  updatePaddockIntel();
+  initColophon();
+});
 </script>
 </body>
 </html>
