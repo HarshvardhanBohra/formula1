@@ -1535,15 +1535,15 @@ const CIRCUIT_LAPS = {
 
 const CIRCUIT_INSIGHTS = {
   'villeneuve': {
-    strategy: 'High braking loads combined with heavy traction requirements out of slow-speed chicanes dictate aero profiles. Monitor structural curbs closely.',
+    strategy: 'High braking loads combined with heavy traction requirements out of slow-speed chicanes dictate aero profiles. Monitor structural curbs closely. Setup demands a delicate compromise between straight-line top speed for the long back straight and compliant suspension for aggressive kerb riding through the final chicane. Brake wear parameters indicate critical cooling requirements.',
     chips: ['LOW DRAG SECTORS', 'BRAKE THERMALS', 'CHICANR RECOVERY']
   },
   'monaco': {
-    strategy: 'Maximum downforce mandatory. Track position is absolute priority. Stint lengths extensions are heavily favored if green flag track parameters persist.',
+    strategy: 'Maximum downforce mandatory. Track position is absolute priority. Stint lengths extensions are heavily favored if green flag track parameters persist. Extremely low grip surface evolution means qualifying simulation is paramount. Overtaking delta is essentially zero, shifting the entire strategic weight onto pit wall undercut timing and avoiding traffic windows.',
     chips: ['MAX DOWNFORCE', 'STEERING LOCK', 'TRACK POSITION']
   },
   'default': {
-    strategy: 'Balancing straight line speeds with low decay platform deployment profiles to secure high sector performance margins.',
+    strategy: 'Balancing straight line speeds with low decay platform deployment profiles to secure high sector performance margins. Telemetry modeling suggests optimizing ERS mapping for corner-exit traction over sustained terminal velocity. Tire degradation models indicate a front-limited wear profile under current climatic forecasts.',
     chips: ['TYRE DELTA', 'ENERGY STORAGE', 'AERO PROTOCOLS']
   }
 };
@@ -2004,6 +2004,9 @@ function populateBriefingModal(nextRace, lastRace) {
     let pointsHtml = `
       • <strong>The Clean Air Factor:</strong> ${winnerName} secured victory utilizing early-stage tire delta preservation patterns.<br><br>
       • <strong>Tire Surface Thermals:</strong> Degradation patterns stabilized late in stint windows, preventing secondary stop strategy shifts.<br><br>
+      • <strong>ERS Deployment Overlap:</strong> Telemetry traces indicate aggressive battery harvesting through the middle sector, leaving peak deployment strictly for defensive DRS zones.<br><br>
+      • <strong>Undercut Vulnerability:</strong> Pit lane timing deltas proved exceptionally narrow, with track position flipping on out-laps due to slow warm-up phases on the harder compounds.<br><br>
+      • <strong>Aero Balance Shift:</strong> Fuel burn off exposed a distinct rear-limited degradation phase in the final 15 laps, forcing drivers into heavy brake bias migration.<br><br>
     `;
     
     if (fastestLap) {
