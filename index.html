@@ -1290,7 +1290,7 @@ body.colo-open { overflow:hidden; }
       <div class="cal-round done" data-round="03" data-date="2026-03-29T05:00:00Z" data-race="Japanese Grand Prix"><div class="cal-rnum">R03<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇯🇵</div><div class="cal-country">Japan</div><div class="cal-flag-name">Suzuka</div><div class="cal-date">Mar 27-29</div><div class="cal-winner">K. Antonelli</div></div>
       <div class="cal-round done" data-round="04" data-date="2026-05-03T20:00:00Z" data-race="Miami Grand Prix"><div class="cal-rnum">R04<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇺🇸</div><div class="cal-country">USA</div><div class="cal-flag-name">Miami</div><div class="cal-date">May 01-03</div><div class="cal-winner">K. Antonelli</div></div>
       <div class="cal-round next" data-round="05" data-date="2026-05-24T18:00:00Z" data-race="Canadian Grand Prix"><div class="cal-rnum">R05 · NEXT<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇨🇦</div><div class="cal-country">Canada</div><div class="cal-flag-name">Montreal</div><div class="cal-date">May 22-24</div><div class="cal-winner">K. Antonelli</div></div>
-      <div class="cal-round" data-round="06" data-date="2026-06-07T13:00:00Z" data-race="Monaco Grand Prix"><div class="cal-rnum">R06<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇲🇨</div><div class="cal-country">Monaco</div><div class="cal-flag-name">Monte Carlo</div><div class="cal-date">Jun 05-07</div><div class="cal-winner">K. Antonelli</div></div>
+      <div class="cal-round" data-round="06" data-date="2026-06-07T13:00:00Z" data-race="Monaco Grand Prix"><div class="cal-rnum">R06<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇲🇨</div><div class="cal-country">Monaco</div><div class="cal-flag-name">Monte Carlo</div><div class="cal-date">Jun 05-07</div></div>
       <div class="cal-round" data-round="07" data-date="2026-06-14T13:00:00Z" data-race="Spanish Grand Prix"><div class="cal-rnum">R07<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇪🇸</div><div class="cal-country">Spain</div><div class="cal-flag-name">Barcelona</div><div class="cal-date">Jun 12-14</div></div>
       <div class="cal-round" data-round="08" data-date="2026-06-28T13:00:00Z" data-race="Austrian Grand Prix"><div class="cal-rnum">R08<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇦🇹</div><div class="cal-country">Austria</div><div class="cal-flag-name">Red Bull Ring</div><div class="cal-date">Jun 26-28</div></div>
       <div class="cal-round" data-round="09" data-date="2026-07-05T14:00:00Z" data-race="British Grand Prix"><div class="cal-rnum">R09<span class="cal-status-dot"></span></div><div class="cal-flag-emoji">🇬🇧</div><div class="cal-country">UK</div><div class="cal-flag-name">Silverstone</div><div class="cal-date">Jul 03-05</div></div>
@@ -1897,6 +1897,25 @@ function renderStories(results, race) {
   const winnerTeam = teamLabel(winner.Constructor?.constructorId, winner.Constructor?.name);
   const podiumNames = [winner, second, third].filter(Boolean).map(result => lastName(driverFullName(result.Driver || {}))).join(' · ');
 
+  // 1. Grid Charger Logic (Who gained the most places)
+  let biggestMover = null;
+  let maxGained = 0;
+  results.forEach(r => {
+    const grid = parseInt(r.grid, 10);
+    const pos = parseInt(r.position, 10);
+    if (grid > 0 && pos > 0) {
+      const gained = grid - pos;
+      if (gained > maxGained) {
+        maxGained = gained;
+        biggestMover = r;
+      }
+    }
+  });
+
+  // 2. Race Attrition Logic (DNFs)
+  const dnfs = results.filter(r => !r.status.includes('Lap') && r.status !== 'Finished');
+  const dnfNames = dnfs.map(r => lastName(driverFullName(r.Driver || {}))).join(', ');
+
   const stories = [
     {
       className:'lead',
@@ -1923,6 +1942,26 @@ function renderStories(results, race) {
       body:fastest
         ? `Fastest lap: ${fastest.FastestLap?.Time?.time || 'time pending'}, lap ${fastest.FastestLap?.lap || '-'}, average speed ${fastest.FastestLap?.AverageSpeed?.speed || '-'} ${fastest.FastestLap?.AverageSpeed?.units || ''}.`
         : `The API result is live, but fastest-lap fields were absent. The story will populate automatically when Jolpica exposes them.`
+    },
+    {
+      className:'neutral',
+      kicker:'Grid Charger',
+      headline: biggestMover && maxGained > 0
+        ? `${lastName(driverFullName(biggestMover.Driver || {}))} surges forward by ${maxGained} places`
+        : `Grid positions hold steady in ${raceName}`,
+      body: biggestMover && maxGained > 0
+        ? `Starting from P${biggestMover.grid}, ${driverFullName(biggestMover.Driver || {})} carved through the field to finish P${biggestMover.position}, putting on a masterclass in overtaking.`
+        : `The race saw minimal positional changes from the starting grid, with drivers largely maintaining their qualifying order.`
+    },
+    {
+      className:'neutral',
+      kicker:'Race Attrition',
+      headline: dnfs.length > 0
+        ? `${dnfs.length} cars fail to see the checkered flag`
+        : `Complete reliability: entire grid finishes`,
+      body: dnfs.length > 0
+        ? `Reliability and incidents took their toll. Casualties included: ${dnfNames || 'Multiple drivers'} succumbing to track and mechanical limits.`
+        : `In a rare display of mechanical perfection and clean racing, no drivers recorded a DNF.`
     }
   ];
 
